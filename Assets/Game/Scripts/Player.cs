@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
 	
 	public Skill currentSpecialSkill;
 
-    public Color color;
+    public Color playerColor;
 
     private Animator anim;
 
@@ -39,7 +39,11 @@ public class Player : MonoBehaviour {
 		jump = new Jump();
         walk = new Walk();
         anim = GetComponent<Animator>();
+
+        GetComponent<SpriteRenderer>().color = playerColor;
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
