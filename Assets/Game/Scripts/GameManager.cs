@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
             gameController.addPlayer("j" + (i + 1), player);
 
-            if (respawnTransform.tag.Contains("NPC"))
+            if (respawnTransform.tag.Contains("KeyboardControlled"))
             {
                 player.isNPC = true;
             }
