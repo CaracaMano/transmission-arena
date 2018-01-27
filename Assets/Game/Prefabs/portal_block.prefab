@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23393808503758276}
   - component: {fileID: 61601014287861716}
   m_Layer: 8
-  m_Name: block_dirt_half
+  m_Name: portal_block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 43bf1eb4cfd014ee8b0ec5c011b3e96e, type: 2}
+  - {fileID: 2100000, guid: ac2c243f6377c4617b9b2cdadfc88bc7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,7 +82,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870038759545852}
-  m_Mesh: {fileID: 4300006, guid: 171326d97d6bd4ce0917af20320b5b74, type: 3}
+  m_Mesh: {fileID: 4300022, guid: 171326d97d6bd4ce0917af20320b5b74, type: 3}
 --- !u!61 &61601014287861716
 BoxCollider2D:
   m_ObjectHideFlags: 1
