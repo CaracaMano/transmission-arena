@@ -31,6 +31,8 @@ public class Projectile : MonoBehaviour {
 			case "Player":
 				other.GetComponent<Player>().GetShot(this);
 				break;
+			case "Portal":
+				break;
 			default:
 				AutoDestroy();
 				break;
