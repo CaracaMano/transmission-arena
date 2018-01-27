@@ -22,12 +22,13 @@ public class AudioPool : MonoBehaviour
         }
     }
 
-    public void PlayAudio(AudioClip clip, float pitch = 1, float volume = 1)
+    public void PlayAudio(AudioClip clip, float pitch = 1, float volume = 1, bool loop = false)
     {
         var src = Source;
         src.volume = volume;
         src.pitch = pitch;
         src.clip = clip;
+        src.loop = loop;
         src.Play();
     }
 }
