@@ -172,7 +172,7 @@ public class Player : MonoBehaviour {
 
 		Vector3 currentScale = projectile.transform.localScale;
 		
-		projectile.transform.localScale = new Vector3(transform.localScale.x, currentScale.y, currentScale.z);
+		projectile.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), currentScale.y, currentScale.z);
 
 		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
 		projBody.velocity = new Vector2(transform.localScale.x * 10, 0);
