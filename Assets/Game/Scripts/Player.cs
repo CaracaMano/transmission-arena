@@ -13,7 +13,9 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public SpriteRenderer sprite;
 
-	[HideInInspector]
+    private bool hasCrown = false;
+    
+    [HideInInspector]
 	public Jump jump;
 
 	[HideInInspector] 
@@ -33,6 +35,18 @@ public class Player : MonoBehaviour {
 
 	public Transform ShootDirection;
 	public GameObject ProjectileObject;
+
+    private GameObject crown;
+
+    public void pickCrown()
+    {
+        crown.GetComponent<Renderer>().enabled = true;
+    }
+    public void loseCrown()
+    {
+        crown.GetComponent<Renderer>().enabled = false;
+
+    }
 
     private bool previousGrounded = true;
     public bool isGrounded {
@@ -70,6 +84,8 @@ public class Player : MonoBehaviour {
 		sprite = GetComponent<SpriteRenderer>();
 		
         sprite.color = playerColor;
+
+        crown = this.transform.Find("crown").gameObject;
 	}
 
 
@@ -128,6 +144,8 @@ public class Player : MonoBehaviour {
 			FadeOutIn(projectile.source.transform);
 			
 			projectile.AutoDestroy();
+
+            loseCrown();
 		}
 	}
 
