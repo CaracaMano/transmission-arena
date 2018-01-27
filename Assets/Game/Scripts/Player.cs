@@ -220,7 +220,11 @@ public class Player : MonoBehaviour {
 		anim.SetTrigger ("MakeItIdle");
 	}
 
-	public void RotateTweenAnimation(){
-		
+	public void FlipPlayerXTween(){
+
+		float time = 0.2f;
+
+		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).Loops();
+
 	}
 }
