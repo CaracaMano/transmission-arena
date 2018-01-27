@@ -8,16 +8,20 @@ public class Player : MonoBehaviour {
 
 	[HideInInspector]
 	public Jump jump;
+
+    [HideInInspector]
+    public Walk walk;
 	
 	public Rigidbody2D body;
 	
 	public Skill currentSpecialSkill;
+
+    public Color color;
 	
 	// Use this for initialization
 	void Start () {
-		
 		jump = new Jump();
-		
+        walk = new Walk();
 	}
 	
 	// Update is called once per frame
