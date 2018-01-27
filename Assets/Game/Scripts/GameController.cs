@@ -58,20 +58,57 @@ public class GameController : MonoBehaviour {
 		}
 
 		foreach (var playerPrefix in playersPrefix) {
-			HandleControls(playerPrefix, players[playerPrefix]);
+
+            
+            if (players[playerPrefix].isNPC == true)
+            {
+                HandleButtons(playerPrefix, players[playerPrefix]);
+            }
+              
+            else
+            {
+                if (!players[playerPrefix].wasStunned)
+                {
+                    HandleControls(playerPrefix, players[playerPrefix]);
+                }
+            }
 		}
 
 		
 	}
 
+    
+    void HandleButtons(string playerPrefix, Player player) {
+        float horizontalTranslation = Input.GetAxis("Horizontal");
+        if (horizontalTranslation != 0)
+        {
+            player.walk.UseSkill(player, horizontalTranslation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump(player);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            player.shoot.UseSkill(player);
+        }
+    }
+
+    void Jump(Player player)
+    {
+        player.jump.UseSkill(player);
+        player.GetComponent<Animator>().SetBool("Jumping?", true);
+    }
+     
 	void HandleControls(string playerPrefix, Player player) {
 		if (Input.GetButtonDown(playerPrefix + SHOOT_ACTION)) {
 			player.shoot.UseSkill(player);
 		}
 
 		if (Input.GetButtonDown(playerPrefix + JUMP_ACTION)) {
-			player.jump.UseSkill(player);
-            player.GetComponent<Animator>().SetBool("Jumping?",true);
+            Jump(player);
         }
 
 		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
@@ -84,6 +121,5 @@ public class GameController : MonoBehaviour {
         {
             player.walk.UseSkill(player, horizontalTranslation);
         }
-
 	}
 }

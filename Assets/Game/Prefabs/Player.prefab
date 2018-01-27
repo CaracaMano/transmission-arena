@@ -302,6 +302,8 @@ MonoBehaviour:
   jump: {fileID: 0}
   shoot: {fileID: 0}
   CanShoot: 1
+  wasStunned: 0
+  stunnedTimeInSeconds: 3
   walk: {fileID: 0}
   body: {fileID: 50355886710383842}
   currentSpecialSkill: {fileID: 0}

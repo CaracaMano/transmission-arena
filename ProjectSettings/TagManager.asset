@@ -6,7 +6,7 @@ TagManager:
   tags:
   - players
   - Projectile
-  - Portal
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -20,7 +20,7 @@ TagManager:
   - Projectile
   - Player
   - PlayerBumper
-  - Portal
+  - 
   - 
   - 
   - 
