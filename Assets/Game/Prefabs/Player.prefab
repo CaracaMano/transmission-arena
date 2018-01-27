@@ -349,10 +349,9 @@ MonoBehaviour:
   audioPool: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: c75bb80bc092f984b907e9a8163f0b6b, type: 3}
   shootSound: {fileID: 8300000, guid: 61fae06c29bb061498481ddd1850f512, type: 3}
-  StunnedSound: {fileID: 8300000, guid: 98e163eb9cb70b84bbb7b22dc7a1a8b3, type: 3}
+  StunnedSound: {fileID: 8300000, guid: 0ef1f50db138d984ca7cc7b4074c1b2f, type: 3}
   changeSound: {fileID: 8300000, guid: b78ae473506a0374790bf7605f33ec0f, type: 3}
-  looseCrownSound: {fileID: 8300000, guid: 0ef1f50db138d984ca7cc7b4074c1b2f, type: 3}
-  getShootSound: {fileID: 8300000, guid: 23c64da08418acb4fbae8d1148ad2150, type: 3}
+  getCrownSound: {fileID: 8300000, guid: 98e163eb9cb70b84bbb7b22dc7a1a8b3, type: 3}
 --- !u!212 &212004388618127180
 SpriteRenderer:
   m_ObjectHideFlags: 1

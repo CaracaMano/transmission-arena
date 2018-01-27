@@ -172,10 +172,10 @@ public class Player : MonoBehaviour {
 
 		Vector3 currentScale = projectile.transform.localScale;
 		
-		projectile.transform.localScale = new Vector3(transform.localScale.x, currentScale.y, currentScale.z);
+		projectile.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), currentScale.y, currentScale.z);
 
 		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
-		projBody.velocity = new Vector2(transform.localScale.x * 10, 0);
+		projBody.velocity = new Vector2(Mathf.Abs(transform.localScale.x) * 10, 0);
 	}
 
 	public void GetShot(Projectile projectile) {
@@ -218,5 +218,13 @@ public class Player : MonoBehaviour {
 
 	public void MakeItIdle(){
 		anim.SetTrigger ("MakeItIdle");
+	}
+
+	public void FlipPlayerXTween(){
+
+		float time = 0.2f;
+
+		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).Loops();
+
 	}
 }
