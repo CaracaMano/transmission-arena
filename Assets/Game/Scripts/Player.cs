@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public bool isNPC = false;
 
     public Transform groundCheck;
+	public Transform groundCheck2;
 	public Transform wallCheck;
 	public Transform wallCheck2;
 
@@ -40,7 +41,8 @@ public class Player : MonoBehaviour {
 
     public Color playerColor;
 
-    private Animator anim;
+	[HideInInspector]
+    public Animator anim;
 
 	public Transform ShootDirection;
 	public GameObject ProjectileObject;
@@ -51,15 +53,27 @@ public class Player : MonoBehaviour {
 
     public Transform crownHeadTransform;
 
+    public AudioPool audioPool;
+
+    public AudioClip jumpSound;
+    public AudioClip shootSound;
+    public AudioClip StunnedSound;
+    public AudioClip changeSound;
+    public AudioClip getCrownSound;
+
+
     public void pickCrown()
     {
         crown.GetComponent<Renderer>().enabled = true;
+        audioPool.PlayAudio(getCrownSound);
         hasCrown = true;
     }
     public void loseCrown()
     {
         if (hasCrown)
         {
+            
+
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
@@ -83,8 +97,9 @@ public class Player : MonoBehaviour {
 
             int layerMask = LayerMask.NameToLayer("Stage");
             RaycastHit2D hit = Physics2D.Linecast(transform.position, groundCheck.position, 1 << layerMask);
+	        RaycastHit2D hit2 = Physics2D.Linecast(transform.position, groundCheck2.position, 1 << layerMask);
 
-            return hit.collider != null;
+            return hit.collider != null || hit2.collider != null;
         }
     }
 	
@@ -111,17 +126,21 @@ public class Player : MonoBehaviour {
         sprite.color = playerColor;
 
         crown = this.transform.Find("crown").gameObject;
+        
+        audioPool = FindObjectOfType<AudioPool>();
 	}
 
 	
 	// Update is called once per frame
 	void Update () {
-        anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
+		
+		anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
 
         bool grounded = isGrounded;
         if (previousGrounded == false && grounded == true)
         {
             anim.SetBool("Jumping?", false);
+			this.MakeItIdle ();
         }
         previousGrounded = grounded;
 
@@ -153,7 +172,7 @@ public class Player : MonoBehaviour {
 
 		Vector3 currentScale = projectile.transform.localScale;
 		
-		projectile.transform.localScale = new Vector3(transform.localScale.x, currentScale.y, currentScale.z);
+		projectile.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), currentScale.y, currentScale.z);
 
 		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
 		projBody.velocity = new Vector2(transform.localScale.x * 10, 0);
@@ -161,6 +180,7 @@ public class Player : MonoBehaviour {
 
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
+
             loseCrown();
 
             var thisPos = transform.position;
@@ -180,6 +200,8 @@ public class Player : MonoBehaviour {
 
         this.anim.SetBool("Stunned?", true);
 
+        audioPool.PlayAudio(this.StunnedSound);
+
         yield return new WaitForSeconds(stunnedTimeInSeconds);
         this.wasStunned = false;
         this.anim.SetBool("Stunned?", false);
@@ -196,5 +218,13 @@ public class Player : MonoBehaviour {
 
 	public void MakeItIdle(){
 		anim.SetTrigger ("MakeItIdle");
+	}
+
+	public void FlipPlayerXTween(){
+
+		float time = 0.2f;
+
+		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).Loops();
+
 	}
 }

@@ -7,9 +7,8 @@ public class Jump : Skill {
 
     public GameObject groundCheck;
 	// Use this for initialization
-	void Start () {
-	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -20,6 +19,10 @@ public class Jump : Skill {
        if (player.isGrounded)
        {
             player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
+
+            player.GetComponent<Animator>().SetBool("Jumping?", true);
+
+            player.audioPool.PlayAudio(player.jumpSound);
        }
 	}
 

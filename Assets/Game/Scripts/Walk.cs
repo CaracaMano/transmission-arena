@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Walk : Skill {
@@ -24,7 +25,8 @@ public class Walk : Skill {
         if (currentDirection != direction)
         {
             Vector3 currentScale = player.transform.localScale;
-            player.transform.localScale = new Vector3( -1 * currentScale.x, currentScale.y, currentScale.z);
+            //player.transform.localScale = new Vector3( -1 * currentScale.x, currentScale.y, currentScale.z);
+	        player.transform.DOScaleX(-1 * Mathf.Sign(currentScale.x), 0.2f);
             currentDirection = direction;
         }
 	}

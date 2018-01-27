@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
 	private float GameTimer = 60;
+
+	private bool gameFinished;
+	public List<ParticleSystem> PartyParticleSystems;
 	
 	public Dictionary<string, Player> players = new Dictionary<string,Player>();
 	public List<string> playersPrefix = new List<string>();
@@ -33,7 +37,30 @@ public class GameController : MonoBehaviour {
 	}
 
 	void EndGame() {
+		if (!gameFinished) {
+			WinAnimationRun();
+		}
+		
+		gameFinished = true;
 		Debug.Log("End Game! Winner: " + WinCondition.winner.PlayerName);	
+	}
+	
+	void WinAnimationRun() {
+		var winnerTrans = WinCondition.winner.transform;
+		
+		WinCondition.winner.anim.SetBool("Dancing?", true);
+	
+		Tween cameraAnimation = Camera.main.gameObject.transform.DOMove(new Vector3(
+			winnerTrans.position.x,
+			winnerTrans.position.y + 1,
+			winnerTrans.position.z - 5
+		), 1).SetDelay(2).Play();
+	
+		cameraAnimation.onComplete += delegate {
+		foreach (var particleSystem in PartyParticleSystems) {
+			particleSystem.Play();
+			}
+		};
 	}
 
 	// Update is called once per frame
@@ -58,31 +85,29 @@ public class GameController : MonoBehaviour {
 		}
 
 		foreach (var playerPrefix in playersPrefix) {
+            if (!players[playerPrefix].wasStunned)
+            {
+                if (players[playerPrefix].isNPC == true)
+                {
+                    HandleButtons(playerPrefix, players[playerPrefix]);
+                }
 
-            
-            if (players[playerPrefix].isNPC == true)
-            {
-                HandleButtons(playerPrefix, players[playerPrefix]);
-            }
-              
-            else
-            {
-                if (!players[playerPrefix].wasStunned)
+                else
                 {
                     HandleControls(playerPrefix, players[playerPrefix]);
-                }
+                } 
             }
 		}
-
-		
 	}
-
-    
+	
     void HandleButtons(string playerPrefix, Player player) {
-        float horizontalTranslation = Input.GetAxis("Horizontal");
-        if (horizontalTranslation != 0)
+        if ((Input.GetKey(KeyCode.RightArrow)))
         {
-            player.walk.UseSkill(player, horizontalTranslation);
+            player.walk.UseSkill(player, 1);
+        }
+        if ((Input.GetKey(KeyCode.LeftArrow)))
+        {
+            player.walk.UseSkill(player, -1);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -99,7 +124,6 @@ public class GameController : MonoBehaviour {
     void Jump(Player player)
     {
         player.jump.UseSkill(player);
-        player.GetComponent<Animator>().SetBool("Jumping?", true);
     }
      
 	void HandleControls(string playerPrefix, Player player) {
