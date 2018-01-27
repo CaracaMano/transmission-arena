@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 	public GameConstants gameConstants;
 
     public Transform groundCheck;
+	public Transform groundCheck2;
 	public Transform wallCheck;
 	public Transform wallCheck2;
 
@@ -80,8 +81,9 @@ public class Player : MonoBehaviour {
 
             int layerMask = LayerMask.NameToLayer("Stage");
             RaycastHit2D hit = Physics2D.Linecast(transform.position, groundCheck.position, 1 << layerMask);
+	        RaycastHit2D hit2 = Physics2D.Linecast(transform.position, groundCheck2.position, 1 << layerMask);
 
-            return hit.collider != null;
+            return hit.collider != null || hit2.collider != null;
         }
     }
 	
