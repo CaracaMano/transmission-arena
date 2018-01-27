@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
+
+
     public void addPlayer(string name, Player player)
     {
         players.Add(name, player);
@@ -30,6 +32,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		WinCondition.ConditionReached = EndGame;
+        
 	}
 
 	void EndGame() {
@@ -58,31 +61,31 @@ public class GameController : MonoBehaviour {
 		}
 
 		foreach (var playerPrefix in playersPrefix) {
+            if (!players[playerPrefix].wasStunned)
+            {
+                if (players[playerPrefix].isNPC == true)
+                {
+                    HandleButtons(playerPrefix, players[playerPrefix]);
+                }
 
-            
-            if (players[playerPrefix].isNPC == true)
-            {
-                HandleButtons(playerPrefix, players[playerPrefix]);
-            }
-              
-            else
-            {
-                if (!players[playerPrefix].wasStunned)
+                else
                 {
                     HandleControls(playerPrefix, players[playerPrefix]);
-                }
+                } 
             }
 		}
 
 		
 	}
-
     
     void HandleButtons(string playerPrefix, Player player) {
-        float horizontalTranslation = Input.GetAxis("Horizontal");
-        if (horizontalTranslation != 0)
+        if ((Input.GetKey(KeyCode.RightArrow)))
         {
-            player.walk.UseSkill(player, horizontalTranslation);
+            player.walk.UseSkill(player, 1);
+        }
+        if ((Input.GetKey(KeyCode.LeftArrow)))
+        {
+            player.walk.UseSkill(player, -1);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
