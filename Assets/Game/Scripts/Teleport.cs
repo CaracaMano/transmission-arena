@@ -14,7 +14,7 @@ public class Teleport : MonoBehaviour {
     {
         Transform ob = collider.transform;
 
-        Transform safeAreaTransform = destiny.GetChild(0).transform;
+        Transform safeAreaTransform = destiny.transform;
         ob.transform.position = safeAreaTransform.position;
 
         Player player = collider.GetComponent<Player>();
