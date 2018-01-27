@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23083fdb07e76482d9ac8753ee0f1edd, type: 3}
   m_Name: DefaultConfigs
   m_EditorClassIdentifier: 
-  JUMP_FORCE: 200
+  JUMP_FORCE: 300
   WALK_SPEED: 5

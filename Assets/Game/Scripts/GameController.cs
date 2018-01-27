@@ -5,23 +5,23 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-	public Player player1;
-
-	public Dictionary<string, Player> players;
-	private List<string> playersPrefix;
+	public Dictionary<string, Player> players = new Dictionary<string,Player>();
+	private List<string> playersPrefix = new List<string>();
 
 	private const string SHOOT_ACTION = "a0";
 	private const string JUMP_ACTION = "a1";
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
-	
+
+    public void addPlayer(string name, Player player)
+    {
+        players.Add(name, player);
+        playersPrefix.Add(name);
+    }
+
 	// Use this for initialization
 	void Start () {
-		players = new Dictionary<string, Player>();
-		
-		players.Add("j1", player1);
 
-		playersPrefix = players.Keys.ToList();
 	}
 	
 	
