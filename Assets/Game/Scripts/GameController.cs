@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,9 +21,6 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
-	private bool gameFinished;
-	public List<ParticleSystem> PartyParticleSystems;
-
     public void addPlayer(string name, Player player)
     {
         players.Add(name, player);
@@ -34,16 +30,9 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		WinCondition.ConditionReached = EndGame;
-        
 	}
 
 	void EndGame() {
-
-		if (!gameFinished) {
-			WinAnimationRun();
-		}
-		
-		gameFinished = true;
 		Debug.Log("End Game! Winner: " + WinCondition.winner.PlayerName);	
 	}
 
@@ -62,43 +51,26 @@ public class GameController : MonoBehaviour {
 			}
 		}
 		else {
-			int minutes = Mathf.FloorToInt(GameTimer / 60f);
-			int seconds = Mathf.FloorToInt(GameTimer % 60f);
+			int minutes = Mathf.RoundToInt(GameTimer / 60f);
+			int seconds = Mathf.RoundToInt(GameTimer % 60f);
 
-			TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+			TimerText.text = minutes + ":" + seconds;
 		}
 
-		if (WinCondition.winner == null) {
-			foreach (var playerPrefix in playersPrefix) {
-				if (!players[playerPrefix].wasStunned) {
-					if (players[playerPrefix].isNPC == true) {
-						HandleButtons(playerPrefix, players[playerPrefix]);
-					}
+		foreach (var playerPrefix in playersPrefix) {
+            if (!players[playerPrefix].wasStunned)
+            {
+                if (players[playerPrefix].isNPC == true)
+                {
+                    HandleButtons(playerPrefix, players[playerPrefix]);
+                }
 
-					else {
-						HandleControls(playerPrefix, players[playerPrefix]);
-					}
-				}
-			}
+                else
+                {
+                    HandleControls(playerPrefix, players[playerPrefix]);
+                } 
+            }
 		}
-	}
-
-	void WinAnimationRun() {
-		var winnerTrans = WinCondition.winner.transform;
-		
-		WinCondition.winner.anim.SetBool("Dancing?", true);
-		
-		Tween cameraAnimation = Camera.main.gameObject.transform.DOMove(new Vector3(
-			winnerTrans.position.x,
-			winnerTrans.position.y + 1,
-			winnerTrans.position.z - 5
-		), 1).SetDelay(2).Play();
-		
-		cameraAnimation.onComplete += delegate {
-			foreach (var particleSystem in PartyParticleSystems) {
-				particleSystem.Play();	
-			}
-		};
 	}
     
     void HandleButtons(string playerPrefix, Player player) {
@@ -125,7 +97,6 @@ public class GameController : MonoBehaviour {
     void Jump(Player player)
     {
         player.jump.UseSkill(player);
-        player.GetComponent<Animator>().SetBool("Jumping?", true);
     }
      
 	void HandleControls(string playerPrefix, Player player) {

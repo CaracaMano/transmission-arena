@@ -53,6 +53,16 @@ public class Player : MonoBehaviour {
 
     public Transform crownHeadTransform;
 
+    public AudioPool audioPool;
+
+    public AudioClip jumpSound;
+    public AudioClip shootSound;
+    public AudioClip StunnedSound;
+    public AudioClip changeSound;
+    public AudioClip looseCrownSound;
+    public AudioClip getShootSound;
+
+
     public void pickCrown()
     {
         crown.GetComponent<Renderer>().enabled = true;
@@ -62,6 +72,8 @@ public class Player : MonoBehaviour {
     {
         if (hasCrown)
         {
+            audioPool.PlayAudio(looseCrownSound);
+
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
@@ -114,6 +126,8 @@ public class Player : MonoBehaviour {
         sprite.color = playerColor;
 
         crown = this.transform.Find("crown").gameObject;
+        
+        audioPool = FindObjectOfType<AudioPool>();
 	}
 
 	
@@ -166,6 +180,8 @@ public class Player : MonoBehaviour {
 
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
+
+            audioPool.PlayAudio(getShootSound);
             loseCrown();
 
             var thisPos = transform.position;
@@ -184,6 +200,8 @@ public class Player : MonoBehaviour {
         this.wasStunned = true;
 
         this.anim.SetBool("Stunned?", true);
+
+        audioPool.PlayAudio(this.StunnedSound);
 
         yield return new WaitForSeconds(stunnedTimeInSeconds);
         this.wasStunned = false;
