@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AudioPool : MonoBehaviour
 {
-    private List<AudioSource> sources;
+    private List<AudioSource> sources = new List<AudioSource>();
 
     private AudioSource Source
     {

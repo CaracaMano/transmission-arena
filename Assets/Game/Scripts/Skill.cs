@@ -6,6 +6,17 @@ public class Skill : MonoBehaviour {
 
 	public const int JUMP_FORCE = 10;
 
+
+    protected AudioPool audioPool;
+
+
+
+    protected void Init()
+    {
+        audioPool = FindObjectOfType<AudioPool>();
+    }
+
+
 	// Use this for initialization
 	void Start () {
 		

@@ -21,8 +21,6 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
-
-
     public void addPlayer(string name, Player player)
     {
         players.Add(name, player);
@@ -32,7 +30,6 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		WinCondition.ConditionReached = EndGame;
-        
 	}
 
 	void EndGame() {
@@ -74,8 +71,6 @@ public class GameController : MonoBehaviour {
                 } 
             }
 		}
-
-		
 	}
     
     void HandleButtons(string playerPrefix, Player player) {
@@ -102,7 +97,6 @@ public class GameController : MonoBehaviour {
     void Jump(Player player)
     {
         player.jump.UseSkill(player);
-        player.GetComponent<Animator>().SetBool("Jumping?", true);
     }
      
 	void HandleControls(string playerPrefix, Player player) {

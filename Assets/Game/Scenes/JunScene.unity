@@ -470,6 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309709945}
   - component: {fileID: 309709944}
+  - component: {fileID: 309709946}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -509,6 +510,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309709946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309709943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de64540e006b4e31a86b23d625854af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &398525176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1488,7 @@ MonoBehaviour:
   playersPrefix: []
   WinCondition: {fileID: 1762047051}
   TimerText: {fileID: 724159980}
+  jumpSound: {fileID: 8300000, guid: c75bb80bc092f984b907e9a8163f0b6b, type: 3}
 --- !u!4 &1762047050
 Transform:
   m_ObjectHideFlags: 0
