@@ -175,7 +175,7 @@ public class Player : MonoBehaviour {
 		projectile.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), currentScale.y, currentScale.z);
 
 		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
-		projBody.velocity = new Vector2(Mathf.Abs(transform.localScale.x) * 10, 0);
+		projBody.velocity = new Vector2(Mathf.Sign(transform.localScale.x) * 10, 0);
 	}
 
 	public void GetShot(Projectile projectile) {
@@ -224,7 +224,7 @@ public class Player : MonoBehaviour {
 
 		float time = 0.2f;
 
-		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).Loops();
+		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).SetLoops(-1);
 
 	}
 }

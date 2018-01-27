@@ -4,6 +4,7 @@ using System.Linq;
 using System.Timers;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
@@ -38,7 +39,7 @@ public class GameController : MonoBehaviour {
 
 	void EndGame() {
 		if (!gameFinished) {
-			WinAnimationRun();
+			Invoke("WinAnimationRun", 2);
 		}
 		
 		gameFinished = true;
@@ -49,6 +50,7 @@ public class GameController : MonoBehaviour {
 		var winnerTrans = WinCondition.winner.transform;
 		
 		WinCondition.winner.anim.SetBool("Dancing?", true);
+		WinCondition.winner.FlipPlayerXTween ();
 	
 		Tween cameraAnimation = Camera.main.gameObject.transform.DOMove(new Vector3(
 			winnerTrans.position.x,
@@ -78,10 +80,10 @@ public class GameController : MonoBehaviour {
 			}
 		}
 		else {
-			int minutes = Mathf.RoundToInt(GameTimer / 60f);
-			int seconds = Mathf.RoundToInt(GameTimer % 60f);
+			int minutes = Mathf.FloorToInt(GameTimer / 60f);
+			int seconds = Mathf.FloorToInt(GameTimer % 60f);
 
-			TimerText.text = minutes + ":" + seconds;
+			TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 		}
 
 		if (WinCondition.winner == null) {
@@ -99,6 +101,11 @@ public class GameController : MonoBehaviour {
 					} 
 				}
 			}	
+		}
+		else {
+			if (Input.GetButtonDown("Submit")) {
+				SceneManager.LoadScene("JunScene");	
+			}
 		}
 	}
 	

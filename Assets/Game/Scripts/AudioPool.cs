@@ -5,6 +5,8 @@ public class AudioPool : MonoBehaviour
 {
     private List<AudioSource> sources = new List<AudioSource>();
 
+    private AudioSource musicSource;
+
     private AudioSource Source
     {
         get
@@ -29,5 +31,19 @@ public class AudioPool : MonoBehaviour
         src.pitch = pitch;
         src.clip = clip;
         src.Play();
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (musicSource != null)
+        {
+            musicSource.Stop();
+        }
+        musicSource = Source;
+        musicSource.volume = 1;
+        musicSource.pitch = 1;
+        musicSource.loop = true;
+        musicSource.clip = clip;
+        musicSource.Play();
     }
 }
