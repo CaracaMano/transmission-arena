@@ -8,7 +8,7 @@ public class Shoot : Skill {
         if (player.CanShoot) {
             player.Shoot();
             player.CanShoot = false;
-            //player.sprite.color = player.gameConstants.GRAY_COLOR;
+            player.GetComponent<Animator>().SetTrigger("MakeItAttack");
         }
         
     }
