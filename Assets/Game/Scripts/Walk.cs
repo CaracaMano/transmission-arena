@@ -21,9 +21,6 @@ public class Walk : Skill {
 
         player.body.velocity = new Vector2(amount * player.gameConstants.WALK_SPEED, player.body.velocity.y);
 
-        
-
-
         float direction = 1;
         if(amount < 0)
             direction = -1;

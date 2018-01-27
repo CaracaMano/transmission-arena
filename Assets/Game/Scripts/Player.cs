@@ -8,8 +8,13 @@ public class Player : MonoBehaviour {
 
     public Transform groundCheck;
 
+	private SpriteRenderer sprite;
+
 	[HideInInspector]
 	public Jump jump;
+
+	[HideInInspector] 
+	public Shoot shoot;
 
     [HideInInspector]
     public Walk walk;
@@ -21,6 +26,9 @@ public class Player : MonoBehaviour {
     public Color playerColor;
 
     private Animator anim;
+
+	public Transform ShootDirection;
+	public GameObject ProjectileObject;
 
     private bool previousGrounded = true;
     public bool isGrounded {
@@ -38,9 +46,12 @@ public class Player : MonoBehaviour {
 	void Start () {
 		jump = new Jump();
         walk = new Walk();
+		shoot = new Shoot();
         anim = GetComponent<Animator>();
 
-        GetComponent<SpriteRenderer>().color = playerColor;
+		sprite = GetComponent<SpriteRenderer>();
+		
+        sprite.color = playerColor;
 	}
 
 
@@ -65,5 +76,23 @@ public class Player : MonoBehaviour {
 
 	public void ForgetSkill(Skill skill) {
 		currentSpecialSkill = null;
+	}
+
+	public void Shoot() {
+		GameObject projectile = Instantiate(ProjectileObject);
+
+		Projectile projectileScript = projectile.GetComponent<Projectile>(); 
+		
+		projectileScript.source = this;
+		projectileScript.sprite.color = playerColor;
+
+		projectile.transform.position = ShootDirection.position;
+
+		Vector3 currentScale = projectile.transform.localScale;
+		
+		projectile.transform.localScale = new Vector3(transform.localScale.x, currentScale.y, currentScale.z);
+
+		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
+		projBody.velocity = new Vector2(transform.localScale.x * 10, 0);
 	}
 }
