@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public string PlayerName;
+	
 	public GameConstants gameConstants;
 
     public bool isNPC = false;
@@ -15,7 +17,7 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public SpriteRenderer sprite;
 
-    private bool hasCrown = false;
+    public bool hasCrown = false;
     
     [HideInInspector]
 	public Jump jump;
@@ -121,7 +123,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        anim.SetBool("Running?",Mathf.Abs(body.velocity.x) > 0);
+        anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
 
         bool grounded = isGrounded;
         if (previousGrounded == false && grounded == true)

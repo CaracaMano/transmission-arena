@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
 
             player.playerColor = colors[i];
 
+            player.PlayerName = "Player " + (i + 1); 
+
             gameController.addPlayer("j" + (i + 1), player);
         }
 
