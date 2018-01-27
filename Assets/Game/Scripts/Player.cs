@@ -118,12 +118,14 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
+		
+		anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
 
         bool grounded = isGrounded;
         if (previousGrounded == false && grounded == true)
         {
             anim.SetBool("Jumping?", false);
+			this.MakeItIdle ();
         }
         previousGrounded = grounded;
 
