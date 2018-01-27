@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public GameController gameController;
     private Transform playerGroupTransform;
+
+    public List<Color> colors;
 
     private GameObject createPlayer(Vector2 position) { 
         GameObject prefab = Resources.Load ("Player") as GameObject;
@@ -25,6 +28,8 @@ public class GameManager : MonoBehaviour
             Transform respawnTransform = respawnGroup.transform.GetChild(i);
             GameObject p = createPlayer(respawnTransform.position);
             Player player = p.GetComponent<Player>();
+
+            player.playerColor = colors[i];
 
             gameController.addPlayer("j" + (i + 1), player);
         }
