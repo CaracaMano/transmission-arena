@@ -13,6 +13,9 @@ ModelImporter:
     100010: Stone
     100012: StoneHalf
     100014: Water
+    100016: DirtSlab
+    100018: GrassSlab
+    100020: StoneSlab
     400000: //RootNode
     400002: Dirt
     400004: DirtHalf
@@ -21,6 +24,9 @@ ModelImporter:
     400010: Stone
     400012: StoneHalf
     400014: Water
+    400016: DirtSlab
+    400018: GrassSlab
+    400020: StoneSlab
     2100000: Material.001
     2100002: Material
     2300000: //RootNode
@@ -31,6 +37,9 @@ ModelImporter:
     2300010: Stone
     2300012: StoneHalf
     2300014: Water
+    2300016: DirtSlab
+    2300018: GrassSlab
+    2300020: StoneSlab
     3300000: //RootNode
     3300002: Dirt
     3300004: DirtHalf
@@ -39,6 +48,9 @@ ModelImporter:
     3300010: Stone
     3300012: StoneHalf
     3300014: Water
+    3300016: DirtSlab
+    3300018: GrassSlab
+    3300020: StoneSlab
     4300000: Cube
     4300002: StoneHalf
     4300004: GrassHalf
@@ -47,6 +59,9 @@ ModelImporter:
     4300010: Dirt
     4300012: Grass
     4300014: Water
+    4300016: DirtSlab
+    4300018: StoneSlab
+    4300020: GrassSlab
   externalObjects: {}
   materials:
     importMaterials: 1
