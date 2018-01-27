@@ -11,5 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23083fdb07e76482d9ac8753ee0f1edd, type: 3}
   m_Name: DefaultConfigs
   m_EditorClassIdentifier: 
-  JUMP_FORCE: 300
+  JUMP_FORCE: 650
   WALK_SPEED: 5
+  WALK_ACCELERATION: 100
+  ACCELERATION_ON_AIR: 30
+  PROJECTILE_DISMISS_TIME_S: 1.5
+  KNOCKBACK_SPEED: 5
+  SHOOT_COOLDOWN_TIME_S: 1
+  SPECIAL_SKILL_TIME_S: 1
+  SWAP_TIME_S: 0.5
+  GRAY_COLOR: {r: 0, g: 0, b: 0, a: 0}

@@ -6,22 +6,18 @@ public class Walk : Skill {
 
     private float currentDirection = 1;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public override void UseSkill(Player player, float amount) {
 		base.UseSkill(player);
 
-        player.body.velocity = new Vector2(amount * player.gameConstants.WALK_SPEED, player.body.velocity.y);
+		if (Mathf.Abs(player.body.velocity.x) < player.gameConstants.WALK_SPEED && !player.isOnWall) {
+			player.body.AddForce(new Vector2(amount * player.gameConstants.WALK_ACCELERATION, 0));	
+		}
 
-        float direction = 1;
+		if (!player.isGrounded && !player.isOnWall) {
+			player.body.AddForce(new Vector2(amount * player.gameConstants.ACCELERATION_ON_AIR, 0));
+		}
+
+		float direction = 1;
         if(amount < 0)
             direction = -1;
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
@@ -7,14 +8,17 @@ public class Player : MonoBehaviour {
 	public GameConstants gameConstants;
 
     public Transform groundCheck;
+	public Transform wallCheck;
 
-	private SpriteRenderer sprite;
+	[HideInInspector]
+	public SpriteRenderer sprite;
 
 	[HideInInspector]
 	public Jump jump;
 
 	[HideInInspector] 
 	public Shoot shoot;
+	public bool CanShoot = true;
 
     [HideInInspector]
     public Walk walk;
@@ -42,6 +46,20 @@ public class Player : MonoBehaviour {
         }
     }
 	
+	// TODO too ineficient change it
+	public bool isOnWall {
+		get {
+			int layerMask = LayerMask.NameToLayer("Stage");
+			RaycastHit2D hit = Physics2D.Linecast(transform.position, wallCheck.position, 1 << layerMask);
+
+			if (hit.collider != null) {
+				Debug.Log("ON WALL");	
+			}
+			
+			return hit.collider != null;
+		}
+	}
+	
 	// Use this for initialization
 	void Start () {
 		jump = new Jump();
@@ -66,6 +84,11 @@ public class Player : MonoBehaviour {
             anim.SetBool("Jumping?", false);
         }
         previousGrounded = grounded;
+
+		if (Mathf.Abs(body.velocity.x) > gameConstants.WALK_SPEED) {
+			var clampVelocity = new Vector2(transform.localScale.x * gameConstants.WALK_SPEED, body.velocity.y);
+			body.velocity = clampVelocity;
+		}
 	}
 
 	public void LearnSkill(Skill skill) {
@@ -98,13 +121,21 @@ public class Player : MonoBehaviour {
 
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
-			var thisColor = playerColor;
-			playerColor = projectile.source.playerColor;
-			sprite.color = projectile.source.playerColor;
-			projectile.source.playerColor = thisColor;
-
-			projectile.source.sprite.color = thisColor;
+			var thisPos = transform.position;
+			transform.DOMove(projectile.source.transform.position, gameConstants.SWAP_TIME_S);
+			FadeOutIn(transform);
+			projectile.source.transform.DOMove(thisPos, gameConstants.SWAP_TIME_S);
+			FadeOutIn(projectile.source.transform);
+			
 			projectile.AutoDestroy();
 		}
+	}
+
+	private void FadeOutIn(Transform transform) {
+		Tween sequence = DOTween.Sequence().Append(
+			transform.DOScaleY(0.1f, gameConstants.SWAP_TIME_S / 2f)
+		).Append(
+			transform.DOScaleY(1, gameConstants.SWAP_TIME_S / 2f)
+		);
 	}
 }
