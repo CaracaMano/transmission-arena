@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Jump : Skill {
 
+
+    public GameObject groundCheck;
 	// Use this for initialization
 	void Start () {
 	}
@@ -15,6 +17,12 @@ public class Jump : Skill {
 
 	public override void UseSkill(Player player) {
 		base.UseSkill(player);
-		player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
+       if (player.isGrounded)
+       {
+            player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
+       }
 	}
+
+    
+
 }

@@ -46,6 +46,12 @@ public class GameController : MonoBehaviour {
 			Debug.Log(playerPrefix + " uses special action!");
 		}
 		
-		player.body.velocity = new Vector2(20 * Input.GetAxis(playerPrefix + HORIZONTAL_AXIS), 0);
+        float horizontalTranslation = Input.GetAxis(playerPrefix + HORIZONTAL_AXIS);
+
+        if (horizontalTranslation != 0)
+        {
+            player.walk.UseSkill(player, horizontalTranslation);
+        }
+
 	}
 }

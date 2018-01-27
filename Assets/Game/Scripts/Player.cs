@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
 
 	public GameConstants gameConstants;
 
+    public Transform groundCheck;
+
 	[HideInInspector]
 	public Jump jump;
 
@@ -17,11 +19,22 @@ public class Player : MonoBehaviour {
 	public Skill currentSpecialSkill;
 
     public Color color;
+
+
+    public bool isGrounded {
+        get {
+            int layerMask = LayerMask.NameToLayer("Stage");
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, groundCheck.position, 1 << layerMask);
+            return hit.collider != null;
+        }
+    }
 	
 	// Use this for initialization
 	void Start () {
 		jump = new Jump();
         walk = new Walk();
+
+
 	}
 	
 	// Update is called once per frame
