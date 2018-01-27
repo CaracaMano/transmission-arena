@@ -7,13 +7,15 @@ public class GameManager : MonoBehaviour
     public GameController gameController;
     private Transform playerGroupTransform;
 
+    public GameObject playerPrefab;
+
     public List<Color> colors;
 
     private GameObject createPlayer(Vector2 position) { 
-        GameObject prefab = Resources.Load ("Player") as GameObject;
+        GameObject prefab = Instantiate(playerPrefab, playerGroupTransform);
 		prefab.transform.position = position;
 
-        return Instantiate(prefab, playerGroupTransform);
+        return prefab;
     }
     // Use this for initialization
     void Start()
