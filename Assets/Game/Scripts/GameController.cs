@@ -22,8 +22,12 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
+<<<<<<< HEAD
 	private bool gameFinished;
 	public List<ParticleSystem> PartyParticleSystems;
+=======
+
+>>>>>>> 0f260023046dc7fd124f57bc82c67ff0ed0f1bcd
 
     public void addPlayer(string name, Player player)
     {
@@ -34,6 +38,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		WinCondition.ConditionReached = EndGame;
+        
 	}
 
 	void EndGame() {
@@ -69,8 +74,16 @@ public class GameController : MonoBehaviour {
 
 		if (WinCondition.winner == null) {
 			foreach (var playerPrefix in playersPrefix) {
-				HandleControls(playerPrefix, players[playerPrefix]);
-			}	
+				if (!players[playerPrefix].wasStunned) {
+					if (players[playerPrefix].isNPC == true) {
+						HandleButtons(playerPrefix, players[playerPrefix]);
+					}
+
+					else {
+						HandleControls(playerPrefix, players[playerPrefix]);
+					}
+				}
+			}
 		}
 	}
 
@@ -89,15 +102,41 @@ public class GameController : MonoBehaviour {
 			}
 		};
 	}
+    
+    void HandleButtons(string playerPrefix, Player player) {
+        if ((Input.GetKey(KeyCode.RightArrow)))
+        {
+            player.walk.UseSkill(player, 1);
+        }
+        if ((Input.GetKey(KeyCode.LeftArrow)))
+        {
+            player.walk.UseSkill(player, -1);
+        }
 
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump(player);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            player.shoot.UseSkill(player);
+        }
+    }
+
+    void Jump(Player player)
+    {
+        player.jump.UseSkill(player);
+        player.GetComponent<Animator>().SetBool("Jumping?", true);
+    }
+     
 	void HandleControls(string playerPrefix, Player player) {
 		if (Input.GetButtonDown(playerPrefix + SHOOT_ACTION)) {
 			player.shoot.UseSkill(player);
 		}
 
 		if (Input.GetButtonDown(playerPrefix + JUMP_ACTION)) {
-			player.jump.UseSkill(player);
-            player.GetComponent<Animator>().SetBool("Jumping?",true);
+            Jump(player);
         }
 
 		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
@@ -110,6 +149,5 @@ public class GameController : MonoBehaviour {
         {
             player.walk.UseSkill(player, horizontalTranslation);
         }
-
 	}
 }

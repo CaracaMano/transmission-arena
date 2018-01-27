@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
             player.PlayerName = "Player " + (i + 1); 
 
             gameController.addPlayer("j" + (i + 1), player);
+
+            if (respawnTransform.tag.Contains("KeyboardControlled"))
+            {
+                player.isNPC = true;
+            }
         }
 
     }
