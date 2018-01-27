@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Invoke("AutoDestroy", 3);
+		Invoke("AutoDestroy", source.gameConstants.PROJECTILE_DISMISS_TIME_S);
 	}
 	
 	// Update is called once per frame
@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour {
 
 	public void AutoDestroy() {
 		Destroy(gameObject);
+		source.CanShoot = true;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
@@ -31,6 +32,7 @@ public class Projectile : MonoBehaviour {
 				other.GetComponent<Player>().GetShot(this);
 				break;
 			default:
+				AutoDestroy();
 				break;
 		}
 		

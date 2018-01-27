@@ -5,7 +5,12 @@ using UnityEngine;
 public class Shoot : Skill {
     
     public override void UseSkill(Player player) {
-        player.Shoot();
+        if (player.CanShoot) {
+            player.Shoot();
+            player.CanShoot = false;
+            //player.sprite.color = player.gameConstants.GRAY_COLOR;
+        }
+        
     }
     
 }
