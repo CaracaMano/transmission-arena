@@ -78,10 +78,10 @@ public class GameController : MonoBehaviour {
 			}
 		}
 		else {
-			int minutes = Mathf.RoundToInt(GameTimer / 60f);
-			int seconds = Mathf.RoundToInt(GameTimer % 60f);
+			int minutes = Mathf.FloorToInt(GameTimer / 60f);
+			int seconds = Mathf.FloorToInt(GameTimer % 60f);
 
-			TimerText.text = minutes + ":" + seconds;
+			TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 		}
 
 		if (WinCondition.winner == null) {
