@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour {
 
 	void HandleControls(string playerPrefix, Player player) {
 		if (Input.GetButtonDown(playerPrefix + SHOOT_ACTION)) {
-			Debug.Log(playerPrefix + " shoots!");
+			player.shoot.UseSkill(player);
 		}
 
 		if (Input.GetButtonDown(playerPrefix + JUMP_ACTION)) {

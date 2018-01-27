@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - Stage
-  - 
-  - 
+  - Projectile
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Attack
+    uniqueID: 1929514447
     locked: 0
