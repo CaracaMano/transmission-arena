@@ -16,6 +16,13 @@ public class Teleport : MonoBehaviour {
 
         Transform safeAreaTransform = destiny.GetChild(0).transform;
         ob.transform.position = safeAreaTransform.position;
+
+        Player player = collider.GetComponent<Player>();
+        if (player != null)
+        {
+            player.audioPool.PlayAudio(player.teleportSound);
+        }
+
     }
 
 	

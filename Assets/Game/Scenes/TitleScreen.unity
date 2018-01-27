@@ -644,6 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343108866}
   - component: {fileID: 1343108865}
+  - component: {fileID: 1343108867}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -662,6 +663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea5b6bec569e4c388f5ffa7e8c011cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: JunScene
+  themeMusic: {fileID: 8300000, guid: 3fce5b001acb95d4db58002b5da2941d, type: 3}
+  audioPool: {fileID: 1343108867}
 --- !u!4 &1343108866
 Transform:
   m_ObjectHideFlags: 0
@@ -675,6 +679,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343108867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343108864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de64540e006b4e31a86b23d625854af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550138794
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,9 +914,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.13860887
+    y: 0.00019532442
     width: 1
-    height: 0.72278225
+    height: 0.99960935
   near clip plane: 0
   far clip plane: 1000
   field of view: 60

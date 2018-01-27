@@ -60,7 +60,7 @@ public class Player : MonoBehaviour {
     public AudioClip StunnedSound;
     public AudioClip changeSound;
     public AudioClip getCrownSound;
-
+    public AudioClip teleportSound;
 
     public void pickCrown()
     {
