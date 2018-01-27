@@ -16,7 +16,9 @@ public class AudioPool : MonoBehaviour
                     return source;
                 }
             }
-            return gameObject.AddComponent<AudioSource>();
+            var src= gameObject.AddComponent<AudioSource>();
+            sources.Add(src);
+            return src;
         }
     }
 
