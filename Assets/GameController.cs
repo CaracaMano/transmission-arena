@@ -13,10 +13,8 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (Input.GetButtonDown("Fire1")) {
 			player1.jump.UseSkill(player1);
 		}
-		
 	}
 }

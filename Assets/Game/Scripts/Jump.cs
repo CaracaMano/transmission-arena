@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Jump : Skill {
-	
+
 	// Use this for initialization
 	void Start () {
-		
+        this.color = Color.blue;		
 	}
 	
 	// Update is called once per frame
