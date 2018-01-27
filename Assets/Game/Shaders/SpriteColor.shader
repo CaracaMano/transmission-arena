@@ -10,7 +10,7 @@
 			"PreviewType" = "Plane"
 			"CanUseSpriteAtlas" = "True"
 		}
-		//Cull Off
+		Cull Off
 		Lighting Off
 		//ZWrite Off
 		//ZTest Always
