@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,26 +42,73 @@ public class GameController : MonoBehaviour {
 		GameTimer -= Time.deltaTime;
 		if (GameTimer < 0) {
 			WinCondition.CheckCondition();
+			if (WinCondition.winner != null) {
+				TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
+				TimerText.color = WinCondition.winner.playerColor;
+			}
+			else {
+				TimerText.text = "Sudden Death!!!";
+			}
 		}
-		
+		else {
+			int minutes = Mathf.RoundToInt(GameTimer / 60f);
+			int seconds = Mathf.RoundToInt(GameTimer % 60f);
+
+			TimerText.text = minutes + ":" + seconds;
+		}
+
 		foreach (var playerPrefix in playersPrefix) {
-			HandleControls(playerPrefix, players[playerPrefix]);
+
+            
+            if (players[playerPrefix].isNPC == true)
+            {
+                HandleButtons(playerPrefix, players[playerPrefix]);
+            }
+              
+            else
+            {
+                if (!players[playerPrefix].wasStunned)
+                {
+                    HandleControls(playerPrefix, players[playerPrefix]);
+                }
+            }
 		}
 
-		int minutes = Mathf.RoundToInt(GameTimer / 60f);
-		int seconds = Mathf.RoundToInt(GameTimer % 60f);
-
-		TimerText.text = minutes + ":" + seconds;
+		
 	}
 
+    
+    void HandleButtons(string playerPrefix, Player player) {
+        float horizontalTranslation = Input.GetAxis("Horizontal");
+        if (horizontalTranslation != 0)
+        {
+            player.walk.UseSkill(player, horizontalTranslation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump(player);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            player.shoot.UseSkill(player);
+        }
+    }
+
+    void Jump(Player player)
+    {
+        player.jump.UseSkill(player);
+        player.GetComponent<Animator>().SetBool("Jumping?", true);
+    }
+     
 	void HandleControls(string playerPrefix, Player player) {
 		if (Input.GetButtonDown(playerPrefix + SHOOT_ACTION)) {
 			player.shoot.UseSkill(player);
 		}
 
 		if (Input.GetButtonDown(playerPrefix + JUMP_ACTION)) {
-			player.jump.UseSkill(player);
-            player.GetComponent<Animator>().SetBool("Jumping?",true);
+            Jump(player);
         }
 
 		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
@@ -73,6 +121,5 @@ public class GameController : MonoBehaviour {
         {
             player.walk.UseSkill(player, horizontalTranslation);
         }
-
 	}
 }

@@ -9,8 +9,11 @@ public class Player : MonoBehaviour {
 	
 	public GameConstants gameConstants;
 
+    public bool isNPC = false;
+
     public Transform groundCheck;
 	public Transform wallCheck;
+	public Transform wallCheck2;
 
 	[HideInInspector]
 	public SpriteRenderer sprite;
@@ -23,6 +26,10 @@ public class Player : MonoBehaviour {
 	[HideInInspector] 
 	public Shoot shoot;
 	public bool CanShoot = true;
+
+    [HideInInspector] 
+    public bool wasStunned = false;
+    public float stunnedTimeInSeconds = 1;
 
     [HideInInspector]
     public Walk walk;
@@ -56,19 +63,16 @@ public class Player : MonoBehaviour {
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
-
             GameObject crownInstance = Instantiate(crownPrefab) as GameObject;
 
             crownInstance.transform.position = crownHeadTransform.position;
 
             Rigidbody2D body = crownInstance.GetComponent<Rigidbody2D>();
 
-
             int rndX = Random.Range(-200, 200);
             int rndy = Random.Range(200, 400);
 
             body.AddForce(new Vector2(rndX, rndy));
-            
         }
     }
 
@@ -89,12 +93,9 @@ public class Player : MonoBehaviour {
 		get {
 			int layerMask = LayerMask.NameToLayer("Stage");
 			RaycastHit2D hit = Physics2D.Linecast(transform.position, wallCheck.position, 1 << layerMask);
-
-			if (hit.collider != null) {
-				Debug.Log("ON WALL");	
-			}
+			RaycastHit2D hit2 = Physics2D.Linecast(transform.position, wallCheck2.position, 1 << layerMask);
 			
-			return hit.collider != null;
+			return hit.collider != null || hit2.collider != null;
 		}
 	}
 	
@@ -111,7 +112,6 @@ public class Player : MonoBehaviour {
 
         crown = this.transform.Find("crown").gameObject;
 	}
-
 
 	
 	// Update is called once per frame
@@ -170,8 +170,21 @@ public class Player : MonoBehaviour {
 			FadeOutIn(projectile.source.transform);
 			
 			projectile.AutoDestroy();
+
+            StartCoroutine("getStunned");
 		}
 	}
+
+    IEnumerator getStunned() {
+        this.wasStunned = true;
+
+        this.anim.SetBool("Stunned?", true);
+
+        yield return new WaitForSeconds(stunnedTimeInSeconds);
+        this.wasStunned = false;
+        this.anim.SetBool("Stunned?", false);
+        this.MakeItIdle();
+    }
 
 	private void FadeOutIn(Transform transform) {
 		Tween sequence = DOTween.Sequence().Append(

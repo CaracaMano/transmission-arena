@@ -5,7 +5,6 @@ using UnityEngine;
 public class Dash : Skill {
 
 
-    public GameObject groundCheck;
 	// Use this for initialization
 	void Start () {
 	}
