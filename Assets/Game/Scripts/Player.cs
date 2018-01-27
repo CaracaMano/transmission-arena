@@ -41,7 +41,8 @@ public class Player : MonoBehaviour {
 
     public Color playerColor;
 
-    private Animator anim;
+	[HideInInspector]
+    public Animator anim;
 
 	public Transform ShootDirection;
 	public GameObject ProjectileObject;

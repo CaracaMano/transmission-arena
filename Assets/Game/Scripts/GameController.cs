@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	private float GameTimer = 5;
+	private float GameTimer = 60;
 	
 	public Dictionary<string, Player> players = new Dictionary<string,Player>();
 	public List<string> playersPrefix = new List<string>();
@@ -22,12 +22,8 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
-<<<<<<< HEAD
 	private bool gameFinished;
 	public List<ParticleSystem> PartyParticleSystems;
-=======
-
->>>>>>> 0f260023046dc7fd124f57bc82c67ff0ed0f1bcd
 
     public void addPlayer(string name, Player player)
     {
@@ -89,6 +85,8 @@ public class GameController : MonoBehaviour {
 
 	void WinAnimationRun() {
 		var winnerTrans = WinCondition.winner.transform;
+		
+		WinCondition.winner.anim.SetBool("Dancing?", true);
 		
 		Tween cameraAnimation = Camera.main.gameObject.transform.DOMove(new Vector3(
 			winnerTrans.position.x,
