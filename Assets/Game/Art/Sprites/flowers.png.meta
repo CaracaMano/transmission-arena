@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: aa66b048b62904e6dbdbb1b20e473b25
-timeCreated: 1517009442
-licenseType: Free
+guid: 9e1ca5c9ae4834e4284be778c314faa8
+timeCreated: 1517021164
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: flowers_0
+    21300002: flowers_1
+    21300004: flowers_2
+    21300006: flowers_3
+    21300008: flowers_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -34,13 +39,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -98,7 +103,77 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: flowers_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flowers_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flowers_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 3
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flowers_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flowers_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
