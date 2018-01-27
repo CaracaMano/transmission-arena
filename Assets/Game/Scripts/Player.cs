@@ -219,4 +219,8 @@ public class Player : MonoBehaviour {
 	public void MakeItIdle(){
 		anim.SetTrigger ("MakeItIdle");
 	}
+
+	public void RotateTweenAnimation(){
+		
+	}
 }
