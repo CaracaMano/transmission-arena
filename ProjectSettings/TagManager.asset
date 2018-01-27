@@ -47,3 +47,6 @@ TagManager:
   - name: Attack
     uniqueID: 1929514447
     locked: 0
+  - name: Particles
+    uniqueID: 3616100701
+    locked: 0
