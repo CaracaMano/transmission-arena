@@ -40,7 +40,8 @@ public class GameController : MonoBehaviour {
 
 		if (Input.GetButtonDown(playerPrefix + JUMP_ACTION)) {
 			player.jump.UseSkill(player);
-		}
+            player.GetComponent<Animator>().SetBool("Jumping?",true);
+        }
 
 		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
 			Debug.Log(playerPrefix + " uses special action!");
