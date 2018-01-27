@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4265752250189256}
   - component: {fileID: 68142362215538118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Physics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4747223575701320}
   - component: {fileID: 33970456158271114}
   - component: {fileID: 23399899481616356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

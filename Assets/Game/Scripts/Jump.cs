@@ -15,6 +15,18 @@ public class Jump : Skill {
 
 	public override void UseSkill(Player player) {
 		base.UseSkill(player);
-		player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
+        if (isGround(player))
+        {
+            player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
+        }
 	}
+
+    private bool isGround(Player player)
+    {
+        float radius = 10;
+        RaycastHit2D hit =  Physics2D.Raycast(player.transform.localPosition, -Vector2.up, radius);
+
+        return hit.collider != null;
+    }
+
 }
