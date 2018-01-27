@@ -1,6 +1,5 @@
 ﻿Shader "Custom/SpriteColor" {
 	Properties{
-		_Tint("Tint", Color) = (1,1,1,1)
 		_Key("Key Color", Color) = (1,1,1,1)		
 		_MainTex("Texture", 2D) = "white" {}
 	} SubShader{
@@ -47,14 +46,13 @@
 			}
 
 			sampler2D _MainTex;
-			float4 _Tint;
 			float4 _Key;
 
 			fixed4 frag(v2f i) : SV_Target {
 				fixed4 col = tex2D(_MainTex, i.uv);
 
                 if(all(col==_Key)){
-                    col = _Tint;
+                    col = i.color;
                 }
                 
 				return col;
