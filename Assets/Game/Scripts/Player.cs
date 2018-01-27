@@ -95,4 +95,16 @@ public class Player : MonoBehaviour {
 		Rigidbody2D projBody = projectile.GetComponent<Rigidbody2D>();
 		projBody.velocity = new Vector2(transform.localScale.x * 10, 0);
 	}
+
+	public void GetShot(Projectile projectile) {
+		if (projectile.source != this) {
+			var thisColor = playerColor;
+			playerColor = projectile.source.playerColor;
+			sprite.color = projectile.source.playerColor;
+			projectile.source.playerColor = thisColor;
+
+			projectile.source.sprite.color = thisColor;
+			projectile.AutoDestroy();
+		}
+	}
 }

@@ -17,7 +17,22 @@ public class Projectile : MonoBehaviour {
 		
 	}
 
-	void AutoDestroy() {
+	public void AutoDestroy() {
 		Destroy(gameObject);
+	}
+
+	private void OnTriggerEnter2D(Collider2D other) {
+
+		switch (other.tag) {
+			case "Projectile":
+				AutoDestroy();
+				break;
+			case "Player":
+				other.GetComponent<Player>().GetShot(this);
+				break;
+			default:
+				break;
+		}
+		
 	}
 }
