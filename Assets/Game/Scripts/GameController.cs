@@ -4,6 +4,7 @@ using System.Linq;
 using System.Timers;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
@@ -38,7 +39,7 @@ public class GameController : MonoBehaviour {
 
 	void EndGame() {
 		if (!gameFinished) {
-			WinAnimationRun();
+			Invoke("WinAnimationRun", 2);
 		}
 		
 		gameFinished = true;
@@ -100,6 +101,11 @@ public class GameController : MonoBehaviour {
 					} 
 				}
 			}	
+		}
+		else {
+			if (Input.GetButtonDown("Submit")) {
+				SceneManager.LoadScene("JunScene");	
+			}
 		}
 	}
 	
