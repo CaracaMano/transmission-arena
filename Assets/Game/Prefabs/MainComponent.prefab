@@ -401,12 +401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0cf62ebe9314879988a9c7b89da26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersPrefix: []
-  WinCondition: {fileID: 114120681493767086}
-  TimerText: {fileID: 114086262948938026}
   PartyParticleSystems:
   - {fileID: 198005184996820702}
   - {fileID: 198987860100670314}
+  playersPrefix: []
+  WinCondition: {fileID: 114120681493767086}
+  TimerText: {fileID: 114086262948938026}
 --- !u!124 &124129338611852296
 Behaviour:
   m_ObjectHideFlags: 1
@@ -474,7 +474,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1782277091
+  randomSeed: 1186685123
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -918,7 +918,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 17.8762
+    angle: 22.044985
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
