@@ -20,11 +20,16 @@ public class Player : MonoBehaviour {
 
     public Color color;
 
+    private Animator anim;
 
+    private bool previousGrounded = true;
     public bool isGrounded {
         get {
+            //previousGrounded = isGrounded;
+
             int layerMask = LayerMask.NameToLayer("Stage");
             RaycastHit2D hit = Physics2D.Linecast(transform.position, groundCheck.position, 1 << layerMask);
+
             return hit.collider != null;
         }
     }
@@ -33,13 +38,19 @@ public class Player : MonoBehaviour {
 	void Start () {
 		jump = new Jump();
         walk = new Walk();
-
-
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        anim.SetBool("Running?",Mathf.Abs(body.velocity.x) > 0);
+
+        bool grounded = isGrounded;
+        if (previousGrounded == false || grounded == true)
+        {
+            anim.SetBool("Jumping?", false);
+            previousGrounded = grounded;
+        }
 	}
 
 	public void LearnSkill(Skill skill) {
