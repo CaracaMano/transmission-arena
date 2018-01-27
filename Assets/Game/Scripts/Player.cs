@@ -224,7 +224,7 @@ public class Player : MonoBehaviour {
 
 		float time = 0.2f;
 
-		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).Loops();
+		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).SetLoops(-1);
 
 	}
 }
