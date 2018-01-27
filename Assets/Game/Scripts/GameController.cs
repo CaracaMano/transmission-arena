@@ -29,10 +29,32 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (var playerPrefix in playersPrefix) {
-			HandleControls(playerPrefix, players[playerPrefix]);
+
+            /*
+            if (players[playerPrefix].isNPC == true)
+            {
+                HandleButtons(playerPrefix, players[playerPrefix]);
+            }
+              
+            else
+             */ 
+            {
+                if (!players[playerPrefix].wasStunned)
+                {
+                    HandleControls(playerPrefix, players[playerPrefix]);
+                }
+            }
 		}
 	}
 
+    /*
+    void HandleButtons(string playerPrefix, Player player) {
+        float horizontalTranslation = Input.GetAxis(playerPrefix + HORIZONTAL_AXIS);
+        if(Input.GetKeyDown())
+    
+    }
+
+     */ 
 	void HandleControls(string playerPrefix, Player player) {
 		if (Input.GetButtonDown(playerPrefix + SHOOT_ACTION)) {
 			player.shoot.UseSkill(player);
@@ -52,6 +74,11 @@ public class GameController : MonoBehaviour {
         if (horizontalTranslation != 0)
         {
             player.walk.UseSkill(player, horizontalTranslation);
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            player.shoot.UseSkill(player);
         }
 
 	}
