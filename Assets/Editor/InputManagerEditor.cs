@@ -62,13 +62,26 @@ public class InputManagerEditor : EditorWindow {
 
   void SetJoystickAxis() {
     for (int i = 1; i <= 4; i++) {
-      for (int j = 0; j <= 14; j++) {
+      for (int j = 0; j <= 5; j++) {
         AddAxis(new InputAxis() {
           name = "j" + i + "a" + j.ToString(),
           dead = 0.4f,
           sensitivity = 1f,
-          type = AxisType.KeyOrMouseButton,
           positiveButton = "joystick " + i + " button " + j,
+          type = AxisType.KeyOrMouseButton,
+          axis = j,
+          joyNum = i,
+        });
+      }
+    }
+    
+    for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= 2; j++) {
+        AddAxis(new InputAxis() {
+          name = "j" + i + "axis" + j.ToString(),
+          dead = 0.4f,
+          sensitivity = 1f,
+          type = AxisType.JoystickAxis,
           axis = j,
           joyNum = i,
         });
