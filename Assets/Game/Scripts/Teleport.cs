@@ -15,7 +15,7 @@ public class Teleport : MonoBehaviour {
         Transform ob = collider.transform;
 
         Transform safeAreaTransform = destiny.GetChild(0).transform;
-        ob.transform.position = safeAreaTransform.position;
+        ob.transform.position = destiny.transform.position;
     }
 
 	
