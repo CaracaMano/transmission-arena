@@ -5,6 +5,8 @@ public class AudioPool : MonoBehaviour
 {
     private List<AudioSource> sources = new List<AudioSource>();
 
+    private AudioSource musicSource;
+
     private AudioSource Source
     {
         get
@@ -22,13 +24,26 @@ public class AudioPool : MonoBehaviour
         }
     }
 
-    public void PlayAudio(AudioClip clip, float pitch = 1, float volume = 1, bool loop = false)
+    public void PlayAudio(AudioClip clip, float pitch = 1, float volume = 1)
     {
         var src = Source;
         src.volume = volume;
         src.pitch = pitch;
         src.clip = clip;
-        src.loop = loop;
         src.Play();
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (musicSource != null)
+        {
+            musicSource.Stop();
+        }
+        musicSource = Source;
+        musicSource.volume = 1;
+        musicSource.pitch = 1;
+        musicSource.loop = true;
+        musicSource.clip = clip;
+        musicSource.Play();
     }
 }
