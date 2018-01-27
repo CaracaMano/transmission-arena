@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Jump : Skill {
 
+
+    public GameObject groundCheck;
 	// Use this for initialization
 	void Start () {
 	}
@@ -15,22 +17,12 @@ public class Jump : Skill {
 
 	public override void UseSkill(Player player) {
 		base.UseSkill(player);
-        if (isGround(player))
-        {
+       if (player.isGrounded)
+       {
             player.body.AddForce(new Vector3(0, player.gameConstants.JUMP_FORCE, 0));
-        }
+       }
 	}
 
-    private bool isGround(Player player)
-    {
-       float radius = 1;
-
-       Transform playerTransform = player.transform;
-       RaycastHit2D hit = Physics2D.Raycast(playerTransform.position, -Vector2.up, 0.1);
-
-       return hit.collider != null;
-
-       return Physics2D.Raycast(playerTransform.localPosition, -playerTransform.up, radius);
-    }
+    
 
 }
