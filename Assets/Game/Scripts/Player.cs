@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 
     public Transform groundCheck;
 	public Transform wallCheck;
+	public Transform wallCheck2;
 
 	[HideInInspector]
 	public SpriteRenderer sprite;
@@ -92,12 +93,9 @@ public class Player : MonoBehaviour {
 		get {
 			int layerMask = LayerMask.NameToLayer("Stage");
 			RaycastHit2D hit = Physics2D.Linecast(transform.position, wallCheck.position, 1 << layerMask);
-
-			if (hit.collider != null) {
-				Debug.Log("ON WALL");	
-			}
+			RaycastHit2D hit2 = Physics2D.Linecast(transform.position, wallCheck2.position, 1 << layerMask);
 			
-			return hit.collider != null;
+			return hit.collider != null || hit2.collider != null;
 		}
 	}
 	

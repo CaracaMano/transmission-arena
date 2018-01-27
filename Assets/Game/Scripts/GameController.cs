@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,8 +42,21 @@ public class GameController : MonoBehaviour {
 		GameTimer -= Time.deltaTime;
 		if (GameTimer < 0) {
 			WinCondition.CheckCondition();
+			if (WinCondition.winner != null) {
+				TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
+				TimerText.color = WinCondition.winner.playerColor;
+			}
+			else {
+				TimerText.text = "Sudden Death!!!";
+			}
 		}
-		
+		else {
+			int minutes = Mathf.RoundToInt(GameTimer / 60f);
+			int seconds = Mathf.RoundToInt(GameTimer % 60f);
+
+			TimerText.text = minutes + ":" + seconds;
+		}
+
 		foreach (var playerPrefix in playersPrefix) {
 
             /*
@@ -61,10 +75,7 @@ public class GameController : MonoBehaviour {
             }
 		}
 
-		int minutes = Mathf.RoundToInt(GameTimer / 60f);
-		int seconds = Mathf.RoundToInt(GameTimer % 60f);
-
-		TimerText.text = minutes + ":" + seconds;
+		
 	}
 
     /*
