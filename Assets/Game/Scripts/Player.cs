@@ -178,4 +178,8 @@ public class Player : MonoBehaviour {
 			transform.DOScaleY(1, gameConstants.SWAP_TIME_S / 2f)
 		);
 	}
+
+	public void MakeItIdle(){
+		anim.SetTrigger ("MakeItIdle");
+	}
 }
