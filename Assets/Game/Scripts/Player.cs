@@ -111,11 +111,6 @@ public class Player : MonoBehaviour {
         sprite.color = playerColor;
 
         crown = this.transform.Find("crown").gameObject;
-
-        if (this.tag.Contains("NPC"))
-        {
-            this.isNPC = true;
-        }
 	}
 
 	
