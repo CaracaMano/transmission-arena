@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -193,6 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1762047049}
+  playerPrefab: {fileID: 1665654190090598, guid: f1925f35987f349958c8d9b7e95cf1d3,
+    type: 2}
   colors:
   - {r: 0.9558824, g: 0.73329556, b: 0.56228375, a: 1}
   - {r: 0.9411765, g: 0.4359862, b: 0.5927693, a: 1}
