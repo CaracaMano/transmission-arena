@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Data", menuName = "Configs/GameConstants", order = 1)]
 public class GameConstants : ScriptableObject {
 
+    public const float GAME_TIME_S = 60;
+    
     [SerializeField]
     public float JUMP_FORCE;
     

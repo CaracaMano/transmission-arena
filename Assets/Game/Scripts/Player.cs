@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public string PlayerName;
+	
 	public GameConstants gameConstants;
 
     public Transform groundCheck;
@@ -13,7 +15,9 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public SpriteRenderer sprite;
 
-	[HideInInspector]
+    public bool hasCrown = false;
+    
+    [HideInInspector]
 	public Jump jump;
 
 	[HideInInspector] 
@@ -33,6 +37,40 @@ public class Player : MonoBehaviour {
 
 	public Transform ShootDirection;
 	public GameObject ProjectileObject;
+
+    private GameObject crown;
+
+    public GameObject crownPrefab;
+
+    public Transform crownHeadTransform;
+
+    public void pickCrown()
+    {
+        crown.GetComponent<Renderer>().enabled = true;
+        hasCrown = true;
+    }
+    public void loseCrown()
+    {
+        if (hasCrown)
+        {
+            hasCrown = false;
+            crown.GetComponent<Renderer>().enabled = false;
+
+
+            GameObject crownInstance = Instantiate(crownPrefab) as GameObject;
+
+            crownInstance.transform.position = crownHeadTransform.position;
+
+            Rigidbody2D body = crownInstance.GetComponent<Rigidbody2D>();
+
+
+            int rndX = Random.Range(-200, 200);
+            int rndy = Random.Range(200, 400);
+
+            body.AddForce(new Vector2(rndX, rndy));
+            
+        }
+    }
 
     private bool previousGrounded = true;
     public bool isGrounded {
@@ -70,13 +108,15 @@ public class Player : MonoBehaviour {
 		sprite = GetComponent<SpriteRenderer>();
 		
         sprite.color = playerColor;
+
+        crown = this.transform.Find("crown").gameObject;
 	}
 
 
 	
 	// Update is called once per frame
 	void Update () {
-        anim.SetBool("Running?",Mathf.Abs(body.velocity.x) > 0);
+        anim.SetBool("Running?", Mathf.Abs(body.velocity.x) > 0);
 
         bool grounded = isGrounded;
         if (previousGrounded == false && grounded == true)
@@ -121,7 +161,9 @@ public class Player : MonoBehaviour {
 
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
-			var thisPos = transform.position;
+            loseCrown();
+
+            var thisPos = transform.position;
 			transform.DOMove(projectile.source.transform.position, gameConstants.SWAP_TIME_S);
 			FadeOutIn(transform);
 			projectile.source.transform.DOMove(thisPos, gameConstants.SWAP_TIME_S);
@@ -137,5 +179,9 @@ public class Player : MonoBehaviour {
 		).Append(
 			transform.DOScaleY(1, gameConstants.SWAP_TIME_S / 2f)
 		);
+	}
+
+	public void MakeItIdle(){
+		anim.SetTrigger ("MakeItIdle");
 	}
 }
