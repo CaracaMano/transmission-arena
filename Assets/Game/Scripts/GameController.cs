@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour {
 			winnerTrans.position.x,
 			winnerTrans.position.y + 1,
 			winnerTrans.position.z - 5
-		), 1).SetDelay(2).Play();
+		), 1).Play();
 	
 		cameraAnimation.onComplete += delegate {
 		foreach (var particleSystem in PartyParticleSystems) {
@@ -85,19 +85,21 @@ public class GameController : MonoBehaviour {
 			TimerText.text = minutes + ":" + seconds;
 		}
 
-		foreach (var playerPrefix in playersPrefix) {
-            if (!players[playerPrefix].wasStunned)
-            {
-                if (players[playerPrefix].isNPC == true)
-                {
-                    HandleButtons(playerPrefix, players[playerPrefix]);
-                }
+		if (WinCondition.winner == null) {
+			foreach (var playerPrefix in playersPrefix) {
+				if (!players[playerPrefix].wasStunned)
+				{
+					if (players[playerPrefix].isNPC == true)
+					{
+						HandleButtons(playerPrefix, players[playerPrefix]);
+					}
 
-                else
-                {
-                    HandleControls(playerPrefix, players[playerPrefix]);
-                } 
-            }
+					else
+					{
+						HandleControls(playerPrefix, players[playerPrefix]);
+					} 
+				}
+			}	
 		}
 	}
 	
