@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour {
 		var winnerTrans = WinCondition.winner.transform;
 		
 		WinCondition.winner.anim.SetBool("Dancing?", true);
+		WinCondition.winner.FlipPlayerXTween ();
 	
 		Tween cameraAnimation = Camera.main.gameObject.transform.DOMove(new Vector3(
 			winnerTrans.position.x,
