@@ -40,14 +40,36 @@ public class Player : MonoBehaviour {
 
     private GameObject crown;
 
+    public GameObject crownPrefab;
+
+    public Transform crownHeadTransform;
+
     public void pickCrown()
     {
         crown.GetComponent<Renderer>().enabled = true;
+        hasCrown = true;
     }
     public void loseCrown()
     {
-        crown.GetComponent<Renderer>().enabled = false;
+        if (hasCrown)
+        {
+            hasCrown = false;
+            crown.GetComponent<Renderer>().enabled = false;
 
+
+            GameObject crownInstance = Instantiate(crownPrefab) as GameObject;
+
+            crownInstance.transform.position = crownHeadTransform.position;
+
+            Rigidbody2D body = crownInstance.GetComponent<Rigidbody2D>();
+
+
+            int rndX = Random.Range(-200, 200);
+            int rndy = Random.Range(200, 400);
+
+            body.AddForce(new Vector2(rndX, rndy));
+            
+        }
     }
 
     private bool previousGrounded = true;
@@ -139,15 +161,15 @@ public class Player : MonoBehaviour {
 
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
-			var thisPos = transform.position;
+            loseCrown();
+
+            var thisPos = transform.position;
 			transform.DOMove(projectile.source.transform.position, gameConstants.SWAP_TIME_S);
 			FadeOutIn(transform);
 			projectile.source.transform.DOMove(thisPos, gameConstants.SWAP_TIME_S);
 			FadeOutIn(projectile.source.transform);
 			
 			projectile.AutoDestroy();
-
-            loseCrown();
 		}
 	}
 
