@@ -59,20 +59,20 @@ public class Player : MonoBehaviour {
     public AudioClip shootSound;
     public AudioClip StunnedSound;
     public AudioClip changeSound;
-    public AudioClip looseCrownSound;
-    public AudioClip getShootSound;
+    public AudioClip getCrownSound;
 
 
     public void pickCrown()
     {
         crown.GetComponent<Renderer>().enabled = true;
+        audioPool.PlayAudio(getCrownSound);
         hasCrown = true;
     }
     public void loseCrown()
     {
         if (hasCrown)
         {
-            audioPool.PlayAudio(looseCrownSound);
+            
 
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
@@ -181,7 +181,6 @@ public class Player : MonoBehaviour {
 	public void GetShot(Projectile projectile) {
 		if (projectile.source != this) {
 
-            audioPool.PlayAudio(getShootSound);
             loseCrown();
 
             var thisPos = transform.position;
