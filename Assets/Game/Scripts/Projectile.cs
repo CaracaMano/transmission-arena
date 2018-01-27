@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
 	public Player source;
+	public SpriteRenderer sprite;
 	
 	// Use this for initialization
 	void Start () {

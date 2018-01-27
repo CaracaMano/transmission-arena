@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
 
     public Transform groundCheck;
 
+	private SpriteRenderer sprite;
+
 	[HideInInspector]
 	public Jump jump;
 
@@ -47,7 +49,9 @@ public class Player : MonoBehaviour {
 		shoot = new Shoot();
         anim = GetComponent<Animator>();
 
-        GetComponent<SpriteRenderer>().color = playerColor;
+		sprite = GetComponent<SpriteRenderer>();
+		
+        sprite.color = playerColor;
 	}
 
 
@@ -77,7 +81,10 @@ public class Player : MonoBehaviour {
 	public void Shoot() {
 		GameObject projectile = Instantiate(ProjectileObject);
 
-		projectile.GetComponent<Projectile>().source = this;
+		Projectile projectileScript = projectile.GetComponent<Projectile>(); 
+		
+		projectileScript.source = this;
+		projectileScript.sprite.color = playerColor;
 
 		projectile.transform.position = ShootDirection.position;
 
