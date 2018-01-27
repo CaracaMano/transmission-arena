@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerName: 
   gameConstants: {fileID: 11400000, guid: f203b9ea30b4748ef8245623b36e2af8, type: 2}
+  isNPC: 0
   groundCheck: {fileID: 4583963541373352}
   groundCheck2: {fileID: 4194106993967246}
   wallCheck: {fileID: 4677768477661698}
@@ -338,12 +339,20 @@ MonoBehaviour:
   body: {fileID: 50355886710383842}
   currentSpecialSkill: {fileID: 0}
   playerColor: {r: 0.199827, g: 0.6516526, b: 0.9705882, a: 1}
+  anim: {fileID: 0}
   ShootDirection: {fileID: 4013440860859806}
   ProjectileObject: {fileID: 1947798281401280, guid: d41111f78b9214ddca5224da1140d774,
     type: 2}
   crownPrefab: {fileID: 1935618344073590, guid: 467ea4f90f5b5b54aa787e788ed83424,
     type: 2}
   crownHeadTransform: {fileID: 4617372442650454}
+  audioPool: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: c75bb80bc092f984b907e9a8163f0b6b, type: 3}
+  shootSound: {fileID: 8300000, guid: 61fae06c29bb061498481ddd1850f512, type: 3}
+  StunnedSound: {fileID: 8300000, guid: 98e163eb9cb70b84bbb7b22dc7a1a8b3, type: 3}
+  changeSound: {fileID: 8300000, guid: b78ae473506a0374790bf7605f33ec0f, type: 3}
+  looseCrownSound: {fileID: 8300000, guid: 0ef1f50db138d984ca7cc7b4074c1b2f, type: 3}
+  getShootSound: {fileID: 8300000, guid: 23c64da08418acb4fbae8d1148ad2150, type: 3}
 --- !u!212 &212004388618127180
 SpriteRenderer:
   m_ObjectHideFlags: 1
