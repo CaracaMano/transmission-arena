@@ -23,10 +23,14 @@ public class Jump : Skill {
 
     private bool isGround(Player player)
     {
-        float radius = 10;
-        RaycastHit2D hit =  Physics2D.Raycast(player.transform.localPosition, -Vector2.up, radius);
+       float radius = 1;
 
-        return hit.collider != null;
+       Transform playerTransform = player.transform;
+       RaycastHit2D hit = Physics2D.Raycast(playerTransform.position, -Vector2.up, 0.1);
+
+       return hit.collider != null;
+
+       return Physics2D.Raycast(playerTransform.localPosition, -playerTransform.up, radius);
     }
 
 }
