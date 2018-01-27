@@ -9,7 +9,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	private float GameTimer = 60;
+	public float GameTimer = 60;
+
+    private float fastMusicGameTime;
 
 	private bool gameFinished;
 	public List<ParticleSystem> PartyParticleSystems;
@@ -26,6 +28,27 @@ public class GameController : MonoBehaviour {
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
 
+
+    public AudioClip slowMusic;
+    public AudioClip fastMusic;
+
+    private bool fastMusicStarted = false;
+
+    private void playMusic(bool isFast) 
+    {
+        AudioPool audioPool = GetComponent<AudioPool>();
+        if (isFast)
+        {
+            audioPool.PlayMusic(fastMusic);
+            fastMusicStarted = true;
+        }
+        else
+        {
+            audioPool.PlayMusic(slowMusic);
+        }
+    
+    }
+
     public void addPlayer(string name, Player player)
     {
         players.Add(name, player);
@@ -34,7 +57,10 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        fastMusicGameTime = GameTimer / 10;
 		WinCondition.ConditionReached = EndGame;
+        playMusic(false);
 	}
 
 	void EndGame() {
@@ -67,9 +93,12 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
 		GameTimer -= Time.deltaTime;
-		if (GameTimer < 0) {
+        if (GameTimer <= fastMusicGameTime && !fastMusicStarted)
+        {
+            playMusic(true);
+        }
+		else if (GameTimer < 0) {
 			WinCondition.CheckCondition();
 			if (WinCondition.winner != null) {
 				TimerText.text = "Winner: " + WinCondition.winner.PlayerName;

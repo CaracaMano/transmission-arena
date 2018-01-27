@@ -9,7 +9,7 @@ public class TitleScreenManager : MonoBehaviour {
 
     private void Start()
     {
-        audioPool.PlayAudio(themeMusic);
+        audioPool.PlayMusic(themeMusic);
     }
 
     private void Update()

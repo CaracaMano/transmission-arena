@@ -35,7 +35,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4617360213779704}
   - component: {fileID: 114295026103952364}
-  - component: {fileID: 114258360455931734}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -105,6 +104,7 @@ GameObject:
   - component: {fileID: 4941719014115658}
   - component: {fileID: 114825491531379928}
   - component: {fileID: 114120681493767086}
+  - component: {fileID: 114594208666370992}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -373,17 +373,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winner: {fileID: 0}
   GameController: {fileID: 114825491531379928}
---- !u!114 &114258360455931734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1066268344081176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de64540e006b4e31a86b23d625854af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114295026103952364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +427,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &114594208666370992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589807864019010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de64540e006b4e31a86b23d625854af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114660516532613300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,6 +482,8 @@ MonoBehaviour:
   playersPrefix: []
   WinCondition: {fileID: 114120681493767086}
   TimerText: {fileID: 114086262948938026}
+  slowMusic: {fileID: 8300000, guid: b6166e21f3ec54f419ff250ccc4ef0d6, type: 3}
+  fastMusic: {fileID: 8300000, guid: 8a334f5637682874bb9ca28c91f30970, type: 3}
 --- !u!114 &114826607177773294
 MonoBehaviour:
   m_ObjectHideFlags: 1
