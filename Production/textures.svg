@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="textures.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5724">
+      <stop
+         style="stop-color:#f9f9f9;stop-opacity:1;"
+         offset="0"
+         id="stop5720" />
+      <stop
+         id="stop5730"
+         offset="0.0995671"
+         style="stop-color:#cbcbcb;stop-opacity:0.99607843" />
+      <stop
+         style="stop-color:#eeeeee;stop-opacity:0.99215686"
+         offset="0.2121212"
+         id="stop5732" />
+      <stop
+         id="stop5734"
+         offset="0.78354979"
+         style="stop-color:#e9e9e9;stop-opacity:0.98823529" />
+      <stop
+         id="stop5728"
+         offset="0.89610386"
+         style="stop-color:#bbbbbb;stop-opacity:0.98823529" />
+      <stop
+         style="stop-color:#f9f9f9;stop-opacity:0.98989898"
+         offset="1"
+         id="stop5722" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4993">
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0"
+         id="stop4989" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop4991" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4985">
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="0"
+         id="stop4981" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop4983" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4977">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4973" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.84771574"
+         offset="1"
+         id="stop4975" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4977"
+       id="linearGradient4979"
+       x1="-285.87146"
+       y1="84.654362"
+       x2="-251.44714"
+       y2="84.654362"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4985"
+       id="linearGradient4987"
+       x1="-249.20209"
+       y1="84.654362"
+       x2="-214.77777"
+       y2="84.654362"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4993"
+       id="linearGradient4995"
+       x1="-212.53271"
+       y1="84.654362"
+       x2="-178.1084"
+       y2="84.654362"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5724"
+       id="linearGradient5726"
+       x1="-15.345834"
+       y1="94.59375"
+       x2="-15.345834"
+       y2="33.474998"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#35481f"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="382.50146"
+     inkscape:cy="584.01054"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1879"
+     inkscape:window-height="1035"
+     inkscape:window-x="41"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.63439453"
+       id="rect5736"
+       width="128"
+       height="128"
+       x="-111.50485"
+       y="-32.681587"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/column.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#7b4720;fill-opacity:1;stroke-width:0.16301824"
+       d="m -140.61054,237.54726 v 60.58958 h 33.86667 33.866665 v -60.58958 h -33.866665 z"
+       id="path5248"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.52916666,0,0,0.52916666,-142.01063,245.9084)"
+       id="g5593"
+       style="fill:#ac6c48;fill-opacity:1">
+      <rect
+         id="rect5589"
+         width="128"
+         height="64"
+         x="2.6458333"
+         y="83.699409"
+         style="fill:#ac6c48;fill-opacity:1;stroke-width:0.23031972"
+         inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:#c08a6a;fill-opacity:1;stroke-width:0.17966573"
+         y="96.227066"
+         x="2.6458333"
+         height="38.944683"
+         width="128"
+         id="rect5591"
+         inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+    <path
+       style="fill:#f9f9f9;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -100.67342,175.53461 c -0.63221,-1.21045 -0.56244,-2.49204 -0.25199,-3.79795 1.894565,-1.30318 3.023095,-0.0688 3.514435,1.80447 -0.79014,0.91317 -1.81362,1.63121 -3.262435,1.99349 z"
+       id="path5545"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g3826"
+       transform="matrix(0.52916666,0,0,0.52916666,-142.01072,144.30851)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png">
+      <rect
+         style="fill:#b3cf2a;fill-opacity:1;stroke-width:0.23031972"
+         y="83.699409"
+         x="2.6458333"
+         height="64"
+         width="128"
+         id="rect3699" />
+      <rect
+         id="rect3712"
+         width="128"
+         height="38.944683"
+         x="2.6458333"
+         y="96.227066"
+         style="fill:#c6de5c;fill-opacity:1;stroke-width:0.17966573" />
+    </g>
+    <g
+       id="g3804"
+       transform="matrix(0.55652172,0,0,0.52916666,9.4943896,106.623)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png">
+      <path
+         id="path3773"
+         transform="scale(0.26458333)"
+         d="m -559.41406,602.68164 v 55.0918 c 19.78461,9.07122 39.9859,-7.06962 48.58594,-20.89453 4.65147,1.83876 9.48217,2.77766 14.33984,2.78711 5.23031,-0.0272 10.42498,-1.13175 15.39453,-3.27344 9.31099,17.83041 24.70959,28.49935 41.17383,28.52734 11.14863,-0.009 21.97531,-4.90945 30.75976,-13.92383 5.95109,3.17612 12.3125,4.8167 18.73633,4.83203 9.92554,-0.0187 19.62228,-3.91588 27.85547,-11.19531 9.45509,13.54732 22.80082,21.27182 36.79492,21.29688 14.35678,-0.0213 28.01394,-8.14507 37.49414,-22.30274 7.3886,5.34919 15.68784,8.15636 24.125,8.16016 6.96598,-0.0276 13.85072,-1.96615 20.21289,-5.69141 9.15568,10.79533 21.02123,16.77852 33.32618,16.80469 13.0521,-0.004 25.58571,-6.70909 34.92382,-18.68359 3.46044,0.9917 6.99133,1.4978 10.53321,1.50976 3.22048,-0.0193 6.43201,-0.44702 9.58984,-1.27734 9.21573,11.18406 21.297,17.40909 33.8457,17.43945 7.74975,-0.0368 15.3869,0.46183 22.308598,-4.11523 v -55.0918 z"
+         style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.99999994"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+      <path
+         id="path3796"
+         transform="scale(0.26458333)"
+         d="m -559.41406,585.50977 v 57.31738 c 18.39113,0.56797 36.49543,-11.53006 43.89844,-23.12012 4.77628,1.83883 9.73659,2.77773 14.7246,2.78711 5.37032,-0.0272 10.70405,-1.1318 15.80664,-3.27344 9.56054,17.8305 25.37186,28.49946 42.27735,28.52735 11.44736,-0.009 22.56414,-4.90946 31.58398,-13.92383 6.11052,3.1761 12.64235,4.81668 19.23828,4.83203 10.19139,-0.0188 20.14786,-3.91596 28.60157,-11.19531 9.70854,13.54744 23.41203,21.27195 37.78125,21.29687 14.74121,-0.0216 28.76399,-8.14532 38.49804,-22.30273 7.58659,5.34919 16.10824,8.15637 24.77149,8.16015 7.1531,-0.0273 14.2228,-1.96591 20.75586,-5.6914 9.4009,10.7952 21.58422,16.77839 34.21875,16.80469 13.40175,-0.004 26.2711,-6.70918 35.85937,-18.6836 3.55284,0.99162 7.178,1.49771 10.81446,1.50977 3.30706,-0.0192 6.60493,-0.44696 9.84765,-1.27735 9.4625,11.18386 21.86723,17.40888 34.75195,17.43946 5.64098,-0.0308 11.23943,0.46945 16.570318,-1.88965 v -57.31738 z"
+         style="fill:#b3cf2a;fill-opacity:1;stroke:none;stroke-width:1.01330936"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+    </g>
+    <g
+       id="g4692"
+       transform="matrix(0.52916666,0,0,0.52916666,-96.526369,76.991567)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png">
+      <path
+         style="fill:#e9afaf;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 47.617117,184.40012 c 0.385646,-2.5517 1.921353,-4.42898 3.851468,-6.07499 4.343724,0.125 4.688569,3.26684 3.348896,6.67252 -2.223881,0.51183 -4.586061,0.46571 -7.200364,-0.59753 z"
+         id="path4679"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4677"
+         d="m 46.779456,183.84318 c -2.578385,-0.10874 -4.610074,-1.43345 -6.454276,-3.17517 -0.343294,-4.33193 2.743165,-5.01297 6.273264,-4.04768 0.748233,2.15586 0.956659,4.50928 0.181012,7.22285 z"
+         style="fill:#e9afaf;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path3828"
+         d="m 41.31493,201.89916 c -3.86514,-7.73282 -1.211951,-12.89247 5.583812,-17.08985 -5.443229,4.57908 -5.976186,10.41951 -5.583812,17.08985 z"
+         style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4681"
+         d="m 47.448936,185.15111 c 2.396885,0.95647 3.87523,2.87925 5.038572,5.13342 -1.110665,4.2012 -4.248501,3.82167 -7.259738,1.7418 0.0079,-2.28201 0.590649,-4.57165 2.221166,-6.87522 z"
+         style="fill:#e9afaf;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4670"
+         d="m 39.972751,193.3279 c -3.975847,0.50779 -5.429396,-0.59645 -7.705267,-3.68514 4.164436,0.47852 4.756599,1.0767 7.705267,3.68514 z"
+         style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         style="fill:#e9afaf;stroke:none;stroke-width:0.16750582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 46.520176,185.00892 c -0.958711,2.39599 -2.882872,3.87254 -5.13813,5.03377 -4.200157,-1.11459 -3.817697,-4.25207 -1.735007,-7.26136 2.281993,0.0101 4.571091,0.59492 6.873137,2.22759 z"
+         id="path4683"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <circle
+         r="2.1037149"
+         cy="184.6077"
+         cx="47.101639"
+         id="path4675"
+         style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.40486005" />
+    </g>
+    <g
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.52916666,0,0,0.52916666,-74.277393,178.17517)"
+       id="g4813"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png">
+      <rect
+         id="rect4809"
+         width="128"
+         height="64"
+         x="2.6458333"
+         y="83.699409"
+         style="fill:#9393ac;fill-opacity:1;stroke-width:0.23031972" />
+      <rect
+         style="fill:#b7b7c8;fill-opacity:1;stroke-width:0.17966573"
+         y="96.227066"
+         x="2.6458333"
+         height="38.944683"
+         width="128"
+         id="rect4811" />
+    </g>
+    <g
+       id="g5432"
+       transform="matrix(0.99557873,0,0,1,-0.32276257,0)"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4815"
+         d="m -66.145827,205.82874 -4.7625,5.29167 2.91041,5.29166 7.14375,1.05834 3.70417,-4.7625 -1.5875,-7.14375 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -53.644467,208.88061 -5.284944,-0.48422 -1.862439,4.09869 2.554334,4.73892 4.496813,0.0881 3.558747,-4.13466 z"
+         id="path4817"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4819"
+         d="m -55.49655,204.11811 -5.284944,-0.48422 -1.862439,4.09869 2.554334,4.73892 4.496813,0.0881 3.558747,-4.13466 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -52.335262,205.07331 -3.487666,4.00016 2.231466,3.91005 5.337136,0.70496 2.705012,-3.59333 -1.267164,-5.30607 z"
+         id="path4821"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4823"
+         d="m -43.595248,215.81426 0.572097,-5.27615 -4.06713,-1.93039 -4.780769,2.47512 -0.162917,4.49473 4.074868,3.62706 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -42.068744,205.29957 -4.7625,5.29167 2.91041,5.29166 7.14375,1.05834 3.70417,-4.7625 -1.5875,-7.14375 z"
+         id="path4825"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4827"
+         d="m -27.979884,208.35144 -5.284944,-0.48422 -1.862439,4.09869 2.554334,4.73892 4.496813,0.0881 3.558747,-4.13466 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -29.831967,203.58894 -5.284944,-0.48422 -1.862439,4.09869 2.554334,4.73892 4.496813,0.0881 3.558747,-4.13466 z"
+         id="path4829"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4831"
+         d="m -26.670679,204.54414 -3.487666,4.00016 2.231466,3.91005 5.337136,0.70496 2.705012,-3.59333 -1.267164,-5.30607 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -17.930665,215.28509 0.572097,-5.27615 -4.06713,-1.93039 -4.780769,2.47512 -0.162917,4.49473 4.074868,3.62706 z"
+         id="path4833"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4835"
+         d="m -17.462494,204.24123 -4.7625,5.29167 2.91041,5.29166 7.14375,1.05834 3.70417,-4.7625 -1.5875,-7.14375 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4839"
+         d="m -8.6653006,207.82227 -5.2849434,-0.48422 -1.862439,4.09869 2.554334,4.73892 4.4968124,0.0881 3.558747,-4.13466 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path4845"
+         d="m -68.489399,206.70719 -4.512902,0.23257 v 8.26098 l 3.074746,0.40618 2.705262,-3.59359 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.19723605px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="rect4847"
+         d="m -4.9681707,206.93975 -1.006139,0.0517 -3.487645,4.00026 2.23139,3.90983 2.262394,0.29921 z"
+         style="fill:#80809e;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+    </g>
+    <rect
+       style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4874"
+       width="16.933332"
+       height="16.933332"
+       x="-224.74814"
+       y="236.75362"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="236.75362"
+       x="-207.8148"
+       height="16.933332"
+       width="16.933332"
+       id="rect4880"
+       style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4882"
+       width="16.933332"
+       height="16.933332"
+       x="-190.88147"
+       y="236.75362"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="236.75362"
+       x="-173.94814"
+       height="16.933332"
+       width="16.933332"
+       id="rect4884"
+       style="fill:#ac6c48;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="253.68694"
+       x="-224.74814"
+       height="16.933332"
+       width="16.933332"
+       id="rect4886"
+       style="fill:#4b6d18;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4888"
+       width="16.933332"
+       height="16.933332"
+       x="-207.8148"
+       y="253.68694"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="253.68694"
+       x="-190.88147"
+       height="16.933332"
+       width="16.933332"
+       id="rect4890"
+       style="fill:#b3cf2a;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#c6de5c;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4892"
+       width="16.933332"
+       height="16.933332"
+       x="-173.94814"
+       y="253.68694"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#53536c;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4894"
+       width="16.933332"
+       height="16.933332"
+       x="-224.74814"
+       y="270.62027"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="270.62027"
+       x="-207.8148"
+       height="16.933332"
+       width="16.933332"
+       id="rect4896"
+       style="fill:#6f6f91;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#9393ac;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4898"
+       width="16.933332"
+       height="16.933332"
+       x="-190.88147"
+       y="270.62027"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="270.62027"
+       x="-173.94814"
+       height="16.933332"
+       width="16.933332"
+       id="rect4900"
+       style="fill:#b7b7c8;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="287.55359"
+       x="-224.74814"
+       height="16.933332"
+       width="16.933332"
+       id="rect4902"
+       style="fill:#0055d4;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4904"
+       width="16.933332"
+       height="16.933332"
+       x="-207.8148"
+       y="287.55359"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       y="287.55359"
+       x="-190.88147"
+       height="16.933332"
+       width="16.933332"
+       id="rect4906"
+       style="fill:#5599ff;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:#aaccff;fill-opacity:1;stroke:none;stroke-width:0.319298"
+       id="rect4908"
+       width="16.933332"
+       height="16.933332"
+       x="-173.94814"
+       y="287.55359"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png" />
+    <rect
+       style="fill:url(#linearGradient4979);fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="rect4967"
+       width="34.424316"
+       height="73.712936"
+       x="-285.87146"
+       y="47.797894"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Shaders/Test.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       y="47.797894"
+       x="-249.20209"
+       height="73.712936"
+       width="34.424316"
+       id="rect4969"
+       style="fill:url(#linearGradient4987);fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Shaders/Test.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:url(#linearGradient4995);fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="rect4971"
+       width="34.424316"
+       height="73.712936"
+       x="-212.53271"
+       y="47.797894"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Shaders/Test.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g5297"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#7b4720;fill-opacity:1;stroke-width:0.12187747"
+         d="m -140.61054,256.33267 v 33.86667 h 33.86667 33.866665 v -33.86667 h -33.866665 z"
+         id="rect4694"
+         inkscape:connector-curvature="0" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse4704"
+         cx="-97.014488"
+         cy="263.65704"
+         rx="1.3386716"
+         ry="1.0190356" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="263.14752"
+         cx="-76.041962"
+         id="ellipse4706"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse4708"
+         cx="-85.561409"
+         cy="259.47897"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse4716"
+         cx="-83.479027"
+         cy="278.94257"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="276.08926"
+         cx="-102.8154"
+         id="ellipse4718"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse4722"
+         cx="-79.31427"
+         cy="271.80933"
+         rx="1.3386716"
+         ry="1.0190356" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444"
+         id="ellipse4730"
+         cx="-92.874779"
+         cy="276.78931"
+         rx="3.2111802"
+         ry="2.3466654" />
+      <ellipse
+         ry="2.3466654"
+         rx="3.2111802"
+         cy="287.00995"
+         cx="-77.473824"
+         id="ellipse4732"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444" />
+      <ellipse
+         ry="1.226596"
+         rx="1.531076"
+         cy="284.90982"
+         cx="-95.954971"
+         id="ellipse4736"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025"
+         id="ellipse4738"
+         cx="-88.114487"
+         cy="285.88986"
+         rx="1.531076"
+         ry="1.226596" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="260.48392"
+         cx="-104.71127"
+         id="ellipse4740"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="263.65704"
+         cx="-130.88115"
+         id="ellipse5173"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse5175"
+         cx="-109.90863"
+         cy="263.14752"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="259.47897"
+         cx="-119.42808"
+         id="ellipse5177"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="278.94257"
+         cx="-117.3457"
+         id="ellipse5179"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse5181"
+         cx="-136.68207"
+         cy="276.08926"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="271.80933"
+         cx="-113.18094"
+         id="ellipse5183"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+      <ellipse
+         ry="2.3466654"
+         rx="3.2111802"
+         cy="276.78931"
+         cx="-126.74145"
+         id="ellipse5185"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444"
+         id="ellipse5187"
+         cx="-111.34049"
+         cy="287.00995"
+         rx="3.2111802"
+         ry="2.3466654" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025"
+         id="ellipse5189"
+         cx="-129.82164"
+         cy="284.90982"
+         rx="1.531076"
+         ry="1.226596" />
+      <ellipse
+         ry="1.226596"
+         rx="1.531076"
+         cy="285.88986"
+         cx="-121.98116"
+         id="ellipse5191"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse5193"
+         cx="-138.57794"
+         cy="260.48392"
+         rx="1.3386716"
+         ry="1.0190356" />
+    </g>
+    <g
+       id="g5397"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#7b4720;fill-opacity:1;stroke-width:0.12187747"
+         d="m -140.61054,222.46601 v 33.86666 h 33.86667 33.866665 v -33.86666 h -33.866665 z"
+         id="rect3714"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.12187747px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -140.61054,222.46601 v 23.0358 c 3.83359,0.68063 4.3412,4.07305 5.88957,2.04018 3.4045,-3.85036 1.87728,-6.97029 7.57266,-8.79119 8.35161,1.19864 2.40793,7.35001 7.70651,9.86244 9.15505,2.84181 6.03235,-4.19278 12.69793,-3.11143 2.61751,0.86772 4.34119,4.07305 5.88956,2.04018 3.404502,-3.85036 1.877285,-6.97029 7.572666,-8.79119 8.351615,1.19864 2.407933,7.35001 7.706508,9.86244 9.155057,2.84181 6.125903,-4.56695 12.697931,-3.11143 v -23.0358 h -33.866665 z"
+         id="path3716"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#ac6c48;fill-opacity:1;stroke:none;stroke-width:0.12187747px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -140.61054,222.46601 v 11.04583 c 3.6975,0.39299 6.1216,-0.0188 9.43199,0.96583 7.20103,1.76186 6.48651,-6.99661 15.61765,-3.97391 4.70624,0.70185 4.85857,2.06957 8.81703,3.00808 3.6975,0.39299 6.12159,-0.0188 9.431981,0.96583 7.201038,1.76186 6.48652,-6.99661 15.617653,-3.97391 4.706242,0.70185 4.858568,2.06957 8.817031,3.00808 v -11.04583 h -33.866665 z"
+         id="path3740"
+         inkscape:connector-curvature="0" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="229.79036"
+         cx="-97.014488"
+         id="ellipse3751"
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+      <ellipse
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse3753"
+         cx="-76.041962"
+         cy="229.28084"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="225.61232"
+         cx="-85.561409"
+         id="ellipse3755"
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="245.0759"
+         cx="-83.479027"
+         id="ellipse3763"
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse3765"
+         cx="-102.8154"
+         cy="242.2226"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="237.94264"
+         cx="-79.31427"
+         id="ellipse3769"
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+      <ellipse
+         ry="2.3466654"
+         rx="3.2111802"
+         cy="242.92264"
+         cx="-92.874779"
+         id="ellipse4639"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444"
+         id="ellipse4641"
+         cx="-77.473824"
+         cy="253.14326"
+         rx="3.2111802"
+         ry="2.3466654" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025"
+         id="ellipse4664"
+         cx="-95.954971"
+         cy="251.04314"
+         rx="1.531076"
+         ry="1.226596" />
+      <ellipse
+         ry="1.226596"
+         rx="1.531076"
+         cy="252.02319"
+         cx="-88.114487"
+         id="ellipse4666"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025" />
+      <ellipse
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse4668"
+         cx="-103.58875"
+         cy="225.30763"
+         rx="1.3386716"
+         ry="1.0190356" />
+      <ellipse
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse5219"
+         cx="-130.88115"
+         cy="229.79036"
+         rx="1.3386716"
+         ry="1.0190356" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="229.28084"
+         cx="-109.90863"
+         id="ellipse5221"
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse5223"
+         cx="-119.42808"
+         cy="225.61232"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.12187748"
+         id="ellipse5225"
+         cx="-117.3457"
+         cy="245.0759"
+         rx="2.2311194"
+         ry="1.6304569" />
+      <ellipse
+         ry="1.6304569"
+         rx="2.2311194"
+         cy="242.2226"
+         cx="-136.68207"
+         id="ellipse5227"
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.12187748" />
+      <ellipse
+         style="fill:#7b4720;fill-opacity:1;stroke:none;stroke-width:0.07463441"
+         id="ellipse5229"
+         cx="-113.18094"
+         cy="237.94264"
+         rx="1.3386716"
+         ry="1.0190356" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444"
+         id="ellipse5231"
+         cx="-126.74145"
+         cy="242.92264"
+         rx="3.2111802"
+         ry="2.3466654" />
+      <ellipse
+         ry="2.3466654"
+         rx="3.2111802"
+         cy="253.14326"
+         cx="-111.34049"
+         id="ellipse5233"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.17541444" />
+      <ellipse
+         ry="1.226596"
+         rx="1.531076"
+         cy="251.04314"
+         cx="-129.82164"
+         id="ellipse5235"
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025" />
+      <ellipse
+         style="fill:#603719;fill-opacity:1;stroke:none;stroke-width:0.08757025"
+         id="ellipse5237"
+         cx="-121.98116"
+         cy="252.02319"
+         rx="1.531076"
+         ry="1.226596" />
+      <ellipse
+         ry="1.0190356"
+         rx="1.3386716"
+         cy="225.30763"
+         cx="-137.45541"
+         id="ellipse5239"
+         style="fill:#905833;fill-opacity:1;stroke:none;stroke-width:0.07463441" />
+    </g>
+    <rect
+       style="fill:#ddf8ff;fill-opacity:1;stroke:none;stroke-width:0.39076608"
+       id="rect5445"
+       width="508"
+       height="285.75"
+       x="-773.05042"
+       y="151.19231"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/background.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="path5447"
+       cx="-571.74292"
+       cy="35.075863"
+       rx="38.166088"
+       ry="27.689123" />
+    <ellipse
+       ry="27.689123"
+       rx="38.166088"
+       cy="33.579155"
+       cx="-434.79401"
+       id="ellipse5449"
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       d="m -707.56924,53.784596 a 33.301783,24.695703 0 0 0 -33.30183,24.69565 33.301783,24.695703 0 0 0 0.0817,1.717723 33.301783,24.695703 0 0 0 -4.19767,-0.220658 33.301783,24.695703 0 0 0 -33.30186,24.695649 33.301783,24.695703 0 0 0 33.30186,24.69565 33.301783,24.695703 0 0 0 21.23075,-5.69629 33.301783,24.695703 0 0 0 19.929,4.94802 33.301783,24.695703 0 0 0 12.54032,-1.83555 33.301783,24.695703 0 0 0 16.6455,3.3321 33.301783,24.695703 0 0 0 33.30186,-24.69565 33.301783,24.695703 0 0 0 -33.07964,-24.687384 33.301783,24.695703 0 0 0 0.15192,-2.25361 33.301783,24.695703 0 0 0 -33.30186,-24.69565 z"
+       id="path5451"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/cloud.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path5460"
+       d="m -31.0566,345.64292 a 33.301783,24.695703 0 0 0 -33.30184,24.69565 33.301783,24.695703 0 0 0 0.0817,1.71772 33.301783,24.695703 0 0 0 -4.19766,-0.22066 33.301783,24.695703 0 0 0 -33.30186,24.69565 33.301783,24.695703 0 0 0 33.30186,24.69565 33.301783,24.695703 0 0 0 21.23075,-5.69629 33.301783,24.695703 0 0 0 19.92899,4.94802 33.301783,24.695703 0 0 0 12.54033,-1.83555 33.301783,24.695703 0 0 0 16.6454896,3.3321 A 33.301783,24.695703 0 0 0 35.17302,397.27956 33.301783,24.695703 0 0 0 2.0933796,372.59218 33.301783,24.695703 0 0 0 2.2453096,370.33857 33.301783,24.695703 0 0 0 -31.05655,345.64292 Z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/background.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5466"
+       d="m -58.193572,184.62362 c -2.045304,-4.09195 -0.641325,-6.82226 2.954767,-9.04338 -2.880376,2.4231 -3.162399,5.51366 -2.954767,9.04338 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -58.349246,184.60857 c 0.856184,-4.49381 3.628575,-5.81274 7.834822,-5.39713 -3.759774,0.17912 -5.858738,2.46504 -7.834822,5.39713 z"
+       id="path5485"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5487"
+       d="m -58.360597,184.34475 c -0.345121,-4.56161 1.987484,-6.55777 6.156604,-7.25325 -3.583023,1.15322 -5.013368,3.90735 -6.156604,7.25325 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -58.389146,184.34475 c 0.345121,-4.56161 -1.987484,-6.55777 -6.156604,-7.25325 3.583023,1.15322 5.013368,3.90735 6.156604,7.25325 z"
+       id="path5489"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5495"
+       d="m -39.858977,184.75591 c 2.045304,-4.09195 0.641325,-6.82226 -2.954767,-9.04338 2.880376,2.4231 3.162399,5.51366 2.954767,9.04338 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5499"
+       d="m -39.14874,180.22029 c 2.103886,0.2687 2.873055,-0.31562 4.07737,-1.95006 -2.20368,0.25322 -2.517033,0.56976 -4.07737,1.95006 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ff5555;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -45.491724,172.26495 c 0.216947,0.24962 1.957276,2.31265 1.957276,2.31265 l -0.0345,-2.31862 1.542406,2.07729 0.539644,-3.55373 c 2.073732,2.9925 4.238583,5.86305 0.466658,7.39392 -3.771924,1.53087 -5.589448,-2.28365 -4.471488,-5.91151 z"
+       id="path5514"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccczcc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -88.54231,184.75591 c 2.045304,-4.09195 0.641325,-6.82226 -2.954767,-9.04338 2.880376,2.4231 3.162399,5.51366 2.954767,9.04338 z"
+       id="path5516"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -87.832073,180.22029 c 2.103886,0.2687 2.873055,-0.31562 4.07737,-1.95006 -2.20368,0.25322 -2.517033,0.56976 -4.07737,1.95006 z"
+       id="path5518"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccccczcc"
+       inkscape:connector-curvature="0"
+       id="path5520"
+       d="m -94.175057,172.26495 c 0.216947,0.24962 1.957276,2.31265 1.957276,2.31265 l -0.0345,-2.31862 1.542406,2.07729 0.539644,-3.55373 c 2.073732,2.9925 4.238583,5.86305 0.466658,7.39392 -3.771924,1.53087 -5.589448,-2.28365 -4.471488,-5.91151 z"
+       style="fill:#5599ff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#f9f9f9;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -100.76788,175.29763 c 1.003905,-0.92577 2.259355,-1.1924 3.601055,-1.233 1.75189,1.4895 0.85416,2.90075 -0.82631,3.86326 -1.08752,-0.52488 -2.047435,-1.32589 -2.774745,-2.63026 z"
+       id="path5522"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path5524"
+       d="m -100.63523,175.27494 c -1.34687,0.2255 -2.54357,-0.2384 -3.68875,-0.93866 -0.65114,-2.20538 0.87248,-2.89528 2.80571,-2.78126 0.623,1.03445 0.9881,2.23018 0.88305,3.71991 z"
+       style="fill:#f9f9f9;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5526"
+       d="m -103.76805,184.75591 c -2.0453,-4.09195 -0.64132,-6.82226 2.95477,-9.04338 -2.88037,2.4231 -3.1624,5.51366 -2.95477,9.04338 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path5528"
+       d="m -101.01325,175.63615 c 1.268355,0.50613 2.050645,1.5236 2.666245,2.71644 -0.58773,2.22313 -2.248165,2.0223 -3.841605,0.9217 0.004,-1.20756 0.31255,-2.41917 1.17536,-3.63814 z"
+       style="fill:#f9f9f9;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path5530"
+       d="m -104.47828,180.22029 c -2.10389,0.2687 -2.87306,-0.31563 -4.07737,-1.95006 2.20368,0.25322 2.51703,0.56976 4.07737,1.95006 z"
+       style="fill:#6fa124;fill-opacity:1;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#f9f9f9;stroke:none;stroke-width:0.08863849px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -100.86648,175.50141 c -0.28636,1.33525 -1.15829,2.27703 -2.23106,3.08388 -2.29019,-0.20674 -2.37055,-1.87735 -1.55263,-3.63275 1.19112,-0.19861 2.43732,-0.0974 3.78369,0.54887 z"
+       id="path5532"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       r="1.1132158"
+       cy="175.60585"
+       cx="-100.70592"
+       id="circle5534"
+       style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.21423844"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Sprites/flowers.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.35009941"
+       d="m -621.33334,212.0954 c -22.81584,0 -41.31174,18.49589 -41.31174,41.31173 V 441.7047 h 82.62346 V 253.40713 c 0,-22.81584 -18.49589,-41.31173 -41.31172,-41.31173 z"
+       id="path5547"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssccss" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5554"
+       d="m -558.38167,237.03851 c -22.81584,0 -41.31174,18.49589 -41.31174,41.31173 v 164.35023 h 82.62347 V 278.35024 c 0,-22.81584 -18.49589,-41.31173 -41.31173,-41.31173 z"
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.35009941"
+       sodipodi:nodetypes="ssccss" />
+    <path
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.35009941"
+       d="m -677.15841,297.61465 c -22.81584,0 -41.31174,18.49589 -41.31174,41.31173 l 0,111.21703 h 82.62347 l 0,-111.21703 c 0,-22.81584 -18.49589,-41.31173 -41.31173,-41.31173 z"
+       id="path5556"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssccss" />
+    <ellipse
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.31461826"
+       id="path5558"
+       cx="-697.80011"
+       cy="357.82266"
+       rx="16.587599"
+       ry="19.737141" />
+    <ellipse
+       ry="5.4964194"
+       rx="4.6193314"
+       cy="330.10669"
+       cx="-676.5932"
+       id="ellipse5560"
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.08761523" />
+    <ellipse
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.08761523"
+       id="ellipse5562"
+       cx="-706.61877"
+       cy="326.5372"
+       rx="4.6193314"
+       ry="5.4964194" />
+    <ellipse
+       ry="19.737141"
+       rx="16.587599"
+       cy="293.99191"
+       cx="541.5827"
+       id="ellipse5564"
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.31461826"
+       transform="scale(-1,1)" />
+    <ellipse
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.08761523"
+       id="ellipse5566"
+       cx="562.78961"
+       cy="266.27594"
+       rx="4.6193314"
+       ry="5.4964194"
+       transform="scale(-1,1)" />
+    <ellipse
+       ry="5.4964194"
+       rx="4.6193314"
+       cy="262.70645"
+       cx="532.76398"
+       id="ellipse5568"
+       style="fill:#c5f8e9;fill-opacity:1;stroke:none;stroke-width:0.08761523"
+       transform="scale(-1,1)" />
+    <ellipse
+       transform="scale(-1,1)"
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.31461826"
+       id="ellipse5570"
+       cx="609.04755"
+       cy="262.16809"
+       rx="16.587599"
+       ry="19.737141" />
+    <ellipse
+       transform="scale(-1,1)"
+       ry="5.4964194"
+       rx="4.6193314"
+       cy="235.20041"
+       cx="632.49951"
+       id="ellipse5572"
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.08761523" />
+    <ellipse
+       transform="scale(-1,1)"
+       style="fill:#a1f3d8;fill-opacity:1;stroke:none;stroke-width:0.08761523"
+       id="ellipse5574"
+       cx="602.47388"
+       cy="231.63092"
+       rx="4.6193314"
+       ry="5.4964194" />
+    <path
+       style="fill:#68ecc0;fill-opacity:1;stroke:none;stroke-width:0.99999994"
+       d="m -1486.3379,1377.0781 c -69.5133,-10e-5 -125.8651,41.7887 -125.8652,93.3379 0,2.1661 0.1042,4.3314 0.3086,6.4922 -5.2594,-0.5258 -10.5584,-0.8043 -15.8653,-0.834 -48.8343,0.045 -93.2263,21.0328 -113.8886,53.8457 -10.968,-44.2779 -62.9922,-76.4408 -123.6993,-76.4746 -69.5133,-10e-5 -125.8651,41.7887 -125.8652,93.3379 0,2.1661 0.1042,4.3314 0.3086,6.4922 -5.2594,-0.5258 -10.5584,-0.8043 -15.8652,-0.834 -52.0875,0.01 -98.7872,23.8078 -117.4668,59.8652 -16.3279,-38.7413 -64.5463,-65.2164 -119.2793,-65.4921 0.3663,-2.8312 0.5579,-5.6734 0.5742,-8.5176 -10e-5,-51.5492 -56.3519,-93.338 -125.8652,-93.3379 -69.5133,-10e-5 -125.8652,41.7887 -125.8653,93.3379 0,2.1661 0.1042,4.3314 0.3086,6.4922 -5.2594,-0.5258 -10.5584,-0.8043 -15.8652,-0.834 -36.8158,0.041 -71.7617,12.0334 -95.6328,32.8183 -17.4344,-6.5826 -36.6981,-10.0607 -56.2617,-10.1582 0.3663,-2.8312 0.5579,-5.6733 0.5742,-8.5175 -10e-5,-51.5492 -56.352,-93.338 -125.8653,-93.3379 -69.5133,-10e-5 -125.8651,41.7887 -125.8652,93.3379 0,2.166 0.1042,4.3314 0.3086,6.4921 -5.2594,-0.5257 -10.5584,-0.8042 -15.8652,-0.8339 -69.5133,-1e-4 -125.8652,41.7887 -125.8653,93.3379 186.9878,141.9449 2180.76989,125.4324 2186.37503,-11.3145 -0.0218,-51.2947 -55.85674,-92.9644 -125.02539,-93.3066 0.36631,-2.8312 0.55791,-5.6734 0.57422,-8.5176 -1.4e-4,-51.5492 -56.35196,-93.338 -125.86526,-93.3379 -67.0567,0.026 -122.3118,39.0332 -125.6445,88.6992 -18.3603,-36.0828 -64.7555,-60.0763 -116.7598,-60.3828 0.3663,-2.8312 0.5579,-5.6734 0.5742,-8.5176 -10e-5,-51.5492 -56.3519,-93.338 -125.8652,-93.3379 z"
+       transform="scale(0.26458333)"
+       id="path5578"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccc" />
+    <g
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png"
+       id="g5645"
+       transform="translate(67.733232,33.866763)">
+      <g
+         id="g5653"
+         inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         style="opacity:0.4">
+        <path
+           style="fill:#0066ff;fill-opacity:1;stroke-width:0.12187747"
+           d="m -140.61054,222.46601 v 33.86666 h 33.86667 33.866665 v -33.86666 h -33.866665 z"
+           id="path5595"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path5647"
+           d="m -140.61054,222.46601 v 20.46558 c 3.83359,0.60468 4.3412,3.61859 5.88957,1.81255 3.4045,-3.42076 1.87728,-6.19259 7.57266,-7.81033 8.35161,1.06491 2.40793,6.52995 7.70651,8.76204 9.15505,2.52474 6.03235,-3.72496 12.69793,-2.76426 2.61751,0.77089 4.34119,3.61859 5.88956,1.81255 3.404502,-3.42076 1.877285,-6.19259 7.572666,-7.81033 8.351615,1.06491 2.407933,6.52995 7.706508,8.76204 9.155057,2.52474 6.125903,-4.05739 12.697931,-2.76426 v -20.46558 h -33.866665 z"
+           style="fill:#5599ff;fill-opacity:1;stroke:none;stroke-width:0.11487716px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:#aaccff;fill-opacity:1;stroke:none;stroke-width:0.09069014px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -140.61054,222.46601 v 12.75489 c 3.83359,0.37686 4.3412,2.25524 5.88957,1.12965 3.4045,-2.13194 1.87728,-3.85945 7.57266,-4.86768 8.35161,0.66369 2.40793,4.0697 7.70651,5.46082 9.15505,1.57351 6.03235,-2.32153 12.69793,-1.72279 2.61751,0.48045 4.34119,2.25524 5.88956,1.12965 3.404502,-2.13194 1.877285,-3.85945 7.572666,-4.86768 8.351615,0.66369 2.407933,4.0697 7.706508,5.46082 9.155057,1.57351 6.125903,-2.52871 12.697931,-1.72279 v -12.75489 h -33.866665 z"
+           id="path5597"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.09096262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -140.61054,222.46601 v 6.15287 c 3.6975,0.2189 6.1216,-0.0105 9.43199,0.53799 7.20103,0.98141 6.48651,-3.89732 15.61765,-2.21359 4.70624,0.39095 4.85857,1.15282 8.81703,1.6756 3.6975,0.2189 6.12159,-0.0105 9.431981,0.53799 7.201038,0.98141 6.48652,-3.89732 15.617653,-2.21359 4.706242,0.39095 4.858568,1.15282 8.817031,1.6756 v -6.15287 h -33.866665 z"
+           id="path5599"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g5704"
+         style="opacity:0.4"
+         inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texturea.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <g
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png"
+           transform="matrix(1,0,0,0.5000001,0,145.09955)"
+           id="g5663"
+           style="">
+          <path
+             id="path5655"
+             transform="matrix(0.26458333,0,0,0.52916656,-67.733232,-357.93255)"
+             d="M -275.44141 1096.8164 L -275.44141 1160.8164 L -275.44141 1224.8164 L -147.44141 1224.8164 L -19.441406 1224.8164 L -19.441406 1160.8164 L -19.441406 1096.8164 L -147.44141 1096.8164 L -275.44141 1096.8164 z "
+             style="fill:#0066ff;fill-opacity:1;stroke-width:0.32572117" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path5657"
+             d="m -140.61054,222.46601 v 20.46558 c 3.83359,0.60468 4.3412,3.61859 5.88957,1.81255 3.4045,-3.42076 1.87728,-6.19259 7.57266,-7.81033 8.35161,1.06491 2.40793,6.52995 7.70651,8.76204 9.15505,2.52474 6.03235,-3.72496 12.69793,-2.76426 2.61751,0.77089 4.34119,3.61859 5.88956,1.81255 3.404502,-3.42076 1.877285,-6.19259 7.572666,-7.81033 8.351615,1.06491 2.407933,6.52995 7.706508,8.76204 9.155057,2.52474 6.125903,-4.05739 12.697931,-2.76426 v -20.46558 h -33.866665 z"
+             style="fill:#5599ff;fill-opacity:1;stroke:none;stroke-width:0.11487716px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <path
+             style="fill:#aaccff;fill-opacity:1;stroke:none;stroke-width:0.09069014px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m -140.61054,222.46601 v 12.75489 c 3.83359,0.37686 4.3412,2.25524 5.88957,1.12965 3.4045,-2.13194 1.87728,-3.85945 7.57266,-4.86768 8.35161,0.66369 2.40793,4.0697 7.70651,5.46082 9.15505,1.57351 6.03235,-2.32153 12.69793,-1.72279 2.61751,0.48045 4.34119,2.25524 5.88956,1.12965 3.404502,-2.13194 1.877285,-3.85945 7.572666,-4.86768 8.351615,0.66369 2.407933,4.0697 7.706508,5.46082 9.155057,1.57351 6.125903,-2.52871 12.697931,-1.72279 v -12.75489 h -33.866665 z"
+             id="path5659"
+             inkscape:connector-curvature="0" />
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.09096262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m -140.61054,222.46601 v 6.15287 c 3.6975,0.2189 6.1216,-0.0105 9.43199,0.53799 7.20103,0.98141 6.48651,-3.89732 15.61765,-2.21359 4.70624,0.39095 4.85857,1.15282 8.81703,1.6756 3.6975,0.2189 6.12159,-0.0105 9.431981,0.53799 7.201038,0.98141 6.48652,-3.89732 15.617653,-2.21359 4.706242,0.39095 4.858568,1.15282 8.817031,1.6756 v -6.15287 h -33.866665 z"
+             id="path5661"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           inkscape:export-filename="/Users/tapps/projects/transmission-arena/Assets/Game/Art/Materials/texture.png"
+           id="g5673"
+           transform="matrix(1,0,0,-0.5000001,0,401.43227)"
+           style="">
+          <path
+             style="fill:#5599ff;fill-opacity:1;stroke:none;stroke-width:0.11487716px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m -72.877205,222.46601 v 20.46558 c -3.83359,0.60468 -4.3412,3.61859 -5.88957,1.81255 -3.4045,-3.42076 -1.87728,-6.19259 -7.57266,-7.81033 -8.35161,1.06491 -2.40793,6.52995 -7.70651,8.76204 -9.155055,2.52474 -6.032355,-3.72496 -12.697935,-2.76426 -2.61751,0.77089 -4.34119,3.61859 -5.88956,1.81255 -3.4045,-3.42076 -1.87728,-6.19259 -7.57266,-7.81033 -8.35162,1.06491 -2.40793,6.52995 -7.70651,8.76204 -9.15506,2.52474 -6.1259,-4.05739 -12.69793,-2.76426 v -20.46558 h 33.86666 z"
+             id="path5667"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path5669"
+             d="m -72.877205,222.46601 v 12.75489 c -3.83359,0.37686 -4.3412,2.25524 -5.88957,1.12965 -3.4045,-2.13194 -1.87728,-3.85945 -7.57266,-4.86768 -8.35161,0.66369 -2.40793,4.0697 -7.70651,5.46082 -9.155055,1.57351 -6.032355,-2.32153 -12.697935,-1.72279 -2.61751,0.48045 -4.34119,2.25524 -5.88956,1.12965 -3.4045,-2.13194 -1.87728,-3.85945 -7.57266,-4.86768 -8.35162,0.66369 -2.40793,4.0697 -7.70651,5.46082 -9.15506,1.57351 -6.1259,-2.52871 -12.69793,-1.72279 v -12.75489 h 33.86666 z"
+             style="fill:#aaccff;fill-opacity:1;stroke:none;stroke-width:0.09069014px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path5671"
+             d="m -140.61054,222.46601 v 6.15287 c 3.6975,0.2189 6.1216,-0.0105 9.43199,0.53799 7.20103,0.98141 6.48651,-3.89732 15.61765,-2.21359 4.70624,0.39095 4.85857,1.15282 8.81703,1.6756 3.6975,0.2189 6.12159,-0.0105 9.431981,0.53799 7.201038,0.98141 6.48652,-3.89732 15.617653,-2.21359 4.706242,0.39095 4.858568,1.15282 8.817031,1.6756 v -6.15287 h -33.866665 z"
+             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.09096262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+      </g>
+    </g>
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.44858468"
+       id="rect5706"
+       width="64"
+       height="128"
+       x="-111.50485"
+       y="-32.681587" />
+    <rect
+       y="31.318411"
+       x="-47.504852"
+       height="64"
+       width="64"
+       id="rect5708"
+       style="opacity:1;fill:url(#linearGradient5726);fill-opacity:1;stroke:none;stroke-width:0.31719726" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.37417731"
+       id="rect5710"
+       width="8.9958334"
+       height="117.475"
+       x="-109.27292"
+       y="-28.368414"
+       rx="4.4979167"
+       ry="4.4979167" />
+    <rect
+       ry="4.4979167"
+       rx="4.4979167"
+       y="-28.368414"
+       x="-96.969788"
+       height="117.475"
+       width="8.9958334"
+       id="rect5712"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.37417731" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.37417731"
+       id="rect5714"
+       width="8.9958334"
+       height="117.475"
+       x="-84.666672"
+       y="-28.368414"
+       rx="4.4979167"
+       ry="4.4979167" />
+    <rect
+       ry="4.4979167"
+       rx="4.4979167"
+       y="-28.368414"
+       x="-72.363533"
+       height="117.475"
+       width="8.9958334"
+       id="rect5716"
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.37417731" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.37417731"
+       id="rect5718"
+       width="8.9958334"
+       height="117.475"
+       x="-60.06041"
+       y="-28.368414"
+       rx="4.4979167"
+       ry="4.4979167" />
+    <path
+       style="fill:#0066ff;fill-opacity:1;stroke-width:0.46063927"
+       d="M 199.73438 462.5293 L 199.73438 590.52734 L 199.73438 654.52734 L 199.73438 718.52734 L 327.73438 718.52734 L 455.73438 718.52734 L 455.73438 654.52734 L 455.73438 590.52734 L 455.73438 462.5293 L 327.73438 462.5293 L 199.73438 462.5293 z "
+       id="path5740"
+       transform="scale(0.26458333)" />
+    <path
+       style="fill:#5599ff;fill-opacity:1;stroke:none;stroke-width:0.43418139px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 199.73438 462.5293 L 199.73438 539.87891 C 214.22353 542.16431 216.14203 553.55449 221.99414 546.72852 C 234.86154 533.79966 229.08939 523.32328 250.61523 517.20898 C 282.18037 521.23384 259.71606 541.88993 279.74219 550.32617 C 314.34395 559.8685 302.54163 536.24791 327.73438 539.87891 C 337.62733 542.79251 344.14203 553.55449 349.99414 546.72852 C 362.86155 533.79966 357.08937 523.32328 378.61523 517.20898 C 410.18037 521.23384 387.7161 541.88993 407.74219 550.32617 C 442.34399 559.8685 430.89524 534.99149 455.73438 539.87891 L 455.73438 462.5293 L 327.73438 462.5293 L 199.73438 462.5293 z M 199.73438 590.52734 L 199.73438 629.20312 C 214.22353 630.34583 216.14203 636.0419 221.99414 632.62891 C 234.86154 626.16448 229.08939 620.92629 250.61523 617.86914 C 282.18037 619.88155 259.71606 630.20959 279.74219 634.42773 C 314.34395 639.1989 302.54163 627.38763 327.73438 629.20312 C 337.62733 630.65991 344.14203 636.0419 349.99414 632.62891 C 362.86155 626.16448 357.08937 620.92629 378.61523 617.86914 C 410.18037 619.88155 387.7161 630.20959 407.74219 634.42773 C 442.34399 639.1989 430.89524 626.7594 455.73438 629.20312 L 455.73438 590.52734 L 327.73438 590.52734 L 199.73438 590.52734 z M 362.58789 673.49219 C 343.91013 673.21637 348.99075 681.38534 327.73438 679.85352 C 317.84142 678.39673 311.32672 673.01475 305.47461 676.42773 C 292.60721 682.89216 298.37936 688.13035 276.85352 691.1875 C 245.28834 689.17509 267.75269 678.84705 247.72656 674.62891 C 213.12476 669.85774 224.57354 682.29724 199.73438 679.85352 L 199.73438 718.52734 L 327.73438 718.52734 L 455.73438 718.52734 L 455.73438 679.85352 C 441.24522 678.71081 439.32672 673.01475 433.47461 676.42773 C 420.60721 682.89216 426.37936 688.13035 404.85352 691.1875 C 373.28839 689.17509 395.75267 678.84705 375.72656 674.62891 C 370.32003 673.88341 366.04674 673.54326 362.58789 673.49219 z "
+       transform="scale(0.26458333)"
+       id="path5742" />
+    <path
+       style="fill:#aaccff;fill-opacity:1;stroke:none;stroke-width:0.3427659px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 199.73438 462.5293 L 199.73438 510.73633 C 214.22353 512.16068 216.14203 519.26006 221.99414 515.00586 C 234.86154 506.94813 229.08939 500.41805 250.61523 496.60742 C 282.18037 499.11586 259.71606 511.99027 279.74219 517.24805 C 314.34395 523.19517 302.54163 508.47337 327.73438 510.73633 C 337.62733 512.5522 344.14203 519.26006 349.99414 515.00586 C 362.86155 506.94813 357.08937 500.41805 378.61523 496.60742 C 410.18037 499.11586 387.7161 511.99027 407.74219 517.24805 C 442.34399 523.19517 430.89524 507.69033 455.73438 510.73633 L 455.73438 462.5293 L 327.73438 462.5293 L 199.73438 462.5293 z M 199.73438 590.52734 L 199.73438 614.63086 C 214.22353 615.34304 216.14203 618.89271 221.99414 616.76562 C 234.86154 612.73676 229.08939 609.47366 250.61523 607.56836 C 282.18037 608.82256 259.71606 615.25783 279.74219 617.88672 C 314.34395 620.86026 302.54163 613.49938 327.73438 614.63086 C 337.62733 615.53882 344.14203 618.89271 349.99414 616.76562 C 362.86155 612.73676 357.08937 609.47366 378.61523 607.56836 C 410.18037 608.82256 387.7161 615.25783 407.74219 617.88672 C 442.34399 620.86026 430.89524 613.10786 455.73438 614.63086 L 455.73438 590.52734 L 327.73438 590.52734 L 199.73438 590.52734 z M 360.60742 690.46094 C 344.24997 690.65588 348.20348 695.34315 327.73438 694.42383 C 317.84142 693.51587 311.32672 690.16198 305.47461 692.28906 C 292.60721 696.31793 298.37936 699.58298 276.85352 701.48828 C 245.28834 700.23408 267.75269 693.79686 247.72656 691.16797 C 213.12476 688.19443 224.57354 695.94683 199.73438 694.42383 L 199.73438 718.52734 L 327.73438 718.52734 L 455.73438 718.52734 L 455.73438 694.42383 C 441.24522 693.71165 439.32672 690.16198 433.47461 692.28906 C 420.60721 696.31793 426.37936 699.58298 404.85352 701.48828 C 373.28839 700.23408 395.75267 693.79686 375.72656 691.16797 C 369.23873 690.61043 364.38222 690.41595 360.60742 690.46094 z "
+       transform="scale(0.26458333)"
+       id="path5744" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34379572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 199.73438 462.5293 L 199.73438 485.7832 C 213.70918 486.61054 222.8711 485.74337 235.38281 487.81641 C 262.5993 491.52567 259.89876 473.08747 294.41016 479.45117 C 312.19752 480.92878 312.77327 483.80734 327.73438 485.7832 C 341.70918 486.61054 350.8711 485.74337 363.38281 487.81641 C 390.59934 491.52567 387.8988 473.08747 422.41016 479.45117 C 440.19756 480.92878 440.77323 483.80734 455.73438 485.7832 L 455.73438 462.5293 L 327.73438 462.5293 L 199.73438 462.5293 z M 199.73438 590.52734 L 199.73438 602.15625 C 213.70918 602.56992 222.8711 602.13628 235.38281 603.17188 C 262.5993 605.02649 259.89876 595.80645 294.41016 598.98828 C 312.19752 599.7271 312.77327 601.16832 327.73438 602.15625 C 341.70918 602.56992 350.8711 602.13628 363.38281 603.17188 C 390.59934 605.02649 387.8988 595.80645 422.41016 598.98828 C 440.19756 599.7271 440.77323 601.16832 455.73438 602.15625 L 455.73438 590.52734 L 327.73438 590.52734 L 199.73438 590.52734 z M 242.30273 705.63477 C 240.22176 705.63331 237.93436 705.7109 235.38281 705.88477 C 222.8711 706.92036 213.70918 706.48672 199.73438 706.90039 L 199.73438 718.52734 L 327.73438 718.52734 L 455.73438 718.52734 L 455.73438 706.90039 C 440.77323 707.88832 440.19756 709.32758 422.41016 710.06641 C 387.8988 713.24824 390.59934 704.03015 363.38281 705.88477 C 350.8711 706.92036 341.70918 706.48672 327.73438 706.90039 C 312.77327 707.88832 312.19752 709.32758 294.41016 710.06641 C 263.1342 712.94994 262.41881 705.64879 242.30273 705.63477 z "
+       transform="scale(0.26458333)"
+       id="path5746" />
+  </g>
+</svg>
