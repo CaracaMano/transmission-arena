@@ -57,11 +57,11 @@ public class Player : MonoBehaviour {
         anim.SetBool("Running?",Mathf.Abs(body.velocity.x) > 0);
 
         bool grounded = isGrounded;
-        if (previousGrounded == false || grounded == true)
+        if (previousGrounded == false && grounded == true)
         {
             anim.SetBool("Jumping?", false);
-            previousGrounded = grounded;
         }
+        previousGrounded = grounded;
 	}
 
 	public void LearnSkill(Skill skill) {
