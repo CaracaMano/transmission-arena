@@ -72,8 +72,6 @@ public class Player : MonoBehaviour {
     {
         if (hasCrown)
         {
-            
-
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
@@ -85,6 +83,8 @@ public class Player : MonoBehaviour {
 
             int rndX = Random.Range(-200, 200);
             int rndy = Random.Range(200, 400);
+
+            body.angularVelocity = 1500;
 
             body.AddForce(new Vector2(rndX, rndy));
         }
@@ -119,6 +119,7 @@ public class Player : MonoBehaviour {
 		jump = new Jump();
         walk = new Walk();
 		shoot = new Shoot();
+
         anim = GetComponent<Animator>();
 
 		sprite = GetComponent<SpriteRenderer>();
@@ -222,9 +223,14 @@ public class Player : MonoBehaviour {
 
 	public void FlipPlayerXTween(){
 
-		float time = 0.5f;
+		float time = 0.6f;
 
-		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).SetLoops(-1);
+
+		DOTween.Sequence ().Append (
+			transform.DOScaleX (Mathf.Sign(-transform.localScale.x), time).SetEase(Ease.OutExpo)
+		).Append(
+			transform.DOScaleX (Mathf.Sign(transform.localScale.x), time).SetEase(Ease.OutExpo)
+		).SetLoops(-1);
 
 	}
 }

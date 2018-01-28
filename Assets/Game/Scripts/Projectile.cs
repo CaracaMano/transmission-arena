@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Projectile : MonoBehaviour {
 
@@ -18,8 +19,12 @@ public class Projectile : MonoBehaviour {
 	}
 
 	public void AutoDestroy() {
-		Destroy(gameObject);
-		source.CanShoot = true;
+
+		this.transform.DOScale(new Vector3(0f, 0f, 0f), 0.15f).OnComplete(() =>{
+			Destroy(gameObject);
+			source.CanShoot = true; 
+		});
+
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
@@ -33,6 +38,18 @@ public class Projectile : MonoBehaviour {
 				break;
 			case "Portal":
 				break;
+            case "Crown":
+                GameObject crown = GameObject.FindGameObjectWithTag("Crown") as GameObject;
+                Rigidbody2D body = crown.GetComponent<Rigidbody2D>();
+
+                Vector2 direction = (body.transform.position - this.transform.position).normalized;
+                
+                float amount = Random.RandomRange(300,500);
+
+                body.angularVelocity = 1500;
+
+                body.AddForce(new Vector2(direction.x * amount, amount));
+                break;
 			default:
 				AutoDestroy();
 				break;

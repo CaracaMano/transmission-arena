@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public float GameTimer = 60;
-    public float fastGameTimer = 10;
+	public float GameTimer;
+    public float fastGameTimer;
 
 
     float audioVolume = 0.5f;
@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour {
 	public WinCondition WinCondition;
 
 	public Text TimerText;
+    public Text getTheCrownText;
 	
 	private const string SHOOT_ACTION = "a0";
 	private const string JUMP_ACTION = "a1";
@@ -47,6 +48,7 @@ public class GameController : MonoBehaviour {
 
     AudioPool audioPool;
     private bool suddenDeathSoundPlayed = false;
+    private bool canPlay = false;
 
     private void playMusic(bool isFast) 
     {
@@ -77,7 +79,44 @@ public class GameController : MonoBehaviour {
         fastMusicGameTime = fastGameTimer;
 		WinCondition.ConditionReached = EndGame;
         playMusic(false);
+
+        StartGame();
 	}
+
+    void StartGame() {
+
+        GameObject crown = GameObject.FindGameObjectWithTag("Crown") as GameObject;
+
+        Vector3 camPosition = Camera.main.gameObject.transform.position;
+
+        Camera.main.gameObject.transform.position = new Vector3(
+            crown.transform.position.x,
+            crown.transform.position.y + 1,
+            crown.transform.position.z - 5
+        );
+
+		getTheCrownText.DOFade (0f, 0f);
+		getTheCrownText.rectTransform.DOScale (new Vector3 (10f, 10f, 10f), 0f);
+		DOTween.Sequence().Append(getTheCrownText.DOFade(1f, 0.05f)).Append(getTheCrownText.rectTransform.DOScale(new Vector3(1,1,1), 0.3f)).SetDelay(0.5f).SetEase(Ease.InQuad);
+
+
+        Tween cameraAnimationIn = Camera.main.gameObject.transform.DOMove(new Vector3(
+              camPosition.x,
+              camPosition.y,
+              camPosition.z
+          ), 2).SetDelay(1.5f).Play();
+
+        cameraAnimationIn.onComplete += delegate
+        {
+            canPlay = true;
+
+            getTheCrownText.DOFade(0f,0.1f).OnComplete(() =>
+            {
+                getTheCrownText.enabled = false;
+            });
+        };
+    
+    }
 
 	void EndGame() {
 		if (!gameFinished) {
@@ -111,108 +150,142 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        GameTimer -= Time.deltaTime;
-        if (GameTimer <= fastMusicGameTime && !fastMusicStarted)
+        if (canPlay)
         {
-            playMusic(true);
-        }
-        else if (GameTimer < 0)
-        {
-            WinCondition.CheckCondition();
-            if (WinCondition.winner != null)
+            GameTimer -= Time.deltaTime;
+            if (GameTimer <= fastMusicGameTime && !fastMusicStarted)
             {
-                TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
-                TimerText.color = WinCondition.winner.playerColor;
+                playMusic(true);
             }
-            else
+            else if (GameTimer < 0)
             {
-                TimerText.text = "Sudden Death!!!";
-
-                if (!suddenDeathSoundPlayed)
+                WinCondition.CheckCondition();
+                if (WinCondition.winner != null)
                 {
-                    audioPool.PlayAudio(suddenDeathSound);
-                    suddenDeathSoundPlayed = true;
+                    TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
+                    TimerText.color = WinCondition.winner.playerColor;
                 }
-            }
-        }
-        else
-        {
-            int minutes = Mathf.FloorToInt(GameTimer / 60f);
-            int seconds = Mathf.FloorToInt(GameTimer % 60f);
-
-            if (GameTimer > 10)
-            {
-                TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-            }
-            else
-            {
-                if (!hurryUp)
+                else
                 {
-                    DOTween.Sequence().Append(
-                        TimerText.transform.DOScale(1.2f, 0.5f)
-                    ).Append(
-                        TimerText.transform.DOScale(1f, 0.5f)
-                    ).SetLoops(10);
-                    hurryUp = true;
-                }
-                TimerText.text = seconds.ToString("00");
-                TimerText.color = new Color(1f, 0.26f, 0.27f);
-            }
-        }
+                    TimerText.text = "Sudden Death!!!";
 
-        if (WinCondition.winner == null)
-        {
-            foreach (var playerPrefix in playersPrefix)
-            {
-                if (!players[playerPrefix].wasStunned)
-                {
-                    if (players[playerPrefix].isNPC == true)
+                    if (!suddenDeathSoundPlayed)
                     {
-                        HandleButtons(playerPrefix, players[playerPrefix]);
-                    }
-                    else
-                    {
-                        HandleControls(playerPrefix, players[playerPrefix]);
+                        audioPool.PlayAudio(suddenDeathSound);
+                        suddenDeathSoundPlayed = true;
                     }
                 }
             }
-        }
-        else
-        {
-            reloadTimer -= Time.deltaTime;
-            
-            if (reloadTimer < 0) {
-                if (!ReloadText.gameObject.activeSelf) {
-                    ReloadText.gameObject.SetActive(true);
+            else
+            {
+                int minutes = Mathf.FloorToInt(GameTimer / 60f);
+                int seconds = Mathf.FloorToInt(GameTimer % 60f);
+
+                if (GameTimer > 10)
+                {
+                    TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
                 }
-                canReload = true;
+                else
+                {
+                    if (!hurryUp)
+                    {
+                        DOTween.Sequence().Append(
+                            TimerText.transform.DOScale(1.2f, 0.5f)
+                        ).Append(
+                            TimerText.transform.DOScale(1f, 0.5f)
+                        ).SetLoops(10);
+                        hurryUp = true;
+                    }
+                    TimerText.text = seconds.ToString("00");
+                    TimerText.color = new Color(1f, 0.26f, 0.27f);
+                }
             }
-			
-            if (Input.anyKeyDown && canReload) {
-                SceneManager.LoadScene("Arena01");	
+
+            if (WinCondition.winner == null)
+            {
+                foreach (var playerPrefix in playersPrefix)
+                {
+                    if (!players[playerPrefix].wasStunned)
+                    {
+                        if (players[playerPrefix].isNPC == true)
+                        {
+                            HandleButtons(playerPrefix, players[playerPrefix]);
+                        }
+
+                        else
+                        {
+                            HandleControls(playerPrefix, players[playerPrefix]);
+                        }
+                    }
+                }
             }
+            else
+            {
+                reloadTimer -= Time.deltaTime;
+
+                if (reloadTimer < 0)
+                {
+                    if (!ReloadText.gameObject.activeSelf)
+                    {
+                        ReloadText.gameObject.SetActive(true);
+                    }
+                    canReload = true;
+                }
+
+                if (Input.anyKeyDown && canReload)
+                {
+                    SceneManager.LoadScene("Arena01");
+                }
+            } 
         }
     }
 	
     void HandleButtons(string playerPrefix, Player player) {
-        if ((Input.GetKey(KeyCode.RightArrow)))
-        {
-            player.walk.UseSkill(player, 1);
-        }
-        else if ((Input.GetKey(KeyCode.LeftArrow)))
-        {
-            player.walk.UseSkill(player, -1);
-        }
+        switch (playerPrefix) {
+                case "j3":
+                    if ((Input.GetKey(KeyCode.RightArrow)))
+                    {
+                        player.walk.UseSkill(player, 1);
+                    }
+                    else if ((Input.GetKey(KeyCode.LeftArrow)))
+                    {
+                        player.walk.UseSkill(player, -1);
+                    }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Jump(player);
-        }
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    {
+                        Jump(player);
+                    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            player.shoot.UseSkill(player);
+                    if (Input.GetKeyDown(KeyCode.Semicolon))
+                    {
+                        player.shoot.UseSkill(player);
+                    }
+                    break;
+                case "j4":
+                    if ((Input.GetKey(KeyCode.D)))
+                    {
+                        player.walk.UseSkill(player, 1);
+                    }
+                    else if ((Input.GetKey(KeyCode.A)))
+                    {
+                        player.walk.UseSkill(player, -1);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        Jump(player);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        player.shoot.UseSkill(player);
+                    }
+                    break;
+                default:
+                    break;
         }
+        
     }
 
     void Jump(Player player)
@@ -229,10 +302,6 @@ public class GameController : MonoBehaviour {
             Jump(player);
         }
 
-		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
-			Debug.Log(playerPrefix + " uses special action!");
-		}
-		
         float horizontalTranslation = Input.GetAxis(playerPrefix + HORIZONTAL_AXIS);
 
         if (horizontalTranslation != 0)
