@@ -22,7 +22,7 @@ public class Jump : Skill {
 
             player.GetComponent<Animator>().SetBool("Jumping?", true);
 
-            player.audioPool.PlayAudio(player.jumpSound);
+            player.audioPool.PlayAudio(player.jumpSound, 1, 0.5f);
        }
 	}
 

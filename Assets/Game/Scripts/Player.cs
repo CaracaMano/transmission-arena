@@ -60,12 +60,12 @@ public class Player : MonoBehaviour {
     public AudioClip StunnedSound;
     public AudioClip changeSound;
     public AudioClip getCrownSound;
-
+    public AudioClip teleportSound;
 
     public void pickCrown()
     {
         crown.GetComponent<Renderer>().enabled = true;
-        audioPool.PlayAudio(getCrownSound);
+        audioPool.PlayAudio(getCrownSound, 1, 0.5f);
         hasCrown = true;
     }
     public void loseCrown()
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour {
 
         this.anim.SetBool("Stunned?", true);
 
-        audioPool.PlayAudio(this.StunnedSound);
+        audioPool.PlayAudio(this.StunnedSound, 1, 0.5f);
 
         yield return new WaitForSeconds(stunnedTimeInSeconds);
         this.wasStunned = false;

@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1665654190090598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5983732, y: 1.525828, z: 0}
+  m_LocalPosition: {x: 40.165016, y: 5.904476, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4583963541373352}
@@ -352,6 +352,7 @@ MonoBehaviour:
   StunnedSound: {fileID: 8300000, guid: 0ef1f50db138d984ca7cc7b4074c1b2f, type: 3}
   changeSound: {fileID: 8300000, guid: b78ae473506a0374790bf7605f33ec0f, type: 3}
   getCrownSound: {fileID: 8300000, guid: 98e163eb9cb70b84bbb7b22dc7a1a8b3, type: 3}
+  teleportSound: {fileID: 8300000, guid: 5f23a97e43f073f4cb337f8fd7175582, type: 3}
 --- !u!212 &212004388618127180
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -385,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ce0a50d42e52a544097a9298387c81d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
