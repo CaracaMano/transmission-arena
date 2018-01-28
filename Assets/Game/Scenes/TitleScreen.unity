@@ -227,7 +227,7 @@ RectTransform:
   m_GameObject: {fileID: 480709087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9998999, y: 0.9998999, z: 0.9998999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2014719181}
   m_Father: {fileID: 1150314184}
@@ -268,10 +268,10 @@ RectTransform:
   m_Father: {fileID: 1150314184}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.335, y: 0.16655555}
-  m_AnchorMax: {x: 0.68500006, y: 0.24215001}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -120}
+  m_SizeDelta: {x: 300, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507566127
 MonoBehaviour:
@@ -298,14 +298,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 300
+    m_MaxSize: 20
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS ENTER TO START
+  m_Text: PRESS 'ENTER' TO START
 --- !u!222 &507566128
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ RectTransform:
   m_GameObject: {fileID: 527537103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9998999, y: 0.9998999, z: 0.9998999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1410068659}
   m_Father: {fileID: 1150314184}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 775178099}
   - component: {fileID: 775178098}
   m_Layer: 5
-  m_Name: Text
+  m_Name: InstructionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,11 +450,11 @@ RectTransform:
   m_Father: {fileID: 1150314184}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.365, y: 0.784889}
-  m_AnchorMax: {x: 0.62875044, y: 0.9626667}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 250, y: 62.44}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &775178098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,14 +494,16 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 14
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: PRESS "M" OR "F" TO ENTER USING THE KEYBOARD OR any button on a joystick
+    m_LineSpacing: 1.5
+  m_Text: 'KEYBOARD: PRESS ''M'' OR ''F''
+
+    JOYSTICK: press any button'
 --- !u!222 &775178100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -608,10 +610,10 @@ RectTransform:
   m_Father: {fileID: 1150314184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.987001}
-  m_AnchorMin: {x: 0.22958751, y: 0.24215001}
-  m_AnchorMax: {x: 0.7656344, y: 0.66045004}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 429, y: 188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829266835
 MonoBehaviour:
@@ -1605,10 +1607,10 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00005733967
-    y: 0
-    width: 0.9998853
-    height: 1
+    x: 0
+    y: 0.0005494356
+    width: 1
+    height: 0.9989011
   near clip plane: 0
   far clip plane: 1000
   field of view: 60
@@ -1677,7 +1679,7 @@ RectTransform:
   m_GameObject: {fileID: 1912974934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9998999, y: 0.9998999, z: 0.9998999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1455996066}
   m_Father: {fileID: 1150314184}
