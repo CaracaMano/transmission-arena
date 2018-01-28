@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleScreenManager : MonoBehaviour {
 
     private const int MINIMUM_PLAYERS = 2;
+
+    public List<AudioClip> enterAudios;
     
     // Input Types
     public const string GAME_PAD = "GamepadControlled";
@@ -58,13 +61,21 @@ public class TitleScreenManager : MonoBehaviour {
         HandleKeyboardPlayerEntrance(KeyCode.F, "j4", player4Avatar, player4Enter);
     }
 
+    private void EnterPlayerAudio(bool enter) {
+        if (enter) {
+            audioPool.PlayAudio(enterAudios[UnityEngine.Random.Range(0, enterAudios.Count)]);
+        }
+    }
+
     private void HandleGamepadPlayerEntrance(string key, string playerPrefix, TitleWiggle avatar, GameObject enter) {
         if (Input.GetButtonDown(key)) {
             var avatarObject = avatar.gameObject;
             var hasPlayer = HandlePlayerEntrance(playerPrefix, GAME_PAD, avatar);
             avatarObject.SetActive(hasPlayer);
             enter.SetActive(!hasPlayer);
-            playerCount += hasPlayer ? 1 : -1;   
+            playerCount += hasPlayer ? 1 : -1;
+            EnterPlayerAudio(hasPlayer);
+            
         }
     }
 
@@ -74,7 +85,8 @@ public class TitleScreenManager : MonoBehaviour {
             var hasPlayer = HandlePlayerEntrance(playerPrefix, KEYBOARD, avatar);
             avatarObject.SetActive(hasPlayer);
             enter.SetActive(!hasPlayer);
-            playerCount += hasPlayer ? 1 : -1;   
+            playerCount += hasPlayer ? 1 : -1;
+            EnterPlayerAudio(hasPlayer);
         }
     }
 
