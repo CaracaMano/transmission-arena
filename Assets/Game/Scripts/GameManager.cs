@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < playersAmount; i++)
         {
             Transform respawnTransform = respawnGroup.transform.GetChild(i);
+            
+            if (!respawnTransform.gameObject.activeSelf) {
+                continue;
+            }
+            
             GameObject p = createPlayer(respawnTransform.position);
             Player player = p.GetComponent<Player>();
 

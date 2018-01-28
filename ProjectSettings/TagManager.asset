@@ -7,6 +7,10 @@ TagManager:
   - players
   - Projectile
   - NPC
+  - Portal
+  - KeyboardControlled
+  - Crown
+  - GamepadControlled
   layers:
   - Default
   - TransparentFX
@@ -49,4 +53,7 @@ TagManager:
     locked: 0
   - name: Particles
     uniqueID: 3616100701
+    locked: 0
+  - name: New Layer
+    uniqueID: 2165935981
     locked: 0
