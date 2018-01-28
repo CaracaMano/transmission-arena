@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public float GameTimer = 60;
-    public float fastGameTimer = 10;
+	public float GameTimer;
+    public float fastGameTimer;
 
 
     float audioVolume = 0.5f;
@@ -94,6 +94,11 @@ public class GameController : MonoBehaviour {
             crown.transform.position.y + 1,
             crown.transform.position.z - 5
         );
+
+		getTheCrownText.DOFade (0f, 0f);
+		getTheCrownText.rectTransform.DOScale (new Vector3 (10f, 10f, 10f), 0f);
+		DOTween.Sequence().Append(getTheCrownText.DOFade(1f, 0.05f)).Append(getTheCrownText.rectTransform.DOScale(new Vector3(1,1,1), 0.3f)).SetDelay(0.5f).SetEase(Ease.InQuad);
+
 
         Tween cameraAnimationIn = Camera.main.gameObject.transform.DOMove(new Vector3(
               camPosition.x,
