@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour {
 	public WinCondition WinCondition;
 
 	public Text TimerText;
+    public Text MessageText;
     public Text getTheCrownText;
 	
 	private const string SHOOT_ACTION = "a0";
@@ -164,16 +165,24 @@ public class GameController : MonoBehaviour {
                 WinCondition.CheckCondition();
                 if (WinCondition.winner != null)
                 {
-                    TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
-                    TimerText.color = WinCondition.winner.playerColor;
-                    
-                   // int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
+                    TimerText.gameObject.SetActive(false);
+
+                    MessageText.text = "Winner: " + WinCondition.winner.PlayerName;
+                    MessageText.color = WinCondition.winner.playerColor;
+                    MessageText.gameObject.SetActive(true);
+
+                  // int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
                     //playerCounterManager.setWinner(playerIndex);
 
                 }
                 else
                 {
-                    TimerText.text = "Sudden Death!!!";
+                    TimerText.gameObject.SetActive(false);
+
+                    MessageText.text = "Sudden Death!!!";
+                    MessageText.color = Color.red;
+
+                    MessageText.gameObject.SetActive(true);
 
                     if (!suddenDeathSoundPlayed)
                     {
