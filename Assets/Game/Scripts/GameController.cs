@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
 	private float reloadTimer = 5;
 	public Text ReloadText;
 
-	private bool gameFinished;
+	private bool gameFinished = false;
 	public List<ParticleSystem> PartyParticleSystems;
 	
 	public Dictionary<string, Player> players = new Dictionary<string,Player>();
@@ -82,6 +82,8 @@ public class GameController : MonoBehaviour {
         fastMusicGameTime = fastGameTimer;
 		WinCondition.ConditionReached = EndGame;
         playMusic(false);
+
+        gameFinished = false;
 
         StartGame();
 	}
@@ -161,9 +163,8 @@ public class GameController : MonoBehaviour {
             {
                 playMusic(true);
             }
-            else if (GameTimer < 0 && !winMessageShown)
+            else if (GameTimer < 0)
             {
-                winMessageShown = true;
                 WinCondition.CheckCondition();
                 if (WinCondition.winner != null)
                 {
@@ -173,13 +174,22 @@ public class GameController : MonoBehaviour {
                    MessageText.color = WinCondition.winner.playerColor;
                    MessageText.gameObject.SetActive(true);
 
-                   int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
-                   playerCounterManager.setWinner(playerIndex);
+
+                   if (!winMessageShown)
+                   {
+                       winMessageShown = true;
+                       int playerIndex = int.Parse(WinCondition.winner.PlayerName.Replace("Player", ""));
+                       playerCounterManager.setWinner(playerIndex); 
+                   }
 
                 }
                 else
                 {
+
+                    WinCondition.CheckCondition();
+
                     TimerText.gameObject.SetActive(false);
+
 
                     MessageText.text = "Sudden Death!!!";
                     MessageText.color = Color.red;

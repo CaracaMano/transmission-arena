@@ -490,10 +490,10 @@ Camera:
   m_BackGroundColor: {r: 0.4852941, g: 0.7496958, b: 0.9705882, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.00006496906
-    width: 1
-    height: 0.99987006
+    x: 0.000785619
+    y: 0
+    width: 0.99842876
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 41
@@ -986,8 +986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0cf62ebe9314879988a9c7b89da26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameTimer: 10
-  fastGameTimer: 5
+  GameTimer: 60
+  fastGameTimer: 10
   ReloadText: {fileID: 114669892788019972}
   PartyParticleSystems:
   - {fileID: 198005184996820702}
