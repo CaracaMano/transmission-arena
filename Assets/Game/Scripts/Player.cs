@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
 	
 	public GameConstants gameConstants;
 
+	public GameObject Crown;
+
     public bool isNPC = false;
 
     public Transform groundCheck;
@@ -74,21 +76,15 @@ public class Player : MonoBehaviour {
         {
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
+	        
+	        Crown.SetActive(true);
 
-            GameObject crownInstance = Instantiate(crownPrefab) as GameObject;
-
-            crownInstance.transform.position = crownHeadTransform.position;
-
-            Rigidbody2D body = crownInstance.GetComponent<Rigidbody2D>();
-
-            int rndX = Random.Range(-200, 200);
-            int rndy = Random.Range(200, 400);
-
-            body.angularVelocity = 1500;
-
-            body.AddForce(new Vector2(rndX, rndy));
+	        Crown.transform.position = crownHeadTransform.position;
         }
     }
+
+
+	
 
     private bool previousGrounded = true;
     public bool isGrounded {
