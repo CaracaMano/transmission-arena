@@ -152,7 +152,6 @@ public class GameController : MonoBehaviour {
 					{
 						HandleButtons(playerPrefix, players[playerPrefix]);
 					}
-
 					else
 					{
 						HandleControls(playerPrefix, players[playerPrefix]);
@@ -161,8 +160,6 @@ public class GameController : MonoBehaviour {
 			}	
 		}
 		else {
-			if (Input.GetButtonDown("Submit")) {
-				SceneManager.LoadScene("Arena01");	
 
 			reloadTimer -= Time.deltaTime;
 
@@ -174,7 +171,7 @@ public class GameController : MonoBehaviour {
 			}
 			
 			if (Input.anyKeyDown && canReload) {
-				SceneManager.LoadScene("JunScene");	
+				SceneManager.LoadScene("Arena01");	
 			}
 		}
 	}

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 114414747051521904}
   m_Layer: 8
   m_Name: portal_block (3)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 114263152864030748}
   m_Layer: 8
   m_Name: portal_block
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 114558869268297870}
   m_Layer: 8
   m_Name: portal_block (1)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 114101824398563988}
   m_Layer: 8
   m_Name: portal_block (2)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413956535459692}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 16.95, y: -1.79, z: 0}
+  m_LocalPosition: {x: -1032.3212, y: 407.2252, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4249634562449760}
@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965cc5d284adcb74f82bdf0697158219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsVertical: 1
   destiny: {fileID: 4396116902429046}
 --- !u!114 &114263152864030748
 MonoBehaviour:
@@ -574,6 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965cc5d284adcb74f82bdf0697158219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsVertical: 1
   destiny: {fileID: 4809397344957900}
 --- !u!114 &114414747051521904
 MonoBehaviour:
@@ -586,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965cc5d284adcb74f82bdf0697158219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsVertical: 1
   destiny: {fileID: 4396116902429046}
 --- !u!114 &114558869268297870
 MonoBehaviour:
@@ -598,4 +601,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965cc5d284adcb74f82bdf0697158219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsVertical: 1
   destiny: {fileID: 4809397344957900}
