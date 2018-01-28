@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Teleport : MonoBehaviour {
 
+	public bool IsVertical;
+	
     public Transform destiny;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,16 @@ public class Teleport : MonoBehaviour {
         Transform ob = collider.transform;
 
         Transform safeAreaTransform = destiny.transform;
-        ob.transform.position = safeAreaTransform.position;
+
+	    if (IsVertical) {
+		    var position = new Vector3(ob.transform.position.x, safeAreaTransform.position.y, ob.transform.position.z);
+		    ob.transform.position = position;    
+	    }
+	    else {
+		    var position = new Vector3(safeAreaTransform.position.x, ob.transform.position.y, ob.transform.position.z);
+		    ob.transform.position = position;
+	    }
+        
 
         Player player = collider.GetComponent<Player>();
         if (player != null)

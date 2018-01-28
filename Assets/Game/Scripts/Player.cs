@@ -222,7 +222,7 @@ public class Player : MonoBehaviour {
 
 	public void FlipPlayerXTween(){
 
-		float time = 0.2f;
+		float time = 0.5f;
 
 		DOTween.Sequence ().Append (transform.DOScaleX (-1f, time)).Append(transform.DOScaleX (1f, time)).SetLoops(-1);
 

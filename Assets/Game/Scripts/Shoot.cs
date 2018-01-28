@@ -16,7 +16,7 @@ public class Shoot : Skill {
             player.Shoot();
             player.CanShoot = false;
             player.GetComponent<Animator>().SetTrigger("MakeItAttack");
-            player.audioPool.PlayAudio(player.shootSound, 1, 0.5f););
+            player.audioPool.PlayAudio(player.shootSound, 1, 0.5f);
         }
         
     }

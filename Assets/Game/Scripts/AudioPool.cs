@@ -33,7 +33,7 @@ public class AudioPool : MonoBehaviour
         src.Play();
     }
 
-    public void PlayMusic(AudioClip clip)
+    public void PlayMusic(AudioClip clip, float volume = 1)
     {
         if (musicSource != null)
         {
