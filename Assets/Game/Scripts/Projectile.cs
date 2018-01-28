@@ -38,6 +38,18 @@ public class Projectile : MonoBehaviour {
 				break;
 			case "Portal":
 				break;
+            case "Crown":
+                GameObject crown = GameObject.FindGameObjectWithTag("Crown") as GameObject;
+                Rigidbody2D body = crown.GetComponent<Rigidbody2D>();
+
+                Vector2 direction = (body.transform.position - this.transform.position).normalized;
+                
+                float amount = Random.RandomRange(300,500);
+
+                body.angularVelocity = 1500;
+
+                body.AddForce(new Vector2(direction.x * amount, amount));
+                break;
 			default:
 				AutoDestroy();
 				break;

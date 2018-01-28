@@ -84,6 +84,8 @@ public class Player : MonoBehaviour {
             int rndX = Random.Range(-200, 200);
             int rndy = Random.Range(200, 400);
 
+            body.angularVelocity = 1500;
+
             body.AddForce(new Vector2(rndX, rndy));
         }
     }
