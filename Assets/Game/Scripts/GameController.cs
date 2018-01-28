@@ -241,24 +241,51 @@ public class GameController : MonoBehaviour {
     }
 	
     void HandleButtons(string playerPrefix, Player player) {
-        if ((Input.GetKey(KeyCode.RightArrow)))
-        {
-            player.walk.UseSkill(player, 1);
-        }
-        else if ((Input.GetKey(KeyCode.LeftArrow)))
-        {
-            player.walk.UseSkill(player, -1);
-        }
+        switch (playerPrefix) {
+                case "j3":
+                    if ((Input.GetKey(KeyCode.RightArrow)))
+                    {
+                        player.walk.UseSkill(player, 1);
+                    }
+                    else if ((Input.GetKey(KeyCode.LeftArrow)))
+                    {
+                        player.walk.UseSkill(player, -1);
+                    }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Jump(player);
-        }
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    {
+                        Jump(player);
+                    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            player.shoot.UseSkill(player);
+                    if (Input.GetKeyDown(KeyCode.Semicolon))
+                    {
+                        player.shoot.UseSkill(player);
+                    }
+                    break;
+                case "j4":
+                    if ((Input.GetKey(KeyCode.D)))
+                    {
+                        player.walk.UseSkill(player, 1);
+                    }
+                    else if ((Input.GetKey(KeyCode.A)))
+                    {
+                        player.walk.UseSkill(player, -1);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        Jump(player);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        player.shoot.UseSkill(player);
+                    }
+                    break;
+                default:
+                    break;
         }
+        
     }
 
     void Jump(Player player)

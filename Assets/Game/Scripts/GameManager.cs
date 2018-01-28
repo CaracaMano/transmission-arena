@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public List<Color> colors;
 
+    public int playersAmount;
+
     public Skill levelSkill;
 
     private GameObject createPlayer(Vector2 position) { 
@@ -27,9 +29,16 @@ public class GameManager : MonoBehaviour
 
         GameObject respawnGroup = GameObject.FindGameObjectWithTag("Respawn");
 
-        for (int i = 0; i < respawnGroup.transform.childCount; i++)
+        playersAmount = respawnGroup.transform.childCount;
+
+        for (int i = 0; i < playersAmount; i++)
         {
             Transform respawnTransform = respawnGroup.transform.GetChild(i);
+            
+            if (!respawnTransform.gameObject.activeSelf) {
+                continue;
+            }
+            
             GameObject p = createPlayer(respawnTransform.position);
             Player player = p.GetComponent<Player>();
 
