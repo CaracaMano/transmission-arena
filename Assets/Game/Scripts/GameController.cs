@@ -51,12 +51,12 @@ public class GameController : MonoBehaviour {
 
         if (isFast)
         {
-            audioPool.PlayMusic(fastMusic);
+            audioPool.PlayMusic(fastMusic,0.6f);
             fastMusicStarted = true;
         }
         else
         {
-            audioPool.PlayMusic(slowMusic);
+            audioPool.PlayMusic(slowMusic, 0.6f);
         }
     
     }
@@ -106,78 +106,94 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-		GameTimer -= Time.deltaTime;
+    void Update()
+    {
+        GameTimer -= Time.deltaTime;
         if (GameTimer <= fastMusicGameTime && !fastMusicStarted)
         {
             playMusic(true);
         }
-		else if (GameTimer < 0) {
-			WinCondition.CheckCondition();
-			if (WinCondition.winner != null) {
-				TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
-				TimerText.color = WinCondition.winner.playerColor;
-			}
-			else {
-				TimerText.text = "Sudden Death!!!";
-			}
-		}
-		else {		
-			int minutes = Mathf.FloorToInt(GameTimer / 60f);
-			int seconds = Mathf.FloorToInt(GameTimer % 60f);
+        else if (GameTimer < 0)
+        {
+            WinCondition.CheckCondition();
+            if (WinCondition.winner != null)
+            {
+                TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
+                TimerText.color = WinCondition.winner.playerColor;
+            }
+            else
+            {
+                TimerText.text = "Sudden Death!!!";
+            }
+        }
+        else
+        {
+            int minutes = Mathf.FloorToInt(GameTimer / 60f);
+            int seconds = Mathf.FloorToInt(GameTimer % 60f);
 
-			if (GameTimer > 10) {
-				TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-			}
-			else {
-				if (!hurryUp) {
-					DOTween.Sequence().Append(
-						TimerText.transform.DOScale(1.2f, 0.5f)
-					).Append(
-						TimerText.transform.DOScale(1f, 0.5f)
-					).SetLoops(10);
-					hurryUp = true;
-				}
-				TimerText.text = seconds.ToString("00");
-				TimerText.color = new Color(1f, 0.26f, 0.27f);
-			}
+            if (GameTimer > 10)
+            {
+                TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+            }
+            else
+            {
+                if (!hurryUp)
+                {
+                    DOTween.Sequence().Append(
+                        TimerText.transform.DOScale(1.2f, 0.5f)
+                    ).Append(
+                        TimerText.transform.DOScale(1f, 0.5f)
+                    ).SetLoops(10);
+                    hurryUp = true;
+                }
+                TimerText.text = seconds.ToString("00");
+                TimerText.color = new Color(1f, 0.26f, 0.27f);
+            }
 
-		}
+        }
 
-		if (WinCondition.winner == null) {
-			foreach (var playerPrefix in playersPrefix) {
-				if (!players[playerPrefix].wasStunned)
-				{
-					if (players[playerPrefix].isNPC == true)
-					{
-						HandleButtons(playerPrefix, players[playerPrefix]);
-					}
+        if (WinCondition.winner == null)
+        {
+            foreach (var playerPrefix in playersPrefix)
+            {
+                if (!players[playerPrefix].wasStunned)
+                {
+                    if (players[playerPrefix].isNPC == true)
+                    {
+                        HandleButtons(playerPrefix, players[playerPrefix]);
+                    }
 
-					else
-					{
-						HandleControls(playerPrefix, players[playerPrefix]);
-					} 
-				}
-			}	
-		}
-		else {
-			if (Input.GetButtonDown("Submit")) {
-				SceneManager.LoadScene("Arena01");	
+                    else
+                    {
+                        HandleControls(playerPrefix, players[playerPrefix]);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Submit"))
+            {
+                SceneManager.LoadScene("Arena01");
 
-			reloadTimer -= Time.deltaTime;
+                reloadTimer -= Time.deltaTime;
 
-			if (reloadTimer < 0) {
-				if (!ReloadText.gameObject.activeSelf) {
-					ReloadText.gameObject.SetActive(true);
-				}
-				canReload = true;
-			}
-			
-			if (Input.anyKeyDown && canReload) {
-				SceneManager.LoadScene("JunScene");	
-			}
-		}
-	}
+                if (reloadTimer < 0)
+                {
+                    if (!ReloadText.gameObject.activeSelf)
+                    {
+                        ReloadText.gameObject.SetActive(true);
+                    }
+                    canReload = true;
+                }
+
+                if (Input.anyKeyDown && canReload)
+                {
+                    SceneManager.LoadScene("JunScene");
+                }
+            }
+        }
+    }
 	
     void HandleButtons(string playerPrefix, Player player) {
         if ((Input.GetKey(KeyCode.RightArrow)))
