@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Projectile : MonoBehaviour {
 
@@ -18,8 +19,12 @@ public class Projectile : MonoBehaviour {
 	}
 
 	public void AutoDestroy() {
-		Destroy(gameObject);
-		source.CanShoot = true;
+
+		this.transform.DOScale(new Vector3(0f, 0f, 0f), 0.15f).OnComplete(() =>{
+			Destroy(gameObject);
+			source.CanShoot = true; 
+		});
+
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
