@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 178306635}
   m_Layer: 0
   m_Name: Spawn4
-  m_TagString: Untagged
+  m_TagString: KeyboardControlled
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1269,13 +1269,28 @@ Prefab:
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.00025355816
+      value: 0.00029480457
       objectReference: {fileID: 0}
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9994929
+      value: 0.9994104
       objectReference: {fileID: 0}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: winMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 44d0a287c3a058b42a0891d864c69ea6, type: 3}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: slowMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: b05d8b859882a7949b021c4efc722ee7, type: 3}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: fastMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c13e22aecf1991f4aa9f2a739128f10b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0779b720a58174b8387153fd30dac0ec, type: 2}
   m_IsPrefabParent: 0
@@ -3994,7 +4009,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4342722146782064, guid: 1f18e5ffa8b744a798514e6ec4202696, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1413956535459692, guid: 1f18e5ffa8b744a798514e6ec4202696, type: 2}
       propertyPath: m_Name
@@ -5821,7 +5836,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4342722146782064, guid: 1f18e5ffa8b744a798514e6ec4202696, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1413956535459692, guid: 1f18e5ffa8b744a798514e6ec4202696, type: 2}
       propertyPath: m_Name
@@ -6214,7 +6229,7 @@ Transform:
   m_Children:
   - {fileID: 936149138}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027289714
 GameObject:
@@ -6283,7 +6298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4406897739613896, guid: 111d9477d8c7bc645b0c14ec1279d96e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4123740495667686, guid: 111d9477d8c7bc645b0c14ec1279d96e, type: 2}
       propertyPath: m_LocalPosition.x

@@ -663,8 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea5b6bec569e4c388f5ffa7e8c011cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: JunScene
-  themeMusic: {fileID: 8300000, guid: 3fce5b001acb95d4db58002b5da2941d, type: 3}
+  sceneName: Arena01
+  themeMusic: {fileID: 8300000, guid: 48676730738721b4b9ce9173bd59761a, type: 3}
   audioPool: {fileID: 1343108867}
 --- !u!4 &1343108866
 Transform:
@@ -914,9 +914,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.00019532442
+    y: 0.00025355816
     width: 1
-    height: 0.99960935
+    height: 0.9994929
   near clip plane: 0
   far clip plane: 1000
   field of view: 60

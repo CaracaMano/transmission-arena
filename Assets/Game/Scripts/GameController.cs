@@ -31,12 +31,16 @@ public class GameController : MonoBehaviour {
 
     public AudioClip slowMusic;
     public AudioClip fastMusic;
+    public AudioClip winMusic;
 
     private bool fastMusicStarted = false;
 
+    AudioPool audioPool;
+
     private void playMusic(bool isFast) 
     {
-        AudioPool audioPool = GetComponent<AudioPool>();
+        audioPool = GetComponent<AudioPool>();
+
         if (isFast)
         {
             audioPool.PlayMusic(fastMusic);
@@ -57,6 +61,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        audioPool = GetComponent<AudioPool>();
 
         fastMusicGameTime = GameTimer / 10;
 		WinCondition.ConditionReached = EndGame;
@@ -65,6 +70,7 @@ public class GameController : MonoBehaviour {
 
 	void EndGame() {
 		if (!gameFinished) {
+            audioPool.PlayMusic(winMusic);
 			Invoke("WinAnimationRun", 2);
 		}
 		
@@ -133,7 +139,7 @@ public class GameController : MonoBehaviour {
 		}
 		else {
 			if (Input.GetButtonDown("Submit")) {
-				SceneManager.LoadScene("JunScene");	
+				SceneManager.LoadScene("Arena01");	
 			}
 		}
 	}
