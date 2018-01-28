@@ -9,6 +9,8 @@ public class TitleWiggle : MonoBehaviour
     
     private float angle;
 
+    public SpriteRenderer controllerSprite;
+
     private void Start()
     {
         angle = StartingAngle;

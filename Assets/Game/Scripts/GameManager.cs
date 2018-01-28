@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,10 +30,12 @@ public class GameManager : MonoBehaviour
 
         GameObject respawnGroup = GameObject.FindGameObjectWithTag("Respawn");
 
-        playersAmount = respawnGroup.transform.childCount;
-
-        for (int i = 0; i < playersAmount; i++)
-        {
+        playersAmount = PlayersManagerSingleton.Instance.players.Keys.Count;
+        
+        for (int i = 0; i < PlayersManagerSingleton.Instance.players.Keys.Count; i++) {
+            
+            var playerPrefix = PlayersManagerSingleton.Instance.players.Keys.ToArray()[i];
+            
             Transform respawnTransform = respawnGroup.transform.GetChild(i);
             
             if (!respawnTransform.gameObject.activeSelf) {
@@ -46,7 +49,9 @@ public class GameManager : MonoBehaviour
 
             player.PlayerName = "Player " + (i + 1); 
 
-            gameController.addPlayer("j" + (i + 1), player);
+            gameController.addPlayer(playerPrefix, player);
+
+            respawnTransform.tag = PlayersManagerSingleton.Instance.players[playerPrefix];
 
             if (respawnTransform.tag.Contains("KeyboardControlled"))
             {
