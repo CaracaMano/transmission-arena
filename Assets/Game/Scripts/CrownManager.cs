@@ -15,7 +15,8 @@ public class CrownManager : MonoBehaviour {
         if (player != null)
         {
             player.pickCrown();
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+	        gameObject.SetActive(false);
         }
     }
 

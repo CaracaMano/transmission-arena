@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
 	
 	public GameConstants gameConstants;
 
+	public GameObject Crown;
+
     public bool isNPC = false;
 
     public Transform groundCheck;
@@ -75,7 +77,9 @@ public class Player : MonoBehaviour {
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
-            GameObject crownInstance = Instantiate(crownPrefab) as GameObject;
+            GameObject crownInstance = crown;
+	        
+	        crownInstance.SetActive(true);
 
             crownInstance.transform.position = crownHeadTransform.position;
 

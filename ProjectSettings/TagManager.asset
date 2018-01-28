@@ -11,6 +11,7 @@ TagManager:
   - KeyboardControlled
   - Crown
   - GamepadControlled
+  - LifeSaver
   layers:
   - Default
   - TransparentFX

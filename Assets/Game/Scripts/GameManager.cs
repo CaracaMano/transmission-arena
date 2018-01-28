@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
+    
+    private Lifesaver LifeSaver;
+    
     public GameController gameController;
     private Transform playerGroupTransform;
 
@@ -29,8 +31,12 @@ public class GameManager : MonoBehaviour
         playerGroupTransform = GameObject.FindGameObjectWithTag("players").transform;
 
         GameObject respawnGroup = GameObject.FindGameObjectWithTag("Respawn");
+        
+        LifeSaver = GameObject.FindGameObjectWithTag("LifeSaver").GetComponent<Lifesaver>();
 
         playersAmount = PlayersManagerSingleton.Instance.players.Keys.Count;
+
+        var crownObject = GameObject.FindGameObjectWithTag("Crown");
         
         for (int i = 0; i < PlayersManagerSingleton.Instance.players.Keys.Count; i++) {
             
@@ -44,8 +50,12 @@ public class GameManager : MonoBehaviour
             
             GameObject p = createPlayer(respawnTransform.position);
             Player player = p.GetComponent<Player>();
+            
+            LifeSaver.RegisterObject(player.transform);
 
             player.playerColor = colors[i];
+
+            player.Crown = crownObject;
 
             player.PlayerName = "Player " + (i + 1); 
 
