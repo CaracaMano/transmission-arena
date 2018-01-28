@@ -1038,7 +1038,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 98e163eb9cb70b84bbb7b22dc7a1a8b3, type: 3}
   - {fileID: 8300000, guid: ac71bb50d79042c439ef9551806e256d, type: 3}
   - {fileID: 8300000, guid: 06a34a8f3c96c8348b78803cadf9275b, type: 3}
-  sceneName: Arena01
+  scene2Players: Arena2Players
+  scene3Players: Arena01
+  scene4Players: Arena01
   themeMusic: {fileID: 8300000, guid: 48676730738721b4b9ce9173bd59761a, type: 3}
   audioPool: {fileID: 1343108867}
   PressToStartText: {fileID: 507566125}
@@ -1515,9 +1517,9 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.000785619
+    x: 0.05621305
     y: 0
-    width: 0.99842876
+    width: 0.8875739
     height: 1
   near clip plane: 0
   far clip plane: 1000

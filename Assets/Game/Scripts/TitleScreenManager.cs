@@ -13,8 +13,10 @@ public class TitleScreenManager : MonoBehaviour {
     public const string GAME_PAD = "GamepadControlled";
 
     public const string KEYBOARD = "KeyboardControlled";
-    
-    public string sceneName;
+
+    public string scene2Players;
+    public string scene3Players;
+    public string scene4Players;
 
     public AudioClip themeMusic;
     public AudioPool audioPool;
@@ -59,7 +61,20 @@ public class TitleScreenManager : MonoBehaviour {
         
         if (Input.GetKeyDown(KeyCode.Return) && playerCount >= MINIMUM_PLAYERS)
         {
-            SceneManager.LoadScene(sceneName);
+            if (playerCount == 2)
+            {
+                SceneManager.LoadScene(scene2Players);
+            }
+
+            if (playerCount == 3)
+            {
+                SceneManager.LoadScene(scene3Players);
+            }
+
+            else
+            {
+                SceneManager.LoadScene(scene4Players);
+            }
         }
 
         HandleGamepadPlayerEntrance("j1a0", "j1", player1Avatar, player1Enter);
