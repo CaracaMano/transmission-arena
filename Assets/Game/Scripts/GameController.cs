@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour {
 
 	public float GameTimer = 60;
 
+
+    float audioVolume = 0.5f;
+
     private float fastMusicGameTime;
 
 	private bool gameFinished;

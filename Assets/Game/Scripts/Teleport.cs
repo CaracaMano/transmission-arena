@@ -20,7 +20,7 @@ public class Teleport : MonoBehaviour {
         Player player = collider.GetComponent<Player>();
         if (player != null)
         {
-            player.audioPool.PlayAudio(player.teleportSound);
+            player.audioPool.PlayAudio(player.teleportSound, 1, 0.5f);
         }
 
     }
