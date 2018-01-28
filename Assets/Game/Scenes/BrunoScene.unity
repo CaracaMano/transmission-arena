@@ -328,6 +328,40 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: GameTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: fastGameTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: playerCounterManager
+      value: 
+      objectReference: {fileID: 1332932965}
+    - target: {fileID: 1442608410796200, guid: 0779b720a58174b8387153fd30dac0ec, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114669892788019972, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114669892788019972, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114669892788019972, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0779b720a58174b8387153fd30dac0ec, type: 2}
   m_IsPrefabParent: 0
@@ -411,6 +445,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4747223575701320, guid: c19e7234766fff54a82e9f291bd19ecc,
     type: 2}
   m_PrefabInternal: {fileID: 1998814364}
+--- !u!114 &1332932965 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114796459035346876, guid: 0779b720a58174b8387153fd30dac0ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 843204952}
+  m_Script: {fileID: 11500000, guid: e5176d410b110bb4f9a342f27a3526ef, type: 3}
 --- !u!1001 &1352327971
 Prefab:
   m_ObjectHideFlags: 0
