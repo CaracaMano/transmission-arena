@@ -170,7 +170,6 @@ public class GameController : MonoBehaviour {
                     {
                         HandleButtons(playerPrefix, players[playerPrefix]);
                     }
-
                     else
                     {
                         HandleControls(playerPrefix, players[playerPrefix]);
@@ -200,7 +199,7 @@ public class GameController : MonoBehaviour {
         {
             player.walk.UseSkill(player, 1);
         }
-        if ((Input.GetKey(KeyCode.LeftArrow)))
+        else if ((Input.GetKey(KeyCode.LeftArrow)))
         {
             player.walk.UseSkill(player, -1);
         }
