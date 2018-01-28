@@ -22,6 +22,11 @@ public class TitleScreenManager : MonoBehaviour {
     public TitleWiggle player2Avatar;
     public TitleWiggle player3Avatar;
     public TitleWiggle player4Avatar;
+    
+    public GameObject player1Enter;
+    public GameObject player2Enter;
+    public GameObject player3Enter;
+    public GameObject player4Enter;
 
     public Sprite GamepadSprite;
     public Sprite keyboardSprite;
@@ -44,29 +49,31 @@ public class TitleScreenManager : MonoBehaviour {
             SceneManager.LoadScene(sceneName);
         }
 
-        HandleGamepadPlayerEntrance("j1a0", "j1", player1Avatar);
-        HandleGamepadPlayerEntrance("j2a0", "j2", player2Avatar);
-        HandleGamepadPlayerEntrance("j3a0", "j3", player3Avatar);
-        HandleGamepadPlayerEntrance("j4a0", "j4", player4Avatar);
+        HandleGamepadPlayerEntrance("j1a0", "j1", player1Avatar, player1Enter);
+        HandleGamepadPlayerEntrance("j2a0", "j2", player2Avatar, player2Enter);
+        HandleGamepadPlayerEntrance("j3a0", "j3", player3Avatar, player3Enter);
+        HandleGamepadPlayerEntrance("j4a0", "j4", player4Avatar, player4Enter);
         
-        HandleKeyboardPlayerEntrance(KeyCode.Semicolon, "j3", player3Avatar);
-        HandleKeyboardPlayerEntrance(KeyCode.F, "j4", player4Avatar);
+        HandleKeyboardPlayerEntrance(KeyCode.Semicolon, "j3", player3Avatar, player3Enter);
+        HandleKeyboardPlayerEntrance(KeyCode.F, "j4", player4Avatar, player4Enter);
     }
 
-    private void HandleGamepadPlayerEntrance(string key, string playerPrefix, TitleWiggle avatar) {
+    private void HandleGamepadPlayerEntrance(string key, string playerPrefix, TitleWiggle avatar, GameObject enter) {
         if (Input.GetButtonDown(key)) {
             var avatarObject = avatar.gameObject;
             var hasPlayer = HandlePlayerEntrance(playerPrefix, GAME_PAD, avatar);
             avatarObject.SetActive(hasPlayer);
+            enter.SetActive(!hasPlayer);
             playerCount += hasPlayer ? 1 : -1;   
         }
     }
 
-    private void HandleKeyboardPlayerEntrance(KeyCode keycode, string playerPrefix, TitleWiggle avatar) {
+    private void HandleKeyboardPlayerEntrance(KeyCode keycode, string playerPrefix, TitleWiggle avatar, GameObject enter) {
         if (Input.GetKeyDown(keycode)) {
             var avatarObject = avatar.gameObject;
             var hasPlayer = HandlePlayerEntrance(playerPrefix, KEYBOARD, avatar);
             avatarObject.SetActive(hasPlayer);
+            enter.SetActive(!hasPlayer);
             playerCount += hasPlayer ? 1 : -1;   
         }
     }
