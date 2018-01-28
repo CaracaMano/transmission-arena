@@ -32,6 +32,16 @@ public class TitleScreenManager : MonoBehaviour {
     {
         audioPool.PlayMusic(themeMusic);
         PlayersManagerSingleton.Instance.Reset();
+        Init();
+    }
+
+    private void Init()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            string playerPrefName = "Player" + i;
+            PlayerPrefs.SetInt(playerPrefName, 0);
+        }
     }
 
     private void Update()
