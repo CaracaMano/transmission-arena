@@ -12,7 +12,6 @@ public class GameController : MonoBehaviour {
 	public float GameTimer;
     public float fastGameTimer;
 
-
     float audioVolume = 0.5f;
 
     private float fastMusicGameTime;
@@ -49,6 +48,8 @@ public class GameController : MonoBehaviour {
     AudioPool audioPool;
     private bool suddenDeathSoundPlayed = false;
     private bool canPlay = false;
+
+    public PlayerCounterManager playerCounterManager;
 
     private void playMusic(bool isFast) 
     {
@@ -125,6 +126,7 @@ public class GameController : MonoBehaviour {
 		}
 		
 		gameFinished = true;
+
 		Debug.Log("End Game! Winner: " + WinCondition.winner.PlayerName);	
 	}
 	
@@ -164,6 +166,10 @@ public class GameController : MonoBehaviour {
                 {
                     TimerText.text = "Winner: " + WinCondition.winner.PlayerName;
                     TimerText.color = WinCondition.winner.playerColor;
+                    
+                   // int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
+                    //playerCounterManager.setWinner(playerIndex);
+
                 }
                 else
                 {
