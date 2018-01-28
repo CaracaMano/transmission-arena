@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrownManager : MonoBehaviour {
 
 	private bool firstAppear = true;
+	public bool wasCaught = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -30,8 +31,7 @@ public class CrownManager : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
         Player player = collision.collider.GetComponent<Player>();
 
-        if (player != null)
-        {
+        if (player != null && !wasCaught) {
             player.pickCrown();
             //Destroy(this.gameObject);
 	        gameObject.SetActive(false);

@@ -257,7 +257,13 @@ public class GameController : MonoBehaviour {
 
                 if (Input.anyKeyDown && canReload)
                 {
-                    SceneManager.LoadScene("Arena01");
+                    if (Input.GetKeyDown(KeyCode.Escape)) {
+                        SceneManager.LoadScene("TitleScreen");
+                    }
+                    else {
+                        SceneManager.LoadScene("Arena01");    
+                    }
+                    
                 }
             } 
         }

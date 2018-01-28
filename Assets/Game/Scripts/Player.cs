@@ -63,9 +63,9 @@ public class Player : MonoBehaviour {
     public AudioClip changeSound;
     public AudioClip getCrownSound;
     public AudioClip teleportSound;
-
-    public void pickCrown()
-    {
+	
+    public void pickCrown() {
+	    Crown.GetComponent<CrownManager>().wasCaught = true;
         crown.GetComponent<Renderer>().enabled = true;
         audioPool.PlayAudio(getCrownSound, 1, 0.5f);
         hasCrown = true;
@@ -74,12 +74,15 @@ public class Player : MonoBehaviour {
     {
         if (hasCrown)
         {
+	        
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 	        
 	        Crown.SetActive(true);
 
 	        Crown.transform.position = crownHeadTransform.position;
+
+	        Crown.GetComponent<CrownManager>().wasCaught = false;
         }
     }
 
