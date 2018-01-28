@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Arena01.unity
     guid: e09991bc72cb8e14b99311f1829d07cc
+  - enabled: 1
+    path: Assets/Game/Scenes/SelectorScreen.unity
+    guid: 63c22830764024f4a9cdff43493ddccb

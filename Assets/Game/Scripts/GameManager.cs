@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public List<Color> colors;
 
+    public Skill levelSkill;
+
     private GameObject createPlayer(Vector2 position) { 
         GameObject prefab = Instantiate(playerPrefab, playerGroupTransform);
 		prefab.transform.position = position;

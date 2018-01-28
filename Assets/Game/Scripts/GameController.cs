@@ -95,8 +95,6 @@ public class GameController : MonoBehaviour {
             crown.transform.position.z - 5
         );
 
-        getTheCrownText.text = "Get The Crown";
-
         Tween cameraAnimationIn = Camera.main.gameObject.transform.DOMove(new Vector3(
               camPosition.x,
               camPosition.y,
@@ -272,10 +270,6 @@ public class GameController : MonoBehaviour {
             Jump(player);
         }
 
-		if (Input.GetButtonDown(playerPrefix + SPECIAL_ACTION)) {
-			Debug.Log(playerPrefix + " uses special action!");
-		}
-		
         float horizontalTranslation = Input.GetAxis(playerPrefix + HORIZONTAL_AXIS);
 
         if (horizontalTranslation != 0)

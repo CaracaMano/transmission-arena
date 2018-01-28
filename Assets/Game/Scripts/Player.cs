@@ -72,8 +72,6 @@ public class Player : MonoBehaviour {
     {
         if (hasCrown)
         {
-            
-
             hasCrown = false;
             crown.GetComponent<Renderer>().enabled = false;
 
@@ -119,6 +117,7 @@ public class Player : MonoBehaviour {
 		jump = new Jump();
         walk = new Walk();
 		shoot = new Shoot();
+
         anim = GetComponent<Animator>();
 
 		sprite = GetComponent<SpriteRenderer>();
