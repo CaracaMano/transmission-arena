@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public List<Color> colors;
 
+    public int playersAmount;
+
     public Skill levelSkill;
 
     private GameObject createPlayer(Vector2 position) { 
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
 
         GameObject respawnGroup = GameObject.FindGameObjectWithTag("Respawn");
 
+        playersAmount = PlayersManagerSingleton.Instance.players.Keys.Count;
+        
         for (int i = 0; i < PlayersManagerSingleton.Instance.players.Keys.Count; i++) {
             
             var playerPrefix = PlayersManagerSingleton.Instance.players.Keys.ToArray()[i];
