@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	public float GameTimer = 60;
+    public float fastGameTimer = 10;
 
 
     float audioVolume = 0.5f;
@@ -40,10 +41,12 @@ public class GameController : MonoBehaviour {
     public AudioClip slowMusic;
     public AudioClip fastMusic;
     public AudioClip winMusic;
+    public AudioClip suddenDeathSound;
 
     private bool fastMusicStarted = false;
 
     AudioPool audioPool;
+    private bool suddenDeathSoundPlayed = false;
 
     private void playMusic(bool isFast) 
     {
@@ -71,7 +74,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
         audioPool = GetComponent<AudioPool>();
 
-        fastMusicGameTime = GameTimer / 10;
+        fastMusicGameTime = fastGameTimer;
 		WinCondition.ConditionReached = EndGame;
         playMusic(false);
 	}
@@ -124,6 +127,12 @@ public class GameController : MonoBehaviour {
             else
             {
                 TimerText.text = "Sudden Death!!!";
+
+                if (!suddenDeathSoundPlayed)
+                {
+                    audioPool.PlayAudio(suddenDeathSound);
+                    suddenDeathSoundPlayed = true;
+                }
             }
         }
         else

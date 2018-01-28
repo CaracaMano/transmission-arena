@@ -1415,12 +1415,12 @@ Prefab:
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0004850328
+      value: 0.00013920665
       objectReference: {fileID: 0}
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.99902993
+      value: 0.9997216
       objectReference: {fileID: 0}
     - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
@@ -1436,7 +1436,12 @@ Prefab:
         type: 2}
       propertyPath: fastMusic
       value: 
-      objectReference: {fileID: 8300000, guid: c13e22aecf1991f4aa9f2a739128f10b, type: 3}
+      objectReference: {fileID: 8300000, guid: e5cdd1808fd3b4248914b9918e37f948, type: 3}
+    - target: {fileID: 114825491531379928, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
+      propertyPath: suddenDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 44e57b3635b2d5c4c9da8d5514755eac, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0779b720a58174b8387153fd30dac0ec, type: 2}
   m_IsPrefabParent: 0
