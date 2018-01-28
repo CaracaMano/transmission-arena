@@ -31,6 +31,7 @@ public class TitleScreenManager : MonoBehaviour {
     private void Start()
     {
         audioPool.PlayMusic(themeMusic);
+        PlayersManagerSingleton.Instance.Reset();
     }
 
     private void Update()
