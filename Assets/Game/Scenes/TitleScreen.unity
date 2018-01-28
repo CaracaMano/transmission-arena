@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1343108865}
   - component: {fileID: 1343108867}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TitleScreenManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,10 +913,10 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.00007811189
-    width: 1
-    height: 0.9998438
+    x: 0.00024402142
+    y: 0
+    width: 0.99951196
+    height: 1
   near clip plane: 0
   far clip plane: 1000
   field of view: 60
