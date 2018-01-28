@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61600993108110512}
   - component: {fileID: 50676400217217088}
   - component: {fileID: 114506807651851732}
+  - component: {fileID: 95480616709046462}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -75,6 +76,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9305701, y: 0.7177596}
   m_EdgeRadius: 0
+--- !u!95 &95480616709046462
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947798281401280}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a38a77ec8f970a4aa9897d720bfed40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114506807651851732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,6 +165,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.608, y: -1.025}
+  m_AnchoredPosition: {x: 80.422226, y: -125.08671}
   m_SizeDelta: {x: 2.56, y: 2.56}
   m_Pivot: {x: 0.5, y: 0.5}
