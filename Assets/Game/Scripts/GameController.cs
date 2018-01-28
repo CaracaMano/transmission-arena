@@ -9,7 +9,13 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	private float GameTimer = 60;
+	private float GameTimer = 15;
+
+	private bool hurryUp = false;
+	
+	private bool canReload = false;
+	private float reloadTimer = 5;
+	public Text ReloadText;
 
 	private bool gameFinished;
 	public List<ParticleSystem> PartyParticleSystems;
@@ -59,8 +65,8 @@ public class GameController : MonoBehaviour {
 		), 1).Play();
 	
 		cameraAnimation.onComplete += delegate {
-		foreach (var particleSystem in PartyParticleSystems) {
-			particleSystem.Play();
+			foreach (var particleSystem in PartyParticleSystems) {
+				particleSystem.Play();
 			}
 		};
 	}
@@ -79,11 +85,26 @@ public class GameController : MonoBehaviour {
 				TimerText.text = "Sudden Death!!!";
 			}
 		}
-		else {
+		else {		
 			int minutes = Mathf.FloorToInt(GameTimer / 60f);
 			int seconds = Mathf.FloorToInt(GameTimer % 60f);
 
-			TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+			if (GameTimer > 10) {
+				TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+			}
+			else {
+				if (!hurryUp) {
+					DOTween.Sequence().Append(
+						TimerText.transform.DOScale(1.2f, 0.5f)
+					).Append(
+						TimerText.transform.DOScale(1f, 0.5f)
+					).SetLoops(10);
+					hurryUp = true;
+				}
+				TimerText.text = seconds.ToString("00");
+				TimerText.color = new Color(1f, 0.26f, 0.27f);
+			}
+
 		}
 
 		if (WinCondition.winner == null) {
@@ -103,7 +124,17 @@ public class GameController : MonoBehaviour {
 			}	
 		}
 		else {
-			if (Input.GetButtonDown("Submit")) {
+
+			reloadTimer -= Time.deltaTime;
+
+			if (reloadTimer < 0) {
+				if (!ReloadText.gameObject.activeSelf) {
+					ReloadText.gameObject.SetActive(true);
+				}
+				canReload = true;
+			}
+			
+			if (Input.anyKeyDown && canReload) {
 				SceneManager.LoadScene("JunScene");	
 			}
 		}
