@@ -1001,7 +1001,7 @@ MonoBehaviour:
   fastMusic: {fileID: 8300000, guid: e5cdd1808fd3b4248914b9918e37f948, type: 3}
   winMusic: {fileID: 8300000, guid: 44d0a287c3a058b42a0891d864c69ea6, type: 3}
   suddenDeathSound: {fileID: 8300000, guid: 44e57b3635b2d5c4c9da8d5514755eac, type: 3}
-  playerCounterManager: {fileID: 0}
+  playerCounterManager: {fileID: 114796459035346876}
 --- !u!114 &114840371188868034
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,25 +10,22 @@ public class PlayerCounterManager : MonoBehaviour {
 
     public List<Text> Texts;
 
-    private List<int> Score;
-
-
     void Awake()
     {
-        DontDestroyOnLoad(this);
     }
 
 	// Use this for initialization
 	void Start () {
         gameManager = FindObjectOfType<GameManager>();
 
+        
 
 	}
     void Init(int playersCount)
     {
         int maxPlayers = 4;
 
-        Score = new List<int>(playersCount);
+
 
         for (int i = 0; i < maxPlayers; i++)
         {
@@ -52,11 +49,20 @@ public class PlayerCounterManager : MonoBehaviour {
             Init(playersCount);
             isInitialized = true;
         }
+
+        for (int i = 0; i < Texts.Count; i++)
+        {
+            string playerPrefName = "Player" + i;
+            Texts[i].text = PlayerPrefs.GetInt(playerPrefName).ToString();    
+        }
+        
 	}
 
     public void setWinner(int playerIndex)
     {
-        Score[playerIndex] += 1;
-        Texts[playerIndex].text = Score[playerIndex].ToString();
+        playerIndex -= 1;
+        string playerPrefName = "Player" + playerIndex;
+        int score = PlayerPrefs.GetInt(playerPrefName) + 1;
+        PlayerPrefs.SetInt(playerPrefName, score);
     }
 }

@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour {
     private bool canPlay = false;
 
     public PlayerCounterManager playerCounterManager;
+    private bool winMessageShown = false;
 
     private void playMusic(bool isFast) 
     {
@@ -160,19 +161,20 @@ public class GameController : MonoBehaviour {
             {
                 playMusic(true);
             }
-            else if (GameTimer < 0)
+            else if (GameTimer < 0 && !winMessageShown)
             {
+                winMessageShown = true;
                 WinCondition.CheckCondition();
                 if (WinCondition.winner != null)
                 {
-                    TimerText.gameObject.SetActive(false);
+                   TimerText.gameObject.SetActive(false);
 
-                    MessageText.text = "Winner: " + WinCondition.winner.PlayerName;
-                    MessageText.color = WinCondition.winner.playerColor;
-                    MessageText.gameObject.SetActive(true);
+                   MessageText.text = "Winner: " + WinCondition.winner.PlayerName;
+                   MessageText.color = WinCondition.winner.playerColor;
+                   MessageText.gameObject.SetActive(true);
 
-                  // int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
-                    //playerCounterManager.setWinner(playerIndex);
+                   int playerIndex = int.Parse( WinCondition.winner.PlayerName.Replace("Player",""));
+                   playerCounterManager.setWinner(playerIndex);
 
                 }
                 else
