@@ -158,7 +158,6 @@ public class GameController : MonoBehaviour {
                 TimerText.text = seconds.ToString("00");
                 TimerText.color = new Color(1f, 0.26f, 0.27f);
             }
-
         }
 
         if (WinCondition.winner == null)
@@ -181,25 +180,17 @@ public class GameController : MonoBehaviour {
         }
         else
         {
-            if (Input.GetButtonDown("Submit"))
-            {
-                SceneManager.LoadScene("Arena01");
-
-                reloadTimer -= Time.deltaTime;
-
-                if (reloadTimer < 0)
-                {
-                    if (!ReloadText.gameObject.activeSelf)
-                    {
-                        ReloadText.gameObject.SetActive(true);
-                    }
-                    canReload = true;
+            reloadTimer -= Time.deltaTime;
+            
+            if (reloadTimer < 0) {
+                if (!ReloadText.gameObject.activeSelf) {
+                    ReloadText.gameObject.SetActive(true);
                 }
-
-                if (Input.anyKeyDown && canReload)
-                {
-                    SceneManager.LoadScene("JunScene");
-                }
+                canReload = true;
+            }
+			
+            if (Input.anyKeyDown && canReload) {
+                SceneManager.LoadScene("Arena01");	
             }
         }
     }
