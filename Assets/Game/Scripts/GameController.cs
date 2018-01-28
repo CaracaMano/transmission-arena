@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Timers;
+﻿using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,7 +34,6 @@ public class GameController : MonoBehaviour {
 	private const string JUMP_ACTION = "a1";
 	private const string SPECIAL_ACTION = "a5";
 	private const string HORIZONTAL_AXIS = "axis1";
-
 
     public AudioClip slowMusic;
     public AudioClip fastMusic;
@@ -284,7 +280,7 @@ public class GameController : MonoBehaviour {
                         Jump(player);
                     }
 
-                    if (Input.GetKeyDown(KeyCode.Semicolon))
+                    if (Input.GetKeyDown(KeyCode.M))
                     {
                         player.shoot.UseSkill(player);
                     }

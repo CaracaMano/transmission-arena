@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleScreenManager : MonoBehaviour {
 
@@ -52,22 +53,40 @@ public class TitleScreenManager : MonoBehaviour {
         }
     }
 
+    private bool IsAnyButtonDown(string playerPrefix) {
+
+        for (int i = 0; i <= 5; i++) {
+            if (Input.GetButtonDown(playerPrefix + "a" + i)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     private void Update()
     {
         
-        PressToStartText.SetActive(playerCount >= MINIMUM_PLAYERS);
+        //PressToStartText.SetActive(playerCount >= MINIMUM_PLAYERS);
+
+        if (playerCount >= MINIMUM_PLAYERS) {
+            PressToStartText.GetComponent<Text>().text = "Press enter to start";
+        }
+        else {
+            PressToStartText.GetComponent<Text>().text = "Waiting for " + (MINIMUM_PLAYERS - playerCount) + " more players";
+        }
         
         if (Input.GetKeyDown(KeyCode.Return) && playerCount >= MINIMUM_PLAYERS)
         {
             SceneManager.LoadScene(sceneName);
         }
 
-        HandleGamepadPlayerEntrance("j1a0", "j1", player1Avatar, player1Enter);
-        HandleGamepadPlayerEntrance("j2a0", "j2", player2Avatar, player2Enter);
-        HandleGamepadPlayerEntrance("j3a0", "j3", player3Avatar, player3Enter);
-        HandleGamepadPlayerEntrance("j4a0", "j4", player4Avatar, player4Enter);
+        HandleGamepadPlayerEntrance("j1", player1Avatar, player1Enter);
+        HandleGamepadPlayerEntrance("j2", player2Avatar, player2Enter);
+        HandleGamepadPlayerEntrance("j3", player3Avatar, player3Enter);
+        HandleGamepadPlayerEntrance("j4", player4Avatar, player4Enter);
         
-        HandleKeyboardPlayerEntrance(KeyCode.Semicolon, "j3", player3Avatar, player3Enter);
+        HandleKeyboardPlayerEntrance(KeyCode.M, "j3", player3Avatar, player3Enter);
         HandleKeyboardPlayerEntrance(KeyCode.F, "j4", player4Avatar, player4Enter);
     }
 
@@ -77,13 +96,13 @@ public class TitleScreenManager : MonoBehaviour {
         }
     }
 
-    private void HandleGamepadPlayerEntrance(string key, string playerPrefix, TitleWiggle avatar, GameObject enter) {
-        if (Input.GetButtonDown(key)) {
+    private void HandleGamepadPlayerEntrance(string playerPrefix, TitleWiggle avatar, GameObject enter) {
+        if (IsAnyButtonDown(playerPrefix)) {
             var avatarObject = avatar.gameObject;
             var hasPlayer = HandlePlayerEntrance(playerPrefix, GAME_PAD, avatar);
             avatarObject.SetActive(hasPlayer);
             enter.SetActive(!hasPlayer);
-            playerCount += hasPlayer ? 1 : -1;
+            playerCount = PlayersManagerSingleton.Instance.players.Count;
             EnterPlayerAudio(hasPlayer);
             
         }
@@ -95,7 +114,7 @@ public class TitleScreenManager : MonoBehaviour {
             var hasPlayer = HandlePlayerEntrance(playerPrefix, KEYBOARD, avatar);
             avatarObject.SetActive(hasPlayer);
             enter.SetActive(!hasPlayer);
-            playerCount += hasPlayer ? 1 : -1;
+            playerCount = PlayersManagerSingleton.Instance.players.Count;
             EnterPlayerAudio(hasPlayer);
         }
     }
