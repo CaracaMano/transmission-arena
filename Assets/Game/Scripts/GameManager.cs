@@ -61,7 +61,9 @@ public class GameManager : MonoBehaviour {
 
             gameController.addPlayer(playerPrefix, player);
 
-            respawnTransform.tag = PlayersManagerSingleton.Instance.players[playerPrefix];
+            var playerSettings = PlayersManagerSingleton.Instance.players[playerPrefix];
+            respawnTransform.tag = playerSettings.controllerType;
+            player.playerColor = playerSettings.playerColor;
 
             if (respawnTransform.tag.Contains("KeyboardControlled"))
             {

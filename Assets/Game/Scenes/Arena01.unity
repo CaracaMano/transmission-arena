@@ -159,22 +159,22 @@ Prefab:
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.00005733967
-      objectReference: {fileID: 0}
-    - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
-        type: 2}
-      propertyPath: m_NormalizedViewPortRect.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.0004542172
+      objectReference: {fileID: 0}
+    - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
+        type: 2}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.9998853
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20587480483580382, guid: 0779b720a58174b8387153fd30dac0ec,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.99909157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0779b720a58174b8387153fd30dac0ec, type: 2}

@@ -1,8 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayersManagerSingleton {
 
+	public class PlayerSettings {
+		public string controllerType;
+		public Color playerColor;
+	}
 
 	private static PlayersManagerSingleton _instance;
 	public static PlayersManagerSingleton Instance {
@@ -14,14 +19,14 @@ public class PlayersManagerSingleton {
 		}
 	}
 	
-	public Dictionary<string, string> players;
+	public Dictionary<string, PlayerSettings> players;
 
 	private PlayersManagerSingleton() {
-		players = new Dictionary<string, string>();
+		players = new Dictionary<string, PlayerSettings>();
 	}
 
 	public void Reset() {
-		players = new Dictionary<string, string>();
+		players = new Dictionary<string, PlayerSettings>();
 	}
 
 }
