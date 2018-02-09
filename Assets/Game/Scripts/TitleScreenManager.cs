@@ -14,8 +14,6 @@ public class TitleScreenManager : MonoBehaviour {
     public const string GAME_PAD = "GamepadControlled";
 
     public const string KEYBOARD = "KeyboardControlled";
-    
-    public string sceneName;
 
     public AudioClip themeMusic;
     public AudioPool audioPool;
@@ -78,7 +76,12 @@ public class TitleScreenManager : MonoBehaviour {
         
         if (Input.GetKeyDown(KeyCode.Return) && playerCount >= MINIMUM_PLAYERS)
         {
-            SceneManager.LoadScene(sceneName);
+            if (playerCount == MINIMUM_PLAYERS) {
+                SceneManager.LoadScene("Arena_1x1");
+            }
+            else {
+                SceneManager.LoadScene("Arena01");
+            }
         }
 
         HandleGamepadPlayerEntrance("j1", player1Avatar, player1Enter);
@@ -130,18 +133,24 @@ public class TitleScreenManager : MonoBehaviour {
         }
 
         if (players.ContainsKey(playerPrefix)) {
-            var currentType = players[playerPrefix];
-            if (currentType == controller) {
+            var currentPlayer= players[playerPrefix];
+            if (currentPlayer.controllerType == controller) {
                 players.Remove(playerPrefix);
                 return false;
             }
             else {
-                players[playerPrefix] = controller;
+                var playerSettings = new PlayersManagerSingleton.PlayerSettings();
+                playerSettings.controllerType = controller;
+                playerSettings.playerColor = avatar.controllerSprite.color;
+                players[playerPrefix] = playerSettings;
                 return true;
             }
         }
         else {
-            players.Add(playerPrefix, controller);
+            var playerSettings = new PlayersManagerSingleton.PlayerSettings();
+            playerSettings.controllerType = controller;
+            playerSettings.playerColor = avatar.controllerSprite.color;
+            players.Add(playerPrefix, playerSettings);
             return true;
         }
     }

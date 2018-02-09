@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 23008886715619604}
   - component: {fileID: 61824016796976946}
   - component: {fileID: 114790180076216536}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (3)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 23857288531909320}
   - component: {fileID: 61236226351160484}
   - component: {fileID: 114201422153189548}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 23951002081948470}
   - component: {fileID: 61518858975149532}
   - component: {fileID: 114360427876690092}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (2)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 23594929796521248}
   - component: {fileID: 61264167834385596}
   - component: {fileID: 114456492161203566}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (3)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 23039578762972920}
   - component: {fileID: 61994687524481966}
   - component: {fileID: 114316174226749456}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (3)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 23881447000860240}
   - component: {fileID: 61354673685838788}
   - component: {fileID: 114928228894680310}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (3)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 23170307578696626}
   - component: {fileID: 61571949808332718}
   - component: {fileID: 114554063085647252}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (1)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 23034604900746920}
   - component: {fileID: 61159035221635154}
   - component: {fileID: 114788078556981476}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (1)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 23269692452426690}
   - component: {fileID: 61912597772095032}
   - component: {fileID: 114222991868779116}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (5)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 23455210271374476}
   - component: {fileID: 61915439091269480}
   - component: {fileID: 114196860166413930}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (2)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 23909766564531358}
   - component: {fileID: 61305058634041150}
   - component: {fileID: 114898385894034660}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (2)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 23444001252284512}
   - component: {fileID: 61260231649484852}
   - component: {fileID: 114534750039762198}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 23539973230010172}
   - component: {fileID: 61636103050605526}
   - component: {fileID: 114665036453751510}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (4)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 23010022562596682}
   - component: {fileID: 61870205498726358}
   - component: {fileID: 114930755790281852}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (4)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -2312,7 +2312,7 @@ GameObject:
   - component: {fileID: 23088603561753548}
   - component: {fileID: 61976286443620556}
   - component: {fileID: 114989866508931780}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (2)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 23114288645277796}
   - component: {fileID: 61198146337702948}
   - component: {fileID: 114699262102447350}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: portal_block (5)
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -9534,6 +9534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ad608b05abf924b90273ec65bd3fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wasCaught: 0
 --- !u!114 &114554063085647252
 MonoBehaviour:
   m_ObjectHideFlags: 1

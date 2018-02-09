@@ -261,7 +261,8 @@ public class GameController : MonoBehaviour {
                         SceneManager.LoadScene("TitleScreen");
                     }
                     else {
-                        SceneManager.LoadScene("Arena01");    
+                        
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
                     }
                     
                 }
