@@ -257,7 +257,7 @@ public class GameController : MonoBehaviour {
 
                 if (Input.anyKeyDown && canReload)
                 {
-                    if (Input.GetKeyDown(KeyCode.Escape)) {
+                    if (Input.GetKeyDown(KeyCode.Q)) {
                         SceneManager.LoadScene("TitleScreen");
                     }
                     else {

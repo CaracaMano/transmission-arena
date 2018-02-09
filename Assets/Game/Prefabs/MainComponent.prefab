@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 114304486705070254}
   - component: {fileID: 114019835131596818}
   m_Layer: 5
-  m_Name: GameHUD
+  m_Name: GameHUD Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,9 +521,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.0005494356
+    y: 0
     width: 1
-    height: 0.9989011
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 41
@@ -917,7 +917,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press any key to restart
+  m_Text: 'Press any key to restart
+
+    Press Q to return to main menu'
 --- !u!114 &114673552176695006
 MonoBehaviour:
   m_ObjectHideFlags: 1

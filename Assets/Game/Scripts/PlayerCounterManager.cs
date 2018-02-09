@@ -10,10 +10,6 @@ public class PlayerCounterManager : MonoBehaviour {
 
     public List<Text> Texts;
 
-    void Awake()
-    {
-    }
-
 	// Use this for initialization
     void Start() {
         gameManager = FindObjectOfType<GameManager>();
