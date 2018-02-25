@@ -34,3 +34,5 @@ sysinfo.txt
 *.unitypackage
 .idea/.idea.transmission-arena/.idea
 JetBrains.meta
+**/node_modules/*
+*.app
