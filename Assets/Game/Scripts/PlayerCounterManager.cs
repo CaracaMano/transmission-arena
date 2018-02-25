@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,31 +10,27 @@ public class PlayerCounterManager : MonoBehaviour {
 
     public List<Text> Texts;
 
-    void Awake()
-    {
-    }
-
 	// Use this for initialization
-	void Start () {
+    void Start() {
         gameManager = FindObjectOfType<GameManager>();
-
-        
-
-	}
+    }
+    
     void Init(int playersCount)
     {
         int maxPlayers = 4;
 
-
-
         for (int i = 0; i < maxPlayers; i++)
         {
             Text currentText = Texts[i];
-            currentText.color = gameManager.colors[i];           
 
-            if (i >= playersCount)
-            {
+            if (i >= playersCount) {
                 currentText.gameObject.SetActive(false);
+            }
+            else {
+                var key = PlayersManagerSingleton.Instance.players.Keys.ToArray()[i];
+                var player = PlayersManagerSingleton.Instance.players[key];
+
+                currentText.color = player.playerColor;
             }
         }
 
